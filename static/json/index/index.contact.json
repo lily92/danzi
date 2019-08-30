@@ -1,0 +1,22 @@
+{
+  "code": "1001",
+  "msg": "请求成功",
+  "contact":{
+    "look":"@img(446,252)",
+    "jijin":"@img(446,252)",
+    "codeWechat":"@img(160,160)",
+    "codeDouYin":"@img(160,160)",
+    "contactDetail":" <p>地址：山东威海经济技术开发区环山路610号</p><p>电话：+86-631-3651999 3653999</p><p>传真：+86-631-3636777</p><p>邮编：264205</p><p>网址：http://www.hongkonganran.com</p><p>邮箱：info@hongkonganran.com</p>",
+    "copyright":"鲁ICP备17017149号-2 | 鲁公网安备37100402000241号",
+    "friendShipLink":[
+      {
+        "name":"铂丽斯国际大酒店",
+        "link":"http://baidu.com"
+      },
+      {
+        "name":"安然大酒店",
+        "link":"http://baidu.com"
+      }
+    ]
+  }
+}

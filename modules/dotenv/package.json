@@ -1,0 +1,13 @@
+{
+  "name": "@modules/dotenv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "latest",
+    "dotenv-expand": "latest"
+  }
+}

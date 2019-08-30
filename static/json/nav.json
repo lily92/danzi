@@ -1,0 +1,130 @@
+{
+  "code":"1001",
+  "msg": "请求成功",
+  "navList":[
+    { 
+      "menu": "关于丹姿",
+      "id": 1,
+      "isShow": false,
+      "link":"/about",
+      "txtOne":"树",
+      "txtTwo":"百年伟业",
+      "submenu": [
+        {
+          "id": 11,
+          "name": "企业简介",
+          "link":"/about/introduce",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id": 12,
+          "name": "历史概况",
+          "img":"@img(200,130)",
+          "link":"/about/history",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id": 13,
+          "name": "企业文化",
+          "img":"@img(200,130)",
+          "link":"/about/culture",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id": 14,
+          "name": "科研创新",
+          "link":"/about/technology",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id": 15,
+          "name": "联系我们",
+          "link":"/about/contact",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }
+      ]
+    },
+    {
+      "menu": "旗下品牌",
+      "id": 2,
+      "isShow": false,
+      "link":"/brand",
+      "txtOne":"旗",
+      "txtTwo":"下品牌",
+      "submenu": [
+      ]
+    },  {
+      "menu": "社会责任",
+      "id": 3,
+      "isShow": false,
+      "link":"/sociology",
+      "txtOne":"社",
+      "txtTwo":"会责任",
+      "submenu": [
+      ]
+    },
+    {
+      "menu": "新闻资讯",
+      "id": 4,
+      "isShow": false,
+      "link":"/news/list?id=16",
+      "txtOne":"新",
+      "txtTwo":"闻资讯",
+      "submenu": [
+        {
+          "id": 16,
+          "name": "企业新闻",
+          "link":"/news/list?id=16",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id": 17,
+          "name": "品牌动态",
+          "link":"/news/list?id=17",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }
+      ]
+    },
+    {
+      "menu": "招贤纳士",
+      "id": 5,
+      "isShow": false,
+      "link":"/recruit/list",
+      "txtOne":"招",
+      "txtTwo":"贤纳士",
+      "submenu": [
+      ]
+    },
+    {
+      "menu": "官方商城",
+      "id": 6,
+      "isShow": false,
+      "link":"/shop",
+      "txtOne":"官",
+      "txtTwo":"方商城",
+      "submenu": [
+      ]
+    }
+    
+  ]
+}
+

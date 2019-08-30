@@ -1,0 +1,26 @@
+{
+  "code":"1001",
+  "msg": "请求成功",
+  "list":[
+    {
+      "img":"@img(260,160)",
+      "url":"http://baidu.com",
+      "text":"水密码官方商城"
+    },
+    {
+      "img":"@img(260,160)",
+      "url":"http://baidu.com",
+      "text":"水密码官方商城"
+    },
+    {
+      "img":"@img(260,160)",
+      "url":"http://baidu.com",
+      "text":"水密码官方商城"
+    },
+    {
+      "img":"@img(260,160)",
+      "url":"http://baidu.com",
+      "text":"水密码官方商城"
+    }
+  ]
+}

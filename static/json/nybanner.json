@@ -1,0 +1,9 @@
+{
+  "code":"1001",
+  "msg": "请求成功",
+  "menuId":"1",
+  "bannerPC":"@img(1920,500)",
+  "bannerPhone":"@img(640,400)",
+  "menuName":"产品中心",
+  "menuNameEng":"product"
+}

@@ -1,0 +1,11 @@
+{
+  "code":"1001",
+  "msg": "请求成功",
+  "result":{
+    "imgTop":"@img(518,323)",
+    "imgVideoPoster":"@img(315,323)",
+    "videoUrl":"http://baidu.com",
+    "desc":"<p>xxx</p>"
+
+  }
+}

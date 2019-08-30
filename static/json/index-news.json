@@ -1,0 +1,73 @@
+{
+  "code": "1001",
+  "msg": "请求成功",
+  "newLeft": [
+    {
+      "newId":110,
+      "typeId":17,
+      "typeName":"企业新闻",
+      "newDate": "2019-02-13",
+      "newImg": "@img(440,430)",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚"
+    },
+    {
+      "newId":110,
+      "typeId":17,
+      "typeName":"品牌动态",
+      "newDate": "2019-02-13",
+      "newImg": "@img(440,430)",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚"
+    }
+    
+  ],
+  "newRight": [
+    {
+      "newId":110,
+      "typeId":16,
+      "typeName":"品牌动态",
+      "newDate": "2019-02-13",
+      "newImg": "@img(440,430)",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "tag":[
+        {
+          "text":"丹姿新闻",
+          "url":"http://baidu.com"
+        }
+      ]
+    },
+    {
+      "newId":110,
+      "typeId":16,
+      "typeName":"品牌动态",
+      "newDate": "2019-02-13",
+      "newImg": "@img(440,430)",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "tag":[
+        {
+          "text":"丹姿新闻",
+          "url":"http://baidu.com"
+        }
+      ]
+    },
+    {
+      "typeId":16,
+      "typeName":"品牌动态",
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "@img(440,430)",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费新闻简介-高手在敏倩信息费新闻简介-高手在敏倩信息费新闻简介-高手在敏倩信息费新闻简介-高手在敏倩信息费刚刚",
+      "tag":[
+        {
+          "text":"丹姿新闻",
+          "url":"http://baidu.com"
+        }
+      ]
+    }
+    
+  ]
+}

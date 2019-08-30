@@ -1,0 +1,81 @@
+{
+  "code": "1001",
+  "msg": "请求成功",
+  "pageNum": 1,
+  "pageSize": 10,
+  "totalPage":10,
+  "newList": [
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/273",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/413",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/56",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/933",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/617",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/595",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/586",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/177",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    },
+    {
+      "newId": "001",
+      "newDate": "2019-02-13",
+      "newImg": "https://dummyimage.com/550x330/699",
+      "newTitle": "新闻标题1",
+      "newDesc": "新闻简介-高手在敏倩信息费刚刚",
+      "newDetail": "新闻详细，<p>嘿嘿嘿科达</p><img src='@img(550,100)' /><p>嘿嘿嘿科达</p>"
+    }
+  ]
+}

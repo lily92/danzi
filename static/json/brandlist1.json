@@ -1,0 +1,43 @@
+{
+  "code":"1001",
+  "msg": "请求成功",
+  "list":[
+    { 
+      "id": 1,
+      "isShow": true,
+      "img":"@img(878,621)",
+      "logo":"@img(144,52)"
+    },
+    { 
+      "id": 1,
+      "isShow": false,
+      "img":"@img(878,621)",
+      "logo":"@img(144,52)"
+    },
+    { 
+      "id": 1,
+      "isShow": false,
+      "img":"@img(878,621)",
+      "logo":"@img(144,52)"
+    },
+    { 
+      "id": 1,
+      "isShow": false,
+      "img":"@img(878,621)",
+      "logo":"@img(144,52)"
+    },
+    { 
+      "id": 1,
+      "isShow": false,
+      "img":"@img(878,621)",
+      "logo":"@img(144,52)"
+    },{ 
+      "id": 1,
+      "isShow": false,
+      "img":"@img(878,621)",
+      "logo":"@img(144,52)"
+    }
+    
+  ]
+}
+
