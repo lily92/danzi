@@ -17,3 +17,5 @@
 
 .banner-swiper label{ font-weight: normal;}
 
+.swiper-scrollbar{ width: 1px !important; border-radius: 0;}
+.swiper-scrollbar-drag{ width: 4px !important; border-radius: 0;background: #00a2e9; left: -1px !important;}

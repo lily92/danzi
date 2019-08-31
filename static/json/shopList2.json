@@ -3,6 +3,7 @@
   "msg": "请求成功",
   "list": [
     {
+      "shopName":"丹姿京东商城",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
       "qrcode": [
@@ -29,6 +30,7 @@
       ]
     },
     {
+      "shopName":"天猫",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
       "qrcode": [
@@ -55,6 +57,7 @@
       ]
     },
     {
+      "shopName":"淘宝",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
       "qrcode": [
@@ -81,6 +84,7 @@
       ]
     },
     {
+      "shopName":"平多多",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
       "qrcode": [

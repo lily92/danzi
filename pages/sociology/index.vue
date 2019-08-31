@@ -1,6 +1,5 @@
 <template>
   <div>
-    <BannerNy :menuid="menuId" />
     <div class="bgf7 padding25">
       <ul class="container  shehi-list">
         <li v-for="(item,i) in list" :key="'shehui'+i" class="flex">
@@ -43,11 +42,10 @@
 }
 </style>
 <script>
-import BannerNy from '~/components/BannerNy.vue'
 export default {
-  layout: 'single',
+  layout: 'ny',
   components: {
-    BannerNy,
+
   },
   computed: {
     menuId() {

@@ -2,11 +2,11 @@
   <div class="index">
     <Banner :list="bannerlist" class="padding-t100" />
     <!-- about -->
-    <div>about</div>
+    <About :aboutdesc="aboutDesc" :aboutlist="aboutList" />
 
     <!--star 创一流品牌 -->
     <div class="padding25">
-      <div class="container">
+      <div class="container max767">
         <div class="index-h3">
           <span class="colorb">创</span>
           <span class="color0">一流品牌</span>
@@ -24,19 +24,19 @@
           <span class="colorb">造</span>
           <span class="color0">成长梦想</span>
         </div>
-        <Dram />
+        <Dram :dream="dream" />
       </div>
     </div>
     <!--end  造成长梦想 -->
 
     <!--star 誓造福社会 -->
-    <div class=" padding25 ">
+    <div class="padding25">
       <div class="container">
         <div class="index-h3">
           <span class="colorb">誓</span>
           <span class="color0">造福社会</span>
         </div>
-        <Shehui />
+        <Shehui :sociology="sociology" />
       </div>
     </div>
     <!--end  誓造福社会 -->
@@ -54,7 +54,7 @@
     <!--end  聚百家之言 -->
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss" >
 .index-h3 {
   .colorb {
     font-size: 48px;
@@ -63,9 +63,24 @@
     font-size: 36px;
   }
 }
+@media screen and (max-width: 767px) {
+  .index-h3 {
+    .colorb {
+      font-size: 30px;
+    }
+    .color0 {
+      font-size: 20px;
+    }
+  }
+  .container.max767 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 </style>
 <script>
 import Banner from '~/components/pages/index/Banner.vue'
+import About from '~/components/pages/index/About.vue'
 import BrandBanner from '~/components/pages/brand/Banner.vue'
 import Dram from '~/components/pages/index/drame.vue'
 import Shehui from '~/components/pages/index/shehui.vue'
@@ -74,6 +89,7 @@ export default {
   layout: 'index',
   components: {
     Banner,
+    About,
     BrandBanner,
     Dram,
     Shehui,
@@ -90,10 +106,16 @@ export default {
   async asyncData({ $axios }) {
     const list = await $axios.$post('index/banner')
     const res = await $axios.$post('index/newlist')
+    const dream = await $axios.$post('index/dream')
+    const about = await $axios.$post('index/about')
     return {
       bannerlist: list.swiperSlides,
       newlLeft: res.newLeft,
       newRight: res.newRight,
+      dream: dream.dream,
+      sociology: dream.sociology,
+      aboutDesc: about.aboutDesc,
+      aboutList: about.aboutList,
     }
   },
 }

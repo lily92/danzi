@@ -1,12 +1,14 @@
 <template>
-  <div class="shop">
+  <div class="shop positionr">
     <swiper id="banner-swiper" :options="options" class="banner-swiper">
       <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
         <div v-for="(item,i) in bannerlist" :key="'shopbanner'+i" class="swiper-slide">
           <div class="positionr">
             <img src="~/assets/images/shop-img1.jpg" alt srcset class="w100">
             <div class="positionb flex-item">
-              <a :href="item.url" target="_blank"><img :src="item.banner" alt srcset class="w100"></a>
+              <a :href="item.url" target="_blank">
+                <img :src="item.banner" alt srcset class="w100">
+              </a>
             </div>
           </div>
           <div class="bgf7 padding25">
@@ -28,17 +30,64 @@
           </div>
         </div>
       </div>
-
-      <div class="swiper-pagination" />
     </swiper>
+    <div class="swiper-pagination-shop" />
   </div>
 </template>
-<style lang="scss" >
-.qrcode-list{
-  .qrcode-p{ padding: 5px 0;}
-  li{ width: 20%; padding: 0 10px;}
+<style lang="scss" scoped >
+#banner-swiper {
+  margin-left: 100px;
 }
-
+.qrcode-list {
+  .qrcode-p {
+    padding: 5px 0;
+  }
+  li {
+    width: 20%;
+    padding: 0 10px;
+  }
+}
+</style>
+<style lang="scss">
+.swiper-pagination-shop {
+  width: 10px !important;
+  position: absolute;
+  left: 105px;
+  top: 25px;
+  label {
+    width: 100px;
+    white-space: nowrap;
+    position: absolute;
+    right: 17px;
+    top: -8px;
+    display: block;
+    font-weight: normal;
+    max-width: 100px;
+    text-align: right;
+  }
+  .swiper-pagination-bullet {
+    position: relative;
+    margin: 5px 0;
+    background: #333; cursor: pointer;
+  }
+  .swiper-pagination-bullet-active {
+    width: 8px;
+    label {
+      color: #00a2e9;
+    }
+  }
+  .swiper-pagination-bullet-active::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    left: -4px;
+    top: -4px;
+  }
+}
 </style>
 <script>
 import Swiper from '~/components/base/swiper.vue'
@@ -50,45 +99,45 @@ export default {
   data() {
     return {
       options: {
+        // direction: 'vertical',
         pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-pagination-shop',
           clickable: true,
-          // renderBullet: function(index, className) {
-          //   let text = ''
-          //   switch (index) {
-          //     case 0:
-          //       text = '首页'
-          //       break
-          //     case 1:
-          //       text = '关于安然'
-          //       break
-          //     case 2:
-          //       text = '董事长寄语'
-          //       break
-          //     case 3:
-          //       text = '咨询报道'
-          //       break
-          //     case 4:
-          //       text = '产品展馆'
-          //       break
-          //     case 5:
-          //       text = '联系我们'
-          //       break
-          //   }
-          //   return (
-          //     '<span class="' +
-          //     className +
-          //     '"><label>' +
-          //     text +
-          //     '</label></span>'
-          //   )
-          // },
+
+          renderBullet: function(index, className) {
+            return (
+              '<span class="' + className + '"><label>' + 1 + '</label></span>'
+            )
+          },
         },
       },
     }
   },
-  mounted() {},
-  methods: {},
+  mounted() {
+    this.getOption()
+  },
+  methods: {
+    getOption() {
+      const _this = this
+      const options = {
+        // direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination-shop',
+          clickable: true,
+          renderBullet: function(index, className) {
+            return (
+              '<span class="' +
+              className +
+              '"><label>' +
+              _this.bannerlist[index].shopName +
+              '</label></span>'
+            )
+          },
+        },
+      }
+      this.options = options
+    },
+  },
 }
 </script>
 

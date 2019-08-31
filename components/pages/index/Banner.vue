@@ -10,7 +10,7 @@
           :href="item.linkUrl"
         >
           <div class="pc-banner positionr hidden-xs">
-            <img :src="item.src" alt srcset>
+            <img :src="item.src" alt srcset class="w100">
             <div class="positionb flex flex-align-center">
               <div class="banner-txt flex flex-start">
                 <div class="max450" data-swiper-parallax="-1000">
@@ -26,7 +26,7 @@
           </div>
 
           <div class="phone-banner positionr visible-xs">
-            <img :src="item.srcPhone" alt srcset>
+            <img :src="item.srcPhone" alt srcset class="w100">
             <div class="positionb flex flex-align-center">
               <div class="banner-txt flex flex-start">
                 <div class="max450" data-swiper-parallax="-1000">

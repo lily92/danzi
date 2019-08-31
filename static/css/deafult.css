@@ -120,6 +120,7 @@ input, textarea, video, button, select, * { outline: none; }
   .padding25 { padding-top: 12px; padding-bottom: 12px; }
   .padding-t100 { padding-top: 70px; }
   .fon24 { font-size: 18px; }
+  .fon20 { font-size: 16px; }
   .fon18 { font-size: 15px; }
   .fon16 { font-size: 13px; }
   .w50 { width: 100%; } }

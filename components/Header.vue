@@ -190,7 +190,7 @@ $colorb: #00a2e9;
 #header {
   transform: translateY(-100%);
   transition: 0.5s linear all;
-  z-index: 3;
+  z-index: 11;
   border-bottom: 2px solid $colorb;
 }
 #header.active {

@@ -4,20 +4,28 @@
       <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
         <div
           v-for="(item,index) in list"
-          :key="'banner'+item.id+index"
-          class="swiper-slide"
+          :key="'tbanner'+item.id+index"
+          class="swiper-slide positionr"
         >
-          <img :src="item.img" alt="" srcset="">
+          <img src="~/assets/images/about/about-ky-bg.jpg" alt="" srcset="">
+          <div class="positionb">
+            <img :src="item.img" alt="" srcset="">
+          </div>
         </div>
       </div>
 
-      <div class="swiper-pagination" />
+      <div class="swiper-pagination swiper-pagination-tbanner" />
     </swiper>
   </div>
 </template>
-
+<style lang="scss" >
+.swiper-pagination-tbanner{ width: 100%; bottom: 20px;
+ .swiper-pagination-bullet{ margin: 0 5px;}
+}
+</style>
 <style lang="scss" scoped>
 $colorb: #00a2e9;
+
 a {
   color: #fff;
 }
@@ -71,14 +79,10 @@ export default {
           delay: 3000,
         },
         loop: true,
-        // If we need pagination
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
-        // observer: true,
-        // observeParents: true,
-
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',

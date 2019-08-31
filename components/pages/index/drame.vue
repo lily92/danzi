@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="positionr">
-      <img src="~/assets/images/index-d-bg.jpg" alt="" srcset="">
+      <img src="~/assets/images/index-d-bg.jpg" alt="" srcset="" class="hidden-xs">
+      <img src="~/assets/images/index/index-phone-bg.jpg" alt="" srcset="" class="visible-xs">
       <div class="positionb flex-item">
-        <img src="~/assets/images/index-d-bg.jpg" alt="" srcset="">
+        <img :src="dream.pcImg" alt="" srcset="" class="hidden-xs">
+        <img :src="dream.phoneImg" alt="" srcset="" class="visible-xs">
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
           <div class="line3 drame-con">
-            持“专业化、职业化，共同成长”的人才理念，为迎接集团战略发展需要，人力资源率先变革，
-            于2013年发起组织优化项目，项目坚持“精兵简政、专业职业、系统管理，完成使命”的原则，通过组织架构优化调整、
-            人岗匹配测量、薪酬绩效体系改革、内部竞聘机制的建立、导师制的夯实等措施，以“六丹计划”为人才梯队建设的基石....
+            {{ dream.desc }}
           </div>
           <div class="dram-btn">
             <nuxt-link to="/recruit/list" class="a1 trans">
@@ -33,7 +33,7 @@
 .bg-0{ background: url('~@/assets/images/index-bg-line1.png') no-repeat center bottom; width: 100%; height: 100%; align-content: flex-end;}
 .dram-btn{
   width: 332px; flex-shrink: 0;
-  a{ display: inline-block; width: 105px; height: 60px; line-height: 60px; padding-left: 33px;}
+  a{ display: inline-block; width: 105px; height: 60px; line-height: 60px; padding-left: 38px;}
   .a1{ background:url('~@/assets/images/index/icon-dram-1.png') no-repeat 10px center #ffffff; }
   .a1:hover{background:url('~@/assets/images/index/icon-dram-11.png') no-repeat 10px center #0aa5ea; color: #fff; }
   .a2{ background:url('~@/assets/images/index/icon-dram-2.png') no-repeat 10px center #ffffff; }
@@ -42,10 +42,19 @@
   .a3:hover{background:url('~@/assets/images/index/icon-dram-33.png') no-repeat 10px center #0aa5ea; color: #fff; }
 }
 .flex-npwarp{ flex-wrap: nowrap; align-items: center;padding-bottom: 20px;}
+@media screen  and ( max-width: 767px){
+  .flex-npwarp{ flex-wrap: wrap; padding-bottom: 0;}
+  .dram-btn{ display: flex; justify-content: space-between; width: 100%;
+   a{ width: 33%}
+  }
+  .drame-con{ height: 56px;;}
+
+}
 </style>
 
 <script>
 export default {
+  props: ['dream'],
 
 }
 </script>

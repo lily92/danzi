@@ -1,6 +1,6 @@
 <template>
   <div class="flex news-flex">
-    <div class="w35">
+    <div class="w35 hidden-xs">
       <swiper :options="options" class="banner-swiper">
         <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
           <div v-for="(item,i) in newlleft" :key="'newleft'+i" class="swiper-slide curso" @click="goDetail(item.newId,item.typeId)">
@@ -121,6 +121,11 @@
   .line2 {
     margin: 10px 0;
   }
+}
+@media screen  and (max-width: 767px){
+  .w60{ width: 100%}
+  .new-left{ width: 88px;}
+  .news-right li{ padding: 10px; border-bottom: 0; margin-bottom: 15px;}
 }
 </style>
 
