@@ -15,10 +15,10 @@
                   :class="{'current':item.id === fristMenu.id}"
                 >
                   <span>{{ item.menu }}</span>
-                  <span v-if="item.submenu.length>0" class="icon-down" />
+                  <span v-show="item.submenu.length>0" class="icon-down" />
                 </nuxt-link>
 
-                <dl v-if="item.submenu.length>0" class="flex nav-dl">
+                <dl v-show="item.submenu.length>0" class="flex nav-dl" @mouseout="hideDown(index)">
                   <dd>
                     <span class="colorb fon48">{{ item.txtOne }}</span>
                     <span class="color3 fon20">{{ item.txtTwo }}</span>

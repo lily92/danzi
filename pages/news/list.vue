@@ -52,7 +52,8 @@
     bottom: 0;
     width: 100%;
     padding: 15px;
-    position: absolute;
+    position: absolute; transition: .3s linear all;
+    height: auto;
     p{ width: 100%}
     div{ width: 100%}
   }
@@ -71,6 +72,7 @@
   li:hover {
     .new-desc {
       height: 100%;
+      transition: .3s linear all;
     }
     .line22 {
       height: auto;

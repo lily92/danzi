@@ -44,8 +44,8 @@
           <div class="positionb flex-item scale">
             <img :src="video.posterImg" alt srcset class="w100 trans" :data-url="video.url">
           </div>
-          <div class="positionb flex-item">
-            <img src="~/assets/images/index/icon-player.png" alt srcset class="icon-player">
+          <div class="positionb flex-item" @click="showvideo">
+            <img src="~/assets/images/index/icon-player.png" alt srcset class="icon-player trans">
           </div>
         </div>
       </div>
@@ -55,6 +55,7 @@
     <!-- list -->
     <List :list="list" />
     <!--end  list -->
+    <Videomster v-if="showVideo" :video="videod" @close="closevideo" />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -88,22 +89,38 @@
     width: 50%;
   }
 }
-.scale{ overflow: hidden;}
-.video:hover .scale img{ transform: scale(1.1) }
+.scale {
+  overflow: hidden;
+}
+.video{ cursor: pointer;}
+.video:hover .scale img {
+  transform: scale(1.1);
+}
+.video:hover .icon-player {
+  transform: scale(0.9);
+}
 @media screen and (max-width: 767px) {
-  .bg0{ padding: 10px 20px;}
-  .brand {
-  .w50 { width: 100%;}
+  .bg0 {
+    padding: 10px 20px;
   }
-  .icon-player{ max-width: 60px;}
+  .brand {
+    .w50 {
+      width: 100%;
+    }
+  }
+  .icon-player {
+    max-width: 60px;
+  }
 }
 </style>
 <script>
 import List from '~/components/pages/brand/List.vue'
+import Videomster from '~/components/base/video'
 export default {
   layout: 'index',
   components: {
     List,
+    Videomster,
   },
   data() {
     return {
@@ -111,7 +128,8 @@ export default {
       brand: {},
       video: {},
       list: [],
-
+      showVideo: false,
+      videod: {},
     }
   },
   computed: {
@@ -133,6 +151,10 @@ export default {
         this.brand = res.brand
         this.list = res.list
         this.video = res.video
+        this.videod = {
+          poster: res.video.posterImg,
+          url: res.video.url,
+        }
       })
     },
     classActive(color, id) {
@@ -144,6 +166,12 @@ export default {
         box.style.background = '#fff'
         box.style.color = color
       }
+    },
+    showvideo() {
+      this.showVideo = true
+    },
+    closevideo() {
+      this.showVideo = false
     },
   },
 }

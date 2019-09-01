@@ -26,13 +26,14 @@
           <div class="positionb">
             <img :src="introduce.imgVideoPoster" alt srcset class="w100">
           </div>
-          <div class="positionb flex-item">
+          <div class="positionb flex-item" @click="showVideoPlay">
             <img src="~/assets/images/index/icon-player.png" alt="" srcset="">
           </div>
         </div>
       </div>
       <div class="introduct-con" v-html="introduce.desc" />
     </div>
+    <Videomster v-if="showVideo" :video="video" @close="closevideo" />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -66,14 +67,35 @@
 }
 </style>
 <script>
+import Videomster from '~/components/base/video'
 export default {
   // layout: 'single',
-  components: {},
+  components: {
+    Videomster,
+  },
+  data() {
+    return {
+      showVideo: false,
+    }
+  },
   async asyncData({ $axios }) {
     const introduce = await $axios.$post('about/introduction')
     return {
       introduce: introduce.result,
+      video: {
+        url: introduce.result.videoUrl,
+        poster: introduce.result.imgVideoPoster,
+      },
     }
+  },
+  methods: {
+    showVideoPlay() {
+      console.log('a')
+      this.showVideo = true
+    },
+    closevideo() {
+      this.showVideo = false
+    },
   },
 }
 </script>

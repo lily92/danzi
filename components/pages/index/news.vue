@@ -25,7 +25,7 @@
       </swiper>
     </div>
     <ul class="news-right flex w60">
-      <li v-for="(item,i) in newright" :key="'newright'+i" class="curso" @click="goDetail(item.newId,item.typeId)">
+      <li v-for="(item,i) in newright" :key="'newright'+i" class="curso trans" @click="goDetail(item.newId,item.typeId)">
         <div class="flex flex-nowarp">
           <div class="new-left color6 flex-item">
             <div>
@@ -63,7 +63,7 @@
   align-items:initial;
 }
 .news-page {
-  bottom: 80px !important;
+  bottom: 70px !important;
 }
 .taglist {
   a {
@@ -111,6 +111,7 @@
     padding: 20px;
     width: 100%;
   }
+  li:hover{ box-shadow: 0 0 5px rgba(0, 0, 0, .1)}
 }
 .new-right {
   width: 100%;

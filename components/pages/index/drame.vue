@@ -2,10 +2,10 @@
   <div>
     <div class="positionr">
       <img src="~/assets/images/index-d-bg.jpg" alt="" srcset="" class="hidden-xs">
-      <img src="~/assets/images/index/index-phone-bg.jpg" alt="" srcset="" class="visible-xs">
+      <img src="~/assets/images/index/index-phone-bg.jpg" alt="" srcset="" class="visible-xs ">
       <div class="positionb flex-item">
-        <img :src="dream.pcImg" alt="" srcset="" class="hidden-xs">
-        <img :src="dream.phoneImg" alt="" srcset="" class="visible-xs">
+        <img :src="dream.pcImg" alt="" srcset="" class="hidden-xs  ani">
+        <img :src="dream.phoneImg" alt="" srcset="" class="visible-xs  ani">
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
@@ -42,6 +42,7 @@
   .a3:hover{background:url('~@/assets/images/index/icon-dram-33.png') no-repeat 10px center #0aa5ea; color: #fff; }
 }
 .flex-npwarp{ flex-wrap: nowrap; align-items: center;padding-bottom: 20px;}
+
 @media screen  and ( max-width: 767px){
   .flex-npwarp{ flex-wrap: wrap; padding-bottom: 0;}
   .dram-btn{ display: flex; justify-content: space-between; width: 100%;

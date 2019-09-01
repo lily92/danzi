@@ -111,6 +111,11 @@ input, textarea, video, button, select, * { outline: none; }
 .w50 { width: 50%; }
 
 /**/
+.ani { animation: scaleto 1.5s; animation-iteration-count: infinite; }
+
+@keyframes scaleto { from { transform: scale(1); }
+  to { transform: scale(1.1); } }
+
 @media (min-width: 768) { .container { width: 90%; max-width: 1195px; } }
 
 @media (min-width: 1200px) { .container { width: 1200px; } }

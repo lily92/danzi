@@ -42,7 +42,7 @@
         </a>
       </div>
 
-      <div class="swiper-pagination" />
+      <div class="swiper-pagination swiper-pagination-banner" />
       <!-- <div class="swiper-button-prev" />
       <div class="swiper-button-next" />-->
     </swiper>
@@ -107,7 +107,7 @@ export default {
         loop: true,
         // If we need pagination
         pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-pagination-banner',
           clickable: true,
         },
         // observer: true,

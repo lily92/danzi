@@ -4,8 +4,8 @@
       <img src="~/assets/images/index-d-bg.jpg" alt srcset class="hidden-xs">
       <img src="~/assets/images/index/index-phone-bg.jpg" alt srcset class="visible-xs">
       <div class="positionb flex-item">
-        <img :src="sociology.pcImg" alt srcset class="hidden-xs">
-        <img :src="sociology.phoneImg" alt srcset class="visible-xs">
+        <img :src="sociology.pcImg" alt srcset class="hidden-xs ani">
+        <img :src="sociology.phoneImg" alt srcset class="visible-xs ani">
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">

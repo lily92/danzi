@@ -16,14 +16,14 @@
       <div class="w55 positionr">
         <swiper :options="options" class="about-swiper">
           <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
-            <div v-for="(item,i) in aboutlist" :key="'about'+i" class="swiper-slide">
+            <div v-for="(item,i) in aboutlist" :key="'about'+i" class="swiper-slide" @click="showVideoFun(item)">
               <div class="positionr">
                 <img src="~/assets/images/index/index-about-imgbg.jpg" alt srcset class="w100">
-                <div class="positionb">
+                <div class="positionb scale">
                   <img :src="item.videoPoster" alt srcset class="w100">
                 </div>
                 <div class="positionb flex-item master">
-                  <img src="~/assets/images/index/icon-player.png" alt srcset>
+                  <img src="~/assets/images/index/icon-player.png" alt srcset class="icon-player trans">
                 </div>
                 <div class="text flex flex-between">
                   <div class="text-left">
@@ -41,10 +41,11 @@
         <div class="w32 hidden-xs" />
         <div class="swiper-pagination index-about-pagination" />
         <div class="number color6 hidden-xs">
-          0{{ number }}
+          0{{ number +1 }}
         </div>
       </div>
     </div>
+    <Videomster v-if="showVideo" :video="video" @close="closevideo" />
   </div>
 </template>
 <style>
@@ -133,6 +134,7 @@
   color: #fff;
   background: #00a2e9;
 }
+.more:hover{ background: #0498d9}
 .master {
   background: rgba($color: #000000, $alpha: 0.4);
 }
@@ -146,7 +148,14 @@
   padding: 10px 20px;
   background-size: cover;
 }
-
+.icon-player{ max-width: 80px;}
+.about-swiper{
+  .swiper-slide{ cursor: pointer;}
+  .swiper-slide:hover{
+    .icon-player{ transform: scale(0.9)}
+    .scale img{ transform: scale(1.1); transition: .3s linear all}
+  }
+}
 @media screen and (max-width: 767px) {
   .w40 {
     margin-bottom: 20px;
@@ -162,21 +171,25 @@
 </style>
 <script>
 import Swiper from '../../base/swiper'
+import Videomster from '../../base/video'
 export default {
   components: {
     Swiper,
+    Videomster,
   },
   props: ['aboutdesc', 'aboutlist'],
   data() {
     return {
       number: 1,
+      showVideo: false,
       options: {
         slidesPerView: 2,
         spaceBetween: 30,
         centeredSlides: true,
-        loop: true,
+        loop: false,
+        autoplay: true,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.index-about-pagination',
           clickable: true,
         },
         breakpoints: {
@@ -203,6 +216,10 @@ export default {
           },
         },
       },
+      video: {
+        poster: '',
+        url: '',
+      },
     }
   },
   mounted() {
@@ -215,9 +232,10 @@ export default {
         slidesPerView: 2,
         spaceBetween: 30,
         centeredSlides: true,
-        loop: true,
+        loop: false,
+        autoplay: true,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.index-about-pagination',
           clickable: true,
         },
         breakpoints: {
@@ -246,6 +264,14 @@ export default {
         },
       }
       _this.options = options
+    },
+    closevideo() {
+      this.showVideo = false
+    },
+    showVideoFun(item) {
+      this.video.poster = item.videoPoster
+      this.video.url = item.videoUrl
+      this.showVideo = true
     },
   },
 }
