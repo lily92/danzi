@@ -111,10 +111,11 @@ input, textarea, video, button, select, * { outline: none; }
 .w50 { width: 50%; }
 
 /**/
-.ani { animation: scaleto 1.5s; animation-iteration-count: infinite; }
+.ani { animation: scaleto 1.5s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53); }
 
-@keyframes scaleto { from { transform: scale(1); }
-  to { transform: scale(1.1); } }
+@keyframes scaleto { 10% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); } }
 
 @media (min-width: 768) { .container { width: 90%; max-width: 1195px; } }
 

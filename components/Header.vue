@@ -40,7 +40,9 @@
                           <img :src="subitem.img" alt srcset>
                         </div>
                       </div>
-                      <p>{{ subitem.name }}</p>
+                      <p class="animated delay15 fadeInUp">
+                        {{ subitem.name }}
+                      </p>
                     </nuxt-link>
                   </dd>
                 </dl>
@@ -190,7 +192,7 @@ export default {
 
 <style lang="scss" scoped>
 $colorb: #00a2e9;
-
+.delay15{ animation-delay: 1.5s}
 .logo-fix {
   position: fixed;
   left: 40px;
@@ -321,6 +323,7 @@ $colorb: #00a2e9;
       color: #333 !important;
       display: block;
     }
+    a:hover { color: $colorb !important}
     dd {
       // flex: 1;
       width: 16.66%;

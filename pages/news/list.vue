@@ -71,8 +71,9 @@
   }
   li:hover {
     .new-desc {
-      height: 100%;
+      min-height: 100%;
       transition: .3s linear all;
+      max-height: 100%;
     }
     .line22 {
       height: auto;

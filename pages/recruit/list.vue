@@ -61,7 +61,7 @@
     cursor: pointer;
   }
   .desc {
-    height: 0;
+    height: 0; transition: .3s linear all; opacity: 0;
   }
   .scale {
     overflow: hidden;
@@ -70,7 +70,7 @@
     cursor: pointer;
   }
   li:hover .desc {
-    height: auto;
+    height: 105px; opacity: 1;
   }
   li:hover .scale img {
     transform: scale(1.1);

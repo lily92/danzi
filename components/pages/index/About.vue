@@ -92,14 +92,14 @@
     bottom: 0;
     padding: 0;
   }
-  .index-about-pagination .number {
+  .w55 .number {
     position: absolute;
     bottom: 100px;
     left: 22%;
     z-index: 2;
     padding-bottom: 30px;
   }
-  .index-about-pagination .number::after {
+  .w55 .number::after {
     height: 30px;
     border-right: 1px solid #bcbcbc;
     position: absolute;

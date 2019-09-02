@@ -119,6 +119,7 @@ export default {
   data() {
     return {
       options: {
+        mousewheel: true,
         // direction: 'vertical',
         pagination: {
           el: '.swiper-pagination-shop',
@@ -141,6 +142,8 @@ export default {
       const _this = this
       const options = {
         // direction: 'vertical',
+        mousewheel: true,
+        loop: true,
         pagination: {
           el: '.swiper-pagination-shop',
           clickable: true,
