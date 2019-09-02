@@ -232,7 +232,8 @@ select,
 }
 
 @media (max-width: 767px) {
-    body{ font-size: 12px;}
+    .container{ padding-left: 0; padding-right: 0}
+    .phone-container{ padding-left: 15px !important; padding-right: 15px !important;}
     .padding50{ padding-top: 25px; padding-bottom: 25px;}
     .padding25{ padding-top: 12px; padding-bottom: 12px;}
     .padding-t100{ padding-top: 70px;}

@@ -10,13 +10,14 @@
       <img :src="bgimg" alt srcset class="w100">
     </div>
     <div class="positionb">
-      <div class="container h100 padding25 colorf">
+      <div class="container h100 padding25 colorf phone-container overfy">
         <div class="context" v-html="detail" />
       </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
+.overfy{ overflow-y: auto; overflow-x: hidden;}
 .colorf {
   color: #fff;
 }

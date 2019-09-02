@@ -27,7 +27,7 @@ export default {
     ],
     script: [
       // { src: 'https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js' },
-      // { src: 'https://cdn.jsdelivr.net/npm/swiper/dist/js/swiper.min.js' },
+      { src: 'http://api.map.baidu.com/api?v=2.0&ak=t54efmF5G4KExHXVR7O7gLIQ8kHxcgz1' },
       //  { src: 'https://cdn.bootcss.com/baguettebox.js/1.11.0/baguetteBox.min.js' },
 
     ],

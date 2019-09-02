@@ -1,5 +1,6 @@
 <template>
   <div class="shop positionr">
+    <div class="swiper-pagination-shop" />
     <swiper id="banner-swiper" :options="options" class="banner-swiper">
       <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
         <div v-for="(item,i) in bannerlist" :key="'shopbanner'+i" class="swiper-slide">
@@ -31,7 +32,6 @@
         </div>
       </div>
     </swiper>
-    <div class="swiper-pagination-shop" />
   </div>
 </template>
 <style lang="scss" scoped >
@@ -39,14 +39,28 @@
   margin-left: 100px;
 }
 .qrcode-list {
+  justify-content: space-between;
   .qrcode-p {
     padding: 5px 0;
   }
   li {
-    width: 20%;
+    width: 19.5%;
     padding: 0 10px;
   }
 }
+@media screen and (max-width: 767px) {
+#banner-swiper{ margin-left: 0;}
+.qrcode-list {
+  .qrcode-p {
+    padding: 5px 0;
+  }
+  li {
+    width: 33.33%;
+    padding: 0 5px;
+  }
+}
+}
+
 </style>
 <style lang="scss">
 .swiper-pagination-shop {
@@ -64,6 +78,7 @@
     font-weight: normal;
     max-width: 100px;
     text-align: right;
+    cursor: pointer;
   }
   .swiper-pagination-bullet {
     position: relative;
@@ -88,6 +103,11 @@
     top: -4px;
   }
 }
+@media screen and (max-width: 767px) {
+  .swiper-pagination-shop { position: static;}
+.swiper-pagination-shop label{ right: auto; text-align: left; left: 20px;}
+}
+
 </style>
 <script>
 import Swiper from '~/components/base/swiper.vue'

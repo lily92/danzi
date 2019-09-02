@@ -83,7 +83,7 @@
 @media screen and (max-width: 767px) {
   .flex-npwarp {
     flex-wrap: wrap;
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
   }
   .dram-btn {
     display: flex;

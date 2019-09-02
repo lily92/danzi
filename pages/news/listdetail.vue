@@ -129,6 +129,7 @@ export default {
 }
 
 @media (max-width: 767px) {
+  .main-con{ padding: 20px 15px;}
   .page-prevnext.flex-item {
     a {
       width: 100%;

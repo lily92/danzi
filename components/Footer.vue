@@ -1,22 +1,24 @@
 <template>
   <div class="footer padding50">
-    <footer class="clearfix container  ">
-      <div class="flex-between flex col-sm-12">
-        <div class="col-sm-6">
-          <p class="fon16">
-            <b>联系方式</b>
-          </p>
-          <div class="footer copy-right" v-html="footer.copyRight" />
-        </div>
-        <div class="col-sm-6 flex text-center flex-end">
-          <div v-for="(item,i) in footer.qrcode" :key="'qrcode'+i" class="qrcode">
-            <div class="positionr">
-              <img src="~/assets/images/index/qrcode-1.jpg" alt srcset class="visible-hidden">
-              <div class="positionb">
-                <img :src="item.img" alt srcset>
+    <footer class="clearfix container phone-container  ">
+      <div class="flex-between flex  ">
+        <div class="row w100 ">
+          <div class="col-sm-6">
+            <p class="fon16">
+              <b>联系方式</b>
+            </p>
+            <div class="footer copy-right" v-html="footer.copyRight" />
+          </div>
+          <div class="col-sm-6 flex text-center flex-end">
+            <div v-for="(item,i) in footer.qrcode" :key="'qrcode'+i" class="qrcode">
+              <div class="positionr">
+                <img src="~/assets/images/index/qrcode-1.jpg" alt srcset class="visible-hidden">
+                <div class="positionb">
+                  <img :src="item.img" alt srcset>
+                </div>
               </div>
+              <p>{{ item.text }}</p>
             </div>
-            <p>{{ item.text }}</p>
           </div>
         </div>
       </div>
@@ -36,6 +38,7 @@
   }
 }
 @media (max-width: 767px) {
+   .phone-container{ padding-left: 15px !important; padding-right: 15px !important;}
   .footer {
     .qrcode {
       margin-left: 0;
@@ -45,6 +48,7 @@
     .flex-end{ justify-content: flex-start; margin-top: 20px; border-left: 0;}
     .flex-between{ justify-content: flex-start;}
   }
+  // .flex-between.flex.col-sm-12{ margin-left: -15px; margin-right: -15px}
 
 }
 @media (min-width: 992px) {

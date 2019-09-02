@@ -7,9 +7,9 @@
           :key="'tbanner'+item.id+index"
           class="swiper-slide positionr"
         >
-          <img src="~/assets/images/about/about-ky-bg.jpg" alt="" srcset="">
+          <img src="~/assets/images/about/about-ky-bg.jpg" alt="" srcset="" class="w100">
           <div class="positionb">
-            <img :src="item.img" alt="" srcset="">
+            <img :src="item.img" alt="" srcset="" class="w100">
           </div>
         </div>
       </div>

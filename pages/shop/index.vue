@@ -13,7 +13,7 @@
         </div>
         <div>
           <ul class="clearfix row shop-list text-center">
-            <li v-for="(item,i) in list" :key="'shop'+i" class="col-sm-3">
+            <li v-for="(item,i) in list" :key="'shop'+i" class="col-sm-3 col-xs-6">
               <a :href="item.url" target="_blank">
                 <div class="positionr">
                   <img src="~/assets/images/shop-icon.jpg" alt srcset class="w100">
@@ -54,6 +54,9 @@
   padding: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .channel,.shopbanner{ padding: 15px}
+}
 </style>
 <script>
 import Banner from '~/components/pages/shop/Banner.vue'

@@ -1,12 +1,12 @@
 <template>
   <div class="loctat bgf7">
     <div class="container location" :data-link="link">
-      <div class="col-sm-12 flex  loctat-nowarp ">
+      <div class=" flex  loctat-nowarp ">
         <span
           v-for="(item,index) in submenu"
           :key="'locat'+index"
           class="location-li"
-          :class="[lastMenu.id==item.id?'cur':'']"
+          :class="[lastMenu.id==item.id?'cur':'','location-li'+index]"
         >
           <img :src="item.icon" alt="" srcset="" class="item-icon">
           <img :src="item.iconHover" alt="" srcset="" class="item-hover">
@@ -27,6 +27,7 @@ a{ text-decoration: none;}
   .item-hover{ display: none;}
   .a1{ padding-left: 5px;}
 }
+.location-li0{ padding-left: 0; border-left: 0pt}
 .col-sm-12 .location-li:first-child{ border-left: 0;}
 .location-li:hover,.location-li.cur{
   .item-icon{ display: none;}

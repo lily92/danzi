@@ -5,7 +5,7 @@
     <Location :navlist="navList" :navid="navIndex" :current="menuId" />
     <nuxt />
 
-    <Footer :navlist="navList" />
+    <Footer />
   </div>
 </template>
 <script>

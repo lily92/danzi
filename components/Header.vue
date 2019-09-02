@@ -8,7 +8,12 @@
         <div class="header-right flex-item pull-right">
           <nav>
             <ul class="flex-item">
-              <li v-for="(item,index) in navlist" :key="'b'+item.id+index" :class="{'active':item.isShow}" @mouseenter="showPhoneMenu(index)">
+              <li
+                v-for="(item,index) in navlist"
+                :key="'b'+item.id+index"
+                :class="{'active':item.isShow}"
+                @mouseenter="showPhoneMenu(index)"
+              >
                 <nuxt-link
                   class="links"
                   :to="item.link"
@@ -18,7 +23,7 @@
                   <span v-show="item.submenu.length>0" class="icon-down" />
                 </nuxt-link>
 
-                <dl v-show="item.submenu.length>0" class="flex nav-dl" @mouseout="hideDown(index)">
+                <dl v-show="item.submenu.length>0" class="flex nav-dl">
                   <dd>
                     <span class="colorb fon48">{{ item.txtOne }}</span>
                     <span class="color3 fon20">{{ item.txtTwo }}</span>
@@ -78,8 +83,8 @@
           >
             <dt>
               <div class="pull-right phone-more visible-xs" @click="showPhoneMenu(index)">
-                <span v-show="item.isShow">-</span>
-                <span v-show="!item.isShow">+</span>
+                <span v-show="item.isShow || item.submenu.length==0 ">-</span>
+                <span v-show="!item.isShow && item.submenu.length>0 ">+</span>
               </div>
               <nuxt-link :to="item.link" @click.native="showMenu(true)">
                 {{ item.menu }}
@@ -114,6 +119,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import debounce from '~/helper/utils.js'
 export default {
   name: 'Headers',
   props: ['navi', 'navl', 'navid'],
@@ -168,11 +174,15 @@ export default {
       this.showMenuFix = !this.showMenuFix
     },
     hideDown(index) {
-      this.navlistIndex = this.navlistIndex === index ? -1 : index
+      debounce(() => {
+        this.navlistIndex = this.navlistIndex === index ? -1 : index
+      }, 10)
     },
 
     showPhoneMenu(index) {
-      this.navlistIndex = this.navlistIndex === index ? -1 : index
+      debounce(() => {
+        this.navlistIndex = this.navlistIndex === index ? -1 : index
+      }, 400)
     },
   },
 }
@@ -305,7 +315,7 @@ $colorb: #00a2e9;
 
   .nav-dl {
     // justify-content: space-between;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     a {
       color: #333 !important;
@@ -344,13 +354,17 @@ $colorb: #00a2e9;
   nav ul li.active a.links {
     color: $colorb;
   }
+  nav ul li {
+    margin: 0 8px;
+  }
   nav ul a {
     color: #000;
     display: block;
     line-height: 100px;
-    padding: 0 8px;
+    // padding: 0 8px;
     font-size: 13px;
   }
+
   nav ul a.link.current {
     background: $colorb;
     color: #fff;
@@ -369,7 +383,7 @@ $colorb: #00a2e9;
     transform: translateY(-200%);
   }
 
-  nav ul li.active dl{
+  nav ul li.active dl {
     transition: 0.3s linear all;
     opacity: 1;
     transform: translateY(0);
@@ -453,8 +467,11 @@ $colorb: #00a2e9;
   .container {
     width: 970px;
   }
+  nav ul li {
+    margin: 0 15px;
+  }
   nav ul a {
-    padding: 0 15px;
+    // padding: 0 15px;
     font-size: 16px;
   }
   .fon48 {
@@ -468,8 +485,11 @@ $colorb: #00a2e9;
   .container {
     width: 1170px;
   }
+  nav ul li {
+    margin: 0 30px;
+  }
   nav ul a {
-    padding: 0 30px;
+    // padding: 0 30px;
   }
   .fon48 {
     font-size: 48px;

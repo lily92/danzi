@@ -5,7 +5,7 @@
       <nuxt />
     </div>
 
-    <Footer :navlist="navList" />
+    <Footer />
   </div>
 </template>
 <script>

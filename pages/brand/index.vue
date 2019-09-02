@@ -1,6 +1,6 @@
 <template>
   <div class="padding-t100">
-    <Banner />
+    <Banner class="phone" />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -25,6 +25,9 @@
       max-width: auto;
     }
   }
+}
+@media screen and (max-width: 767px) {
+  .phone{ padding: 25px 0;}
 }
 </style>
 <script>

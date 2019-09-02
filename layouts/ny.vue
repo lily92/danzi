@@ -4,7 +4,7 @@
     <BannerNy :menuid="menuId" />
     <nuxt />
 
-    <Footer :navlist="navList" />
+    <Footer />
   </div>
 </template>
 <script>

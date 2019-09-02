@@ -7,7 +7,7 @@
     <!--star 创一流品牌 -->
     <div class="padding25">
       <div class="container max767">
-        <div class="index-h3">
+        <div class="index-h3 phone-container">
           <span class="colorb">创</span>
           <span class="color0">一流品牌</span>
         </div>
@@ -19,7 +19,7 @@
 
     <!--star 造成长梦想 -->
     <div class="bgf7 padding25">
-      <div class="container">
+      <div class="container phone-container">
         <div class="index-h3">
           <span class="colorb">造</span>
           <span class="color0">成长梦想</span>
@@ -31,7 +31,7 @@
 
     <!--star 誓造福社会 -->
     <div class="padding25">
-      <div class="container">
+      <div class="container phone-container">
         <div class="index-h3">
           <span class="colorb">誓</span>
           <span class="color0">造福社会</span>
@@ -43,7 +43,7 @@
 
     <!--star 聚百家之言 -->
     <div class="padding25 bgf7">
-      <div class="container">
+      <div class="container phone-container">
         <div class="index-h3">
           <span class="colorb">聚</span>
           <span class="color0">百家之言</span>

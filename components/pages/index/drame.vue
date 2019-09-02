@@ -44,7 +44,7 @@
 .flex-npwarp{ flex-wrap: nowrap; align-items: center;padding-bottom: 20px;}
 
 @media screen  and ( max-width: 767px){
-  .flex-npwarp{ flex-wrap: wrap; padding-bottom: 0;}
+  .flex-npwarp{ flex-wrap: wrap; padding-bottom: 0 !important;}
   .dram-btn{ display: flex; justify-content: space-between; width: 100%;
    a{ width: 33%}
   }

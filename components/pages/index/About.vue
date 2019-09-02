@@ -1,6 +1,6 @@
 <template>
   <div class="bgf7 about-bg">
-    <div class="container flex flex-between">
+    <div class="container flex flex-between phone-container">
       <div class="w40">
         <div class="index-h3">
           <span class="colorb">树</span>
@@ -92,14 +92,14 @@
     bottom: 0;
     padding: 0;
   }
-  .number {
+  .index-about-pagination .number {
     position: absolute;
     bottom: 100px;
     left: 22%;
     z-index: 2;
     padding-bottom: 30px;
   }
-  .number::after {
+  .index-about-pagination .number::after {
     height: 30px;
     border-right: 1px solid #bcbcbc;
     position: absolute;

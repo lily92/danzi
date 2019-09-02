@@ -1,23 +1,31 @@
 <template>
   <div class="bgf7">
-    <div class="container">
+    <div class="container phone-container">
       <form action class="flex form padding25">
         <div class="item">
           <select v-model="departmentId" name placeholder="招聘部门" class="select">
-            <option value="">
+            <option value>
               招聘部门
             </option>
-            <option v-for="(item,i) in departmentList" :key="'departmentList'+i" :value="item.id">
+            <option
+              v-for="(item,i) in departmentList"
+              :key="'departmentList'+i"
+              :value="item.id"
+            >
               {{ item.text }}
             </option>
           </select>
         </div>
         <div class="item margin20">
           <select v-model="cityId" name placeholder="工作地点" class="select">
-            <option value="">
+            <option value>
               工作地点
             </option>
-            <option v-for="(item,i) in cityList" :key="'cityList'+i" :value="item.id">
+            <option
+              v-for="(item,i) in cityList"
+              :key="'cityList'+i"
+              :value="item.id"
+            >
               {{ item.text }}
             </option>
           </select>
@@ -43,7 +51,7 @@
             <div class="item1">
               {{ item.city }}
             </div>
-            <div class="item2">
+            <div class="item2 hidden-xs">
               {{ item.date }}
             </div>
             <div class>
@@ -78,7 +86,8 @@
               <div v-html="item.zige" />
             </div>
             <div>
-              <a class="send-btn margin25 text-center">如果您适合这个岗位要求，请将您的简历发送到
+              <a class="send-btn margin25 text-center">
+                如果您适合这个岗位要求，请将您的简历发送到
                 {{ item.mail }}
               </a>
             </div>
@@ -90,7 +99,14 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.lin24{ line-height: 24px; display: block; width: 24px; height: 24px; text-align: center; cursor: pointer;}
+.lin24 {
+  line-height: 24px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
 .flex-nowarp {
   flex-wrap: nowrap;
 }
@@ -122,13 +138,22 @@
     margin: 0 20px;
   }
 }
-.re-con{  height: 0; display: none;}
+.re-con {
+  height: 0;
+  display: none;
+}
 .re-list {
-  li{ margin-bottom: 30px;}
-  li.active .re-con{ height: auto; display: block;}
+  li {
+    margin-bottom: 30px;
+  }
+  li.active .re-con {
+    height: auto;
+    display: block;
+  }
   .title {
     padding: 20px 15px;
-    border-bottom: 1px solid #f7f7f7; align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+    align-items: center;
   }
   .item1 {
     flex: 1;
@@ -140,13 +165,28 @@
     padding: 15px;
   }
 }
-.flex-1{
-  div{ flex: 1;}
+.flex-1 {
+  div {
+    flex: 1;
+  }
 }
-.send-btn{
-  display: block; width: 100%; padding: 10px 10px; background: #00a2e9; color: #fff;
+.send-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  background: #00a2e9;
+  color: #fff;
 }
-
+@media screen and (max-width: 767px) {
+  .flex-1 {
+    div {
+      flex: inherit;
+      width: 100%;margin-bottom: 2px;
+    }
+  }
+  .form .item{ flex:inherit; width: 100%; margin-bottom: 5px;}
+  .form .item.margin20{ margin: 0 0 5px 0; }
+}
 </style>
 <script>
 export default {
@@ -180,11 +220,17 @@ export default {
       this.activeIndex = this.activeIndex === index ? -1 : index
     },
     searchJob() {
-      this.$axios.$post('recruit/job', { 'departmentId': this.departmentId, 'cityId': this.cityId, 'keyword': this.keyword }).then((res) => {
-        if (res.code === '1001') {
-          this.list = res.list
-        }
-      })
+      this.$axios
+          .$post('recruit/job', {
+            departmentId: this.departmentId,
+            cityId: this.cityId,
+            keyword: this.keyword,
+          })
+          .then((res) => {
+            if (res.code === '1001') {
+              this.list = res.list
+            }
+          })
     },
   },
 }

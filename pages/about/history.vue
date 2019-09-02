@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="positionr">
-      <img src="~/assets/images/about/history-bg.jpg" alt="" srcset="" class="w100">
+      <img src="~/assets/images/about/history-bg.jpg" alt="" srcset="" class="w100 phone">
       <div class="positionb">
         <History :list="list" />
         <!-- <img src="~/assets/images/about/history-bg.jpg" alt="" srcset="" class="w100"> -->
@@ -10,7 +10,9 @@
   </div>
 </template>
 <style lang="scss" scoped>
-
+@media screen and (max-width: 767px) {
+  .phone{ height:80vh;}
+}
 </style>
 <script>
 import History from '~/components/pages/about/history.vue'

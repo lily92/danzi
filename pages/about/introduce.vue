@@ -60,10 +60,13 @@
   width: 26.2%;
 }
 .introduct-con{ padding: 25px 0; min-height: 400px;}
+
+
 @media screen and  (max-width: 767px){
    .w30{ width: 100%;}
    .w40{ width: 100%;}
    .w26{width: 100%;}
+   .introduct-con{ padding-left: 15px; padding-right: 15px;}
 }
 </style>
 <script>

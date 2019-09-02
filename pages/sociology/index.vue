@@ -15,9 +15,9 @@
             </div>
           </div>
           <div class="w50 positionr">
-            <img src="~/assets/images/shehui-1.jpg" alt srcset>
+            <img src="~/assets/images/shehui-1.jpg" alt srcset class="w100">
             <div class="positionb flex-item">
-              <img :src="item.img" alt srcset>
+              <img :src="item.img" alt srcset class="w100">
             </div>
           </div>
         </li>
