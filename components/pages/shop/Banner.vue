@@ -51,6 +51,7 @@
 @media screen and (max-width: 767px) {
 #banner-swiper{ margin-left: 0;}
 .qrcode-list {
+  justify-content: flex-start;
   .qrcode-p {
     padding: 5px 0;
   }
