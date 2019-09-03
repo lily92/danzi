@@ -100,7 +100,7 @@
 @media screen and (max-width: 767px) {
   .list {
     .line2 {
-      height: 40px;
+      height: 50px;
     }
     .margin-top {
       margin-top: 10px;

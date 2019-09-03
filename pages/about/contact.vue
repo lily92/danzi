@@ -19,7 +19,7 @@
             <p>For your support</p>
           </div>
         </div>
-        <div class="col-sm-6 ">
+        <div class="col-sm-6 col-xs-12 ">
           <!-- 提交表单 -->
           <From />
         </div>
@@ -97,6 +97,7 @@
       width: 100%;
     }
   }
+  .contact-form .row{ margin-left: 0; margin-right: 0;}
 }
 </style>
 <style>
