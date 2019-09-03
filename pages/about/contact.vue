@@ -1,7 +1,7 @@
 <template>
   <div class="contact container phone-container">
     <div class="contact-form flex clearfix w100">
-      <div class="row w100">
+      <div class="row w100 flex">
         <div class="col-sm-6 flex contact-line ">
           <div class="w100">
             <h3 class="fon-impact fon24">

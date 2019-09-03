@@ -47,16 +47,17 @@
     cursor: pointer; margin-bottom: 30px;
   }
   .new-desc {
-    min-height: 35%;
+    height: 35%;
     background: #fff;
     bottom: 0;
     width: 100%;
     padding: 15px;
     position: absolute; transition: .3s linear all;
-    height: auto;
+    height: 35%;
     p{ width: 100%}
     div{ width: 100%}
   }
+  .line2{ height: 46px;}
   .line22 {
     margin: 5px 0;
     height: 48px;
@@ -71,7 +72,7 @@
   }
   li:hover {
     .new-desc {
-      min-height: 100%;
+      height: 100%;
       transition: .3s linear all;
       max-height: 100%;
     }

@@ -77,7 +77,7 @@
 }
 .flex-npwarp {
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-end;
   padding-bottom: 20px;
 }
 @media screen and (max-width: 767px) {

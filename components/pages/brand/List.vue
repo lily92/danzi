@@ -48,7 +48,7 @@
 <style lang="scss" scoped>
 .list {
   li {
-    margin-bottom: 30px;
+    margin-bottom: 30px; cursor: pointer;
   }
   li .scale {
     overflow: hidden;
@@ -72,23 +72,27 @@
     max-width: 180px;
     margin: 0 auto;
   }
+  .nohover{ transition: .3s linear all}
   .hover {
-    display: none;
-    opacity: 0;
+    transition: .3s linear all;
     a {
       background: #00a2e9;
       color: #fff;
-      display: block;
+      height: 0;
+      transition: .3s linear all;
+      display: block; text-align: center; line-height: 0; font-size: 0; cursor: pointer;
     }
   }
-  li:hover .hover {
-    display: block;
+  li:hover .hover a {
     opacity: 1;
     height: 42px;
     line-height: 42px;
+    font-size: 14px;
+
+
   }
   li:hover .nohover {
-    display: none;
+    height:0;
     opacity: 0;
   }
 }

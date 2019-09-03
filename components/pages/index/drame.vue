@@ -30,7 +30,7 @@
 </template>
 <style lang="scss" scoped>
 .drame-con{ width: 100%; flex-shrink: 1; color: #fff; padding: 0 15px; height: 63px; overflow: hidden;}
-.bg-0{ background: url('~@/assets/images/index-bg-line1.png') no-repeat center bottom; width: 100%; height: 100%; align-content: flex-end;}
+.bg-0{ background: url('~@/assets/images/index-bg-line1.png') no-repeat center bottom; width: 100%; height: 100%; align-content: flex-end}
 .dram-btn{
   width: 332px; flex-shrink: 0;
   a{ display: inline-block; width: 105px; height: 60px; line-height: 60px; padding-left: 38px;}
@@ -41,7 +41,7 @@
   .a3{ background:url('~@/assets/images/index/icon-dram-3.png') no-repeat 10px center #ffffff; }
   .a3:hover{background:url('~@/assets/images/index/icon-dram-33.png') no-repeat 10px center #0aa5ea; color: #fff; }
 }
-.flex-npwarp{ flex-wrap: nowrap; align-items: center;padding-bottom: 20px;}
+.flex-npwarp{ flex-wrap: nowrap; align-items: flex-end;padding-bottom: 20px;}
 
 @media screen  and ( max-width: 767px){
   .flex-npwarp{ flex-wrap: wrap; padding-bottom: 0 !important;}

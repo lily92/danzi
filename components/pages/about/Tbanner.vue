@@ -77,6 +77,7 @@ export default {
         speed: 800,
         autoplay: {
           delay: 3000,
+          disableOnInteraction: false,
         },
         loop: true,
         pagination: {

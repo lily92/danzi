@@ -86,7 +86,7 @@
               <div v-html="item.zige" />
             </div>
             <div>
-              <a class="send-btn margin25 text-center">
+              <a class="send-btn margin25 text-center" :href="'mailto:'+item.mail">
                 如果您适合这个岗位要求，请将您的简历发送到
                 {{ item.mail }}
               </a>
@@ -130,6 +130,7 @@
     background: #fff;
     height: 35px;
     border-radius: 0;
+    padding: 0 0 0 10px;
   }
   .item {
     flex: 1;
@@ -186,6 +187,10 @@
   }
   .form .item{ flex:inherit; width: 100%; margin-bottom: 5px;}
   .form .item.margin20{ margin: 0 0 5px 0; }
+  .re-list {
+    .title{ padding: 10px 5px;}
+    li{ margin-bottom: 10px;}
+  }
 }
 </style>
 <script>

@@ -11,6 +11,9 @@ export default {
       type: Object,
       default: () => ({
         direction: 'vertical',
+        autoplay: {
+          disableOnInteraction: false,
+        },
         loop: true,
         // If we need pagination
         pagination: {
@@ -46,10 +49,7 @@ export default {
   methods: {
     async init() {
       if (!process.client) return
-      await load([
-        '/js/swiper.min.js',
-        '/css/swiper.min.css',
-      ], 'swiper')
+      await load(['/js/swiper.min.js', '/css/swiper.min.css'], 'swiper')
 
       const Swiper = window.Swiper
 
