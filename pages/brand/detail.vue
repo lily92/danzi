@@ -73,7 +73,7 @@
   .brand-link {
     margin-top: 20px;
     a {
-      margin-right: 10px;
+      margin-right: 10px; margin-bottom: 5px;
     }
   }
   a:hover,
@@ -98,6 +98,11 @@
 }
 .video:hover .icon-player {
   transform: scale(0.9);
+}
+@media screen and (max-width: 992px) {
+ .bg0 {
+    padding: 10px 30px;
+  }
 }
 @media screen and (max-width: 767px) {
   .bg0 {
