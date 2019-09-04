@@ -1,13 +1,13 @@
 {
-  "name": "anran",
+  "name": "danzi",
   "version": "1.0.0",
-  "description": "anran",
+  "description": "danzi",
   "author": "lily",
   "private": true,
   "scripts": {
     "dev": "nuxt --port 3000",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt start --port 39888",
     "generate": "nuxt generate",
     "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
