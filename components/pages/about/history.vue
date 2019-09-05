@@ -6,7 +6,7 @@
         <div v-for="(item,i) in list" :key="'history'+i" class="swiper-slide flex-item">
           <div class="positionr max280">
             <img src="~/assets/images/about/history-img-bg.jpg" alt srcset class="w100">
-            <div class="positionb flex-item">
+            <div class="positionb ">
               <img :src="item.img" alt srcset class="w100">
             </div>
             <div class="positionb flex-item master">
@@ -145,6 +145,7 @@ $color6: #666;
 @media screen and (max-width: 767px) {
   // .gallery-top .swiper-slide{margin-left: 25px;}
   .gallery-top .swiper-slide::after,.gallery-top .swiper-slide::before{ display: none;}
+  .history .master{ position: static; opacity: 1 !important;}
 }
 </style>
 <style lang="scss">
@@ -160,9 +161,11 @@ $color6: #666;
   left: 295px;
   top: 49.8%;
 }
-.gallery-top .swiper-slide-active .master {
+.gallery-top .swiper-slide:hover .master  {
   opacity: 1;
+  cursor: pointer;
 }
+
 </style>
 
 <script>

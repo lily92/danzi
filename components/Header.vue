@@ -23,7 +23,7 @@
                   <span v-show="item.submenu.length>0" class="icon-down" />
                 </nuxt-link>
 
-                <dl v-show="item.submenu.length>0" class="flex nav-dl">
+                <dl v-show="item.submenu.length>0" class="flex nav-dl" @mouseleave="hideDown(index)">
                   <dd>
                     <span class="colorb fon48">{{ item.txtOne }}</span>
                     <span class="color3 fon20">{{ item.txtTwo }}</span>
@@ -34,10 +34,10 @@
                       :data-menuid="subitem.id"
                       @click.native="hideDown(i)"
                     >
-                      <div class="positionr">
-                        <img src="~/assets/images/index/nav-img-bg.jpg" alt srcset>
+                      <div class="positionr w100 overflow-hidden">
+                        <img src="~/assets/images/index/nav-img-bg.jpg" alt srcset class="w100">
                         <div class="positionb scale">
-                          <img :src="subitem.img" alt srcset>
+                          <img :src="subitem.img" alt srcset class="w100">
                         </div>
                       </div>
                       <p class="animated delay15 fadeInUp">
@@ -178,7 +178,7 @@ export default {
     hideDown(index) {
       debounce(() => {
         this.navlistIndex = this.navlistIndex === index ? -1 : index
-      }, 10)
+      }, 200)
     },
 
     showPhoneMenu(index) {
@@ -327,7 +327,7 @@ $colorb: #00a2e9;
     dd {
       // flex: 1;
       width: 16.66%;
-      padding: 0 15px;
+      padding: 0 20px;
     }
   }
   nav ul.flex-item {

@@ -23,6 +23,10 @@ a {
   color: #333;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -293,8 +297,8 @@ select,
 }
 
 .padding25 {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .fon-ar {
@@ -351,8 +355,8 @@ select,
     padding-bottom: 25px;
   }
   .padding25 {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 15px;
+    padding-bottom: 25px;
   }
   .padding-t100 {
     padding-top: 70px;

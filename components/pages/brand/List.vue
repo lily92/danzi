@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <ul class="list clearfix row hidden-xs">
       <li v-for="(item,i) in list" :key="'brand'+i" class="col-sm-3 col-xs-6">
         <div class="bg-bule">

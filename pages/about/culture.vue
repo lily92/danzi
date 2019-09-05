@@ -32,7 +32,7 @@
 .culture{ background: url('~@/assets/images/about/wenhua-bg.jpg') no-repeat center; background-size: cover; padding: 50px 0;}
 .cluture-list {
   align-items: center;
-  justify-content: space-between; width: 100%; padding: 0 5%;
+  justify-content: space-between; width: 100%; padding: 0 12%;
   li {
     width: 22%; cursor: pointer;
   }

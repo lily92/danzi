@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="positionr">
-      <img src="~/assets/images/about/history-bg.jpg" alt="" srcset="" class="w100 phone">
-      <div class="positionb">
+      <!-- <img src="~/assets/images/about/history-bg.jpg" alt="" srcset="" class="w100 phone"> -->
+      <div class="height60vh">
         <History :list="list" />
         <!-- <img src="~/assets/images/about/history-bg.jpg" alt="" srcset="" class="w100"> -->
       </div>
@@ -10,9 +10,11 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.height60vh{ height: 88vh; background: url('~@/assets/images/about/history-bg.jpg') no-repeat center; background-size: cover;}
 @media screen and (max-width: 767px) {
-  .phone{ height:80vh;}
+  .height60vh{ height:80vh;}
 }
+
 </style>
 <script>
 import History from '~/components/pages/about/history.vue'
