@@ -1,5 +1,5 @@
 <template>
-  <div class="loctat bgf7">
+  <div class="loctat bgf7" :class="bgf?'bgf':''">
     <div class="container location" :data-link="link">
       <div class=" flex  loctat-nowarp ">
         <span
@@ -18,6 +18,7 @@
 </template>
 <style lang="scss" scoped>
 $colorb: #00a2e9;
+.bgf{ background: #fff !important;}
 a{ text-decoration: none;}
 .location-li{
    width: 20%;
@@ -59,7 +60,7 @@ a{ text-decoration: none;}
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  props: ['navlist', 'navid', 'current'],
+  props: ['navlist', 'navid', 'current', 'bgf'],
   data() {
     return {
       submenu: [],

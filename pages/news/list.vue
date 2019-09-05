@@ -96,6 +96,7 @@
 <script>
 import Paging from '~/components/Paging.vue'
 export default {
+  layout: 'news',
   components: {
     Paging,
   },
