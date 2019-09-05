@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class>
     <!-- banner -->
     <div class="socal-banner positionr">
       <img
@@ -13,22 +13,18 @@
         class="visible-xs margin-auto visible-hidden w100"
       >
       <div class="positionb flex-item">
-        <img
-          :src="banner.bannerPC"
-          alt
-          class="hidden-xs margin-auto  w100"
-        >
-        <img
-          :src="banner.bannerPhone"
-          alt
-          class="visible-xs margin-auto  w100"
-        >
+        <img :src="banner.bannerPC" alt class="hidden-xs margin-auto w100">
+        <img :src="banner.bannerPhone" alt class="visible-xs margin-auto w100">
       </div>
-      <div class="positionb ">
+      <div class="positionb">
         <div class="container flex flex-end-center">
           <div class="text-center">
-            <p><img src="~/assets/images/jiji-1.png" alt="" srcset=""></p>
-            <div><img src="~/assets/images/line3.png" alt="" srcset=""></div>
+            <p>
+              <img src="~/assets/images/jiji-1.png" alt srcset>
+            </p>
+            <div>
+              <img src="~/assets/images/line3.png" alt srcset>
+            </div>
             <p class="guangwang">
               <a :href="banner.link" class="enter-link">进入官网</a>
             </p>
@@ -40,6 +36,7 @@
     <div class="bgf7 padding25">
       <ul class="container shehi-list">
         <li v-for="(item,i) in list" :key="'shehui'+i" class="flex">
+          <p :id="'s'+i" style="visible:hidden" class="w100" :name="'s'+i" />
           <div class="w50 flex-item bgf">
             <div>
               <p class="fon18">
@@ -63,7 +60,11 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.flex-end-center{ align-items: center; justify-content: flex-end; height: 100%;}
+.flex-end-center {
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
 .bgf {
   background: #fff;
   padding: 10px 30px 10px 50px;
@@ -83,10 +84,19 @@
     padding-bottom: 5px;
   }
 }
-.enter-link{ background: #00a2e9; color: #fff; border-radius: 3px; padding: 5px 20px;}
-.guangwang{ padding: 10px 0;}
+.enter-link {
+  background: #00a2e9;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 20px;
+}
+.guangwang {
+  padding: 10px 0;
+}
 @media screen and (max-width: 767px) {
-  .flex-end-center{ justify-content: center;}
+  .flex-end-center {
+    justify-content: center;
+  }
   .bgf {
     padding: 15px;
   }
@@ -109,6 +119,17 @@ export default {
     menuId() {
       return this.$store.state.menuId
     },
+    hashs() {
+      return this.$route.hash
+    },
+  },
+  watch: {
+    $route() {
+      // console.log(this.$route.hash)
+    },
+    hashs() {
+      this.$router.push({ path: '/sociology' + this.$route.hash })
+    },
   },
   async asyncData({ $axios }) {
     const res = await $axios.$post('sociology/index')
@@ -117,6 +138,10 @@ export default {
       list: res.list,
       banner: banner.banner,
     }
+  },
+  mounted() {
+    console.log(this.hashs)
+    this.$router.push({ path: '/sociology' + this.hashs })
   },
 }
 </script>
