@@ -49,6 +49,7 @@ a{ text-decoration: none;}
 
 @media (max-width: 767px) {
 .loctat-nowarp{ flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden;}
+.loctat { padding-left: 15px; padding-right: 15px;}
 }
 @media (max-width: 992px) {
 

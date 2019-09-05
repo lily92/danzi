@@ -13,9 +13,15 @@
             {{ sociology.desc }}
           </div>
           <div class="dram-btn">
-            <a href class="a1 trans">甘霖计划</a>
-            <a href class="a2 trans">百善计划</a>
-            <a href class="a3 trans">救灾行动</a>
+            <nuxt-link to="/sociology#a" class="a1 trans">
+              甘霖计划
+            </nuxt-link>
+            <nuxt-link to="/sociology#a" class="a2 trans">
+              百善计划
+            </nuxt-link>
+            <nuxt-link to="/sociology#a" class="a3 trans">
+              救灾行动
+            </nuxt-link>
           </div>
         </div>
       </div>
