@@ -37,7 +37,7 @@
     <!-- end banner -->
 
     <!--star  video -->
-    <div class="video container">
+    <div class="video ">
       <div class="padding25">
         <div class="positionr">
           <img src="~/assets/images/pinpai-video.jpg" alt srcset class="w100">

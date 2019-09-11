@@ -1,0 +1,10 @@
+{
+    "code":"1001",
+    "msg": "请求成功",
+    "banner":{
+        "bannerPC":"@img(1920,500)",
+        "bannerPhone":"@img(640,400)",
+        "link":"hitp://baidu.com"
+    }
+  
+  }

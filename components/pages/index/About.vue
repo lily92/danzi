@@ -16,13 +16,13 @@
       <div class="w55 positionr">
         <swiper :options="options" class="about-swiper">
           <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
-            <div v-for="(item,i) in aboutlist" :key="'about'+i" class="swiper-slide" @click="showVideoFun(item)">
+            <div v-for="(item,i) in aboutlist" :key="'about'+i" class="swiper-slide">
               <div class="positionr">
                 <img src="~/assets/images/index/index-about-imgbg.jpg" alt srcset class="w100">
                 <div class="positionb scale">
                   <img :src="item.videoPoster" alt srcset class="w100">
                 </div>
-                <div class="positionb flex-item master">
+                <div v-if="item.isvideo" class="positionb flex-item master" @click="showVideoFun(item)">
                   <img src="~/assets/images/index/icon-player.png" alt srcset class="icon-player trans">
                 </div>
                 <div class="text flex flex-between">

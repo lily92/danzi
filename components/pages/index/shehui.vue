@@ -13,13 +13,13 @@
             {{ sociology.desc }}
           </div>
           <div class="dram-btn">
-            <nuxt-link to="/sociology#a" class="a1 trans">
+            <nuxt-link to="/sociology#s0" class="a1 trans">
               甘霖计划
             </nuxt-link>
-            <nuxt-link to="/sociology#a" class="a2 trans">
+            <nuxt-link to="/sociology#s1" class="a2 trans">
               百善计划
             </nuxt-link>
-            <nuxt-link to="/sociology#a" class="a3 trans">
+            <nuxt-link to="/sociology#s2" class="a3 trans">
               救灾行动
             </nuxt-link>
           </div>
@@ -55,30 +55,30 @@
   }
   .a1 {
     background: url("~@/assets/images/index/icon-s-1.png") no-repeat 10px center
-      #ffffff;
+      #f7f7f7;
   }
   .a1:hover {
     background: url("~@/assets/images/index/icon-s-11.png") no-repeat 10px
       center #0aa5ea;
-    color: #fff;
+    color: #f7f7f7;
   }
   .a2 {
     background: url("~@/assets/images/index/icon-s-2.png") no-repeat 10px center
-      #ffffff;
+      #f7f7f7;
   }
   .a2:hover {
     background: url("~@/assets/images/index/icon-s-22.png") no-repeat 10px
       center #0aa5ea;
-    color: #fff;
+    color: #f7f7f7;
   }
   .a3 {
     background: url("~@/assets/images/index/icon-dram-3.png") no-repeat 10px
-      center #ffffff;
+      center #f7f7f7;
   }
   .a3:hover {
     background: url("~@/assets/images/index/icon-dram-33.png") no-repeat 10px
       center #0aa5ea;
-    color: #fff;
+    color: #f7f7f7;
   }
 }
 .flex-npwarp {

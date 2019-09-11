@@ -21,6 +21,7 @@ body {
   line-height: 1.5;
 }
 a{ color: #333;}
+.overflow-hidden{ overflow: hidden;}
 p {
   margin: 0;
   padding: 0;
@@ -205,7 +206,7 @@ select,
 .bgf{ background: #fff;}
 .text-uppercase{ text-transform: uppercase;}
 .margin25{ margin: 25px  auto;}
-.padding25{padding-top: 25px; padding-bottom: 25px;}
+.padding25{padding-top: 30px; padding-bottom:50px;}
 .fon-ar{ font-family: Arial, Helvetica, sans-serif}
 .w50{ width: 50%;}
 /**/
@@ -239,7 +240,7 @@ select,
     .container{ padding-left: 0; padding-right: 0}
     .phone-container{ padding-left: 15px !important; padding-right: 15px !important;}
     .padding50{ padding-top: 25px; padding-bottom: 25px;}
-    .padding25{ padding-top: 12px; padding-bottom: 12px;}
+    .padding25{ padding-top:15px; padding-bottom: 25px;}
     .padding-t100{ padding-top: 70px;}
     .fon24 {
       font-size:18px;

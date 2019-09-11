@@ -32,7 +32,9 @@
               <p class="new-type fon20">
                 {{ item.typeName }}
               </p>
-              <p>{{ item.newDate }}</p>
+              <p class="date">
+                {{ item.newDate }}
+              </p>
             </div>
           </div>
           <div class="new-right">
@@ -63,15 +65,16 @@
   align-items:initial;
 }
 .news-page {
-  bottom: 70px !important;
+  bottom: 80px !important;
 }
 .taglist {
   a {
     background: #00a2e9;
-    padding: 3px 5px;
+    padding: 3px;
     color: #fff;
     margin-right: 3px;
     margin-bottom: 3px;
+     line-height: 32px;
   }
 }
 .w35 {
@@ -87,6 +90,7 @@
 }
 .maxh42 {
   max-height: 42px;
+  height: 42px;
   overflow: hidden;
 }
 .new-left {
@@ -102,6 +106,7 @@
     padding: 10px 0 0 0;
     margin-bottom: 10px;
   }
+
 }
 .news-right {
   align-content: space-between;
@@ -127,6 +132,7 @@
   .w60{ width: 100%}
   .new-left{ width: 88px;}
   .news-right li{ padding: 10px; border-bottom: 0; margin-bottom: 15px;}
+  .new-left .date{ font-size: 12px;}
 }
 </style>
 
