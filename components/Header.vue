@@ -23,33 +23,30 @@
                   <span v-show="item.submenu !=null" class="icon-down" />
                 </nuxt-link>
 
-                <<<<<<< HEAD
-                <dl v-show="item.submenu !=null" class="flex nav-dl">
-                  =======
-                  <dl v-show="item.submenu.length>0" class="flex nav-dl" @mouseleave="hideDown(index)">
-                    >>>>>>> ecd61d97322c3f8c5b78a05e7b72dd9d3964f2f5
-                    <dd>
-                      <span class="colorb fon48">{{ item.txtOne }}</span>
-                      <span class="color3 fon20">{{ item.txtTwo }}</span>
-                    </dd>
-                    <dd v-for="(subitem, i) in item.submenu" :key="'a'+subitem.id+i">
-                      <nuxt-link
-                        :to="subitem.link"
-                        :data-menuid="subitem.id"
-                        @click.native="hideDown(i)"
-                      >
-                        <div class="positionr w100 overflow-hidden">
-                          <img src="~/assets/images/index/nav-img-bg.jpg" alt srcset class="w100">
-                          <div class="positionb scale">
-                            <img :src="subitem.img" alt srcset class="w100">
-                          </div>
+
+                <dl v-show="item.submenu !=null" class="flex nav-dl" @mouseleave="hideDown(index)">
+                  <dd>
+                    <span class="colorb fon48">{{ item.txtOne }}</span>
+                    <span class="color3 fon20">{{ item.txtTwo }}</span>
+                  </dd>
+                  <dd v-for="(subitem, i) in item.submenu" :key="'a'+subitem.id+i">
+                    <nuxt-link
+                      :to="subitem.link"
+                      :data-menuid="subitem.id"
+                      @click.native="hideDown(i)"
+                    >
+                      <div class="positionr w100 overflow-hidden">
+                        <img src="~/assets/images/index/nav-img-bg.jpg" alt srcset class="w100">
+                        <div class="positionb scale">
+                          <img :src="subitem.img" alt srcset class="w100">
                         </div>
-                        <p class="animated delay15 fadeInUp">
-                          {{ subitem.name }}
-                        </p>
-                      </nuxt-link>
-                    </dd>
-                  </dl>
+                      </div>
+                      <p class="animated delay15 fadeInUp">
+                        {{ subitem.name }}
+                      </p>
+                    </nuxt-link>
+                  </dd>
+                </dl>
                 </dl>
               </li>
             </ul>
