@@ -72,7 +72,7 @@ export default {
   // },
   proxy: {
     '/api': {
-      target: 'http://47.75.185.34:39004/mock/5d65de1a8f19846bade54a63',
+      target: 'http://admindz.hk.tanghan.cn',
     },
   },
 

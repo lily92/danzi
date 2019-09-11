@@ -63,7 +63,7 @@
 export default {
   layout: 'single',
   async asyncData({ $axios }) {
-    const res = await $axios.$post('culture/list')
+    const res = await $axios.$post('culture/culturelist')
     return {
       list: res.list,
     }

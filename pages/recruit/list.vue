@@ -131,7 +131,7 @@ export default {
     }
   },
   async asyncData({ $axios }) {
-    const res = await $axios.$post('recruit/list')
+    const res = await $axios.$post('recruit/founlist')
     return {
       list: res.list,
     }

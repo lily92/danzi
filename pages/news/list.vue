@@ -126,7 +126,7 @@ export default {
   methods: {
     getList(page) {
       this.$axios
-          .$post('news/list', { size: 6, page: page, type: this.$route.query.id })
+          .$post('news/zixunlist', { size: 6, page: page, type: this.$route.query.id })
           .then((res) => {
             if (res.code === '1001') {
               this.newList = res.list

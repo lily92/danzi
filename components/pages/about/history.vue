@@ -14,9 +14,9 @@
                 <p class="fon24">
                   {{ item.year }}
                 </p>
-                <p class="lin3">
-                  {{ item.desc }}
-                </p>
+                <div class="lin3" v-html="item.desc">
+                  <!-- {{  }} -->
+                </div>
               </div>
             </div>
           </div>

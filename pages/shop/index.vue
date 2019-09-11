@@ -66,7 +66,7 @@ export default {
     Banner,
   },
   async asyncData({ $axios }) {
-    const res = await $axios.$post('shop')
+    const res = await $axios.$post('shop/zhishou')
     const banner = await $axios.$post('shop/listbanner')
     return {
       list: res.list,

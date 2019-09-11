@@ -137,7 +137,7 @@ export default {
   },
   methods: {
     getList() {
-      this.$axios.$post('brand/list').then((res) => {
+      this.$axios.$post('brand/brandlist').then((res) => {
         if (res.code === '1001') {
           this.list = res.list
           this.activeFun(0)

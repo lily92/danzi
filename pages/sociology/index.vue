@@ -53,7 +53,7 @@ export default {
     },
   },
   async asyncData({ $axios }) {
-    const res = await $axios.$post('sociology/index')
+    const res = await $axios.$post('sociology/founindex')
     return {
       list: res.list,
     }

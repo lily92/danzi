@@ -20,10 +20,10 @@
                   :class="{'current':item.id === fristMenu.id}"
                 >
                   <span>{{ item.menu }}</span>
-                  <span v-show="item.submenu.length>0" class="icon-down" />
+                  <span v-show="item.submenu !=null" class="icon-down" />
                 </nuxt-link>
 
-                <dl v-show="item.submenu.length>0" class="flex nav-dl">
+                <dl v-show="item.submenu !=null" class="flex nav-dl">
                   <dd>
                     <span class="colorb fon48">{{ item.txtOne }}</span>
                     <span class="color3 fon20">{{ item.txtTwo }}</span>
@@ -85,8 +85,8 @@
           >
             <dt>
               <div class="pull-right phone-more visible-xs" @click="showPhoneMenu(index)">
-                <span v-show="item.isShow || item.submenu.length==0 ">-</span>
-                <span v-show="!item.isShow && item.submenu.length>0 ">+</span>
+                <span v-show="item.isShow || item.submenu ==null ">-</span>
+                <span v-show="!item.isShow && item.submenu !=null ">+</span>
               </div>
               <nuxt-link :to="item.link" @click.native="showMenu(true)">
                 {{ item.menu }}
