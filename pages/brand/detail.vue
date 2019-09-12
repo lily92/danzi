@@ -17,7 +17,7 @@
           <p class="title fon24">
             {{ brand.title }}
           </p>
-          <div>{{ brand.desc }}</div>
+          <div v-html="brand.desc" />
           <div class="brand-link">
             <a
               v-for="(item,i) in brand.linkArray"

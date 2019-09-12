@@ -38,10 +38,13 @@
               </div>
             </div>
           </div>
-          <div class="com-sm-9 padding15">
+          <div class="col-sm-9 padding15 warp">
             <p class="fon24 color0 margin-b10">
               {{ current.title }}
             </p>
+            <div>
+              {{ current.detail }}
+            </div>
             <div v-html="current.detail" />
           </div>
         </div>
@@ -50,6 +53,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.warp{word-wrap:break-word; overflow-x: hidden; overflow-y: auto}
 .padding70 {
   padding: 70px 0;
 }
@@ -106,7 +110,7 @@
   padding: 15px;
 }
 .margin-b10{ margin-bottom: 10px;}
-.btn-close{ position: absolute;right: 10px; top: 10px; cursor: pointer;}
+.btn-close{ position: absolute;right: 10px; top: 10px; cursor: pointer; z-index: 3;}
 @media screen and (max-width: 767px) {
   li {
     margin-bottom: 15px;

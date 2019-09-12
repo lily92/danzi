@@ -9,9 +9,7 @@
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
-          <div class="line3 drame-con">
-            {{ sociology.desc }}
-          </div>
+          <div class="line3 drame-con" v-html="sociology.desc" />
           <div class="dram-btn">
             <nuxt-link to="/sociology#s0" class="a1 trans">
               甘霖计划

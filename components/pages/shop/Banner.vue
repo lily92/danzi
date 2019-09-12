@@ -12,7 +12,7 @@
               </a>
             </div>
           </div>
-          <div class="bgf7 padding25">
+          <div v-show="item.qrcode.length>0" class="bgf7 padding25">
             <ul class="clearfix qrcode-list text-center flex">
               <li v-for="(subitem,index) in item.qrcode" :key="'qrcodeList'+index">
                 <div>

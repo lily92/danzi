@@ -3,7 +3,7 @@
     <div class="w35 hidden-xs">
       <swiper :options="options" class="banner-swiper">
         <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
-          <div v-for="(item,i) in newlleft" :key="'newleft'+i" class="swiper-slide curso" @click="goDetail(item.newId,item.typeId)">
+          <nuxt-link v-for="(item,i) in newlleft" :key="'newleft'+i" class="swiper-slide curso" :to="'/news/listdetail?newid=' + item.newId + '&cid=' + item.typeId ">
             <div class="positionr">
               <img src="~/assets/images/index-new-bg.jpg" alt srcset class="w100">
               <div class="positionb flex-item">
@@ -19,7 +19,7 @@
                 {{ item.newTitle }}
               </p>
             </div>
-          </div>
+          </nuxt-link>
         </div>
         <div class="swiper-pagination news-page" />
       </swiper>
@@ -175,6 +175,10 @@ export default {
         },
       },
     }
+  },
+  mounted() {
+    // console.log(this.newlleft)
+    // console.log(this.newright)
   },
   methods: {
     goDetail(newId, typeId) {

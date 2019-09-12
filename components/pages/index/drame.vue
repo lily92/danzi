@@ -9,9 +9,7 @@
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
-          <div class="line3 drame-con">
-            {{ dream.desc }}
-          </div>
+          <div class="line3 drame-con" v-html="dream.desc" />
           <div class="dram-btn">
             <nuxt-link to="/recruit/list" class="a1 trans">
               员工理念

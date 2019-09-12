@@ -59,12 +59,13 @@ export default {
     },
   },
   mounted() {
+    console.log('this.$route.query.newid:' + this.$route.query.newid)
     this.getDetail(this.$route.query.newid)
   },
 
   methods: {
     getDetail(newId) {
-      this.$axios.$post('news/listdetail', { id: Number(newId) }).then((res) => {
+      this.$axios.$post('news/listdetail', { newid: Number(newId) }).then((res) => {
         if (res.code === '1001') {
           window.scroll(0, 0)
           this.date = res.date
