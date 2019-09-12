@@ -42,10 +42,8 @@
               <p class="fon18">
                 {{ item.title }}
               </p>
-              <p class="fon16 desc">
-                {{ item.desc }}
-              </p>
-              <p>{{ item.detail }}</p>
+              <div class="fon16 desc" v-html="item.desc" />
+              <div v-html="item.detail" />
             </div>
           </div>
           <div class="w50 positionr">
