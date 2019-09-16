@@ -42,7 +42,7 @@
               <p class="fon18">
                 {{ item.title }}
               </p>
-              <div class="fon16 desc" v-html="item.desc" />
+              <!-- <div class="fon16 desc" v-html="item.desc" /> -->
               <div v-html="item.detail" />
             </div>
           </div>

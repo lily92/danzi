@@ -13,6 +13,7 @@
                 :key="'b'+item.id+index"
                 :class="{'active':item.isShow}"
                 @mouseenter="showPhoneMenu(index)"
+                @mouseout="hideDown(index)"
               >
                 <nuxt-link
                   class="links"
@@ -23,8 +24,8 @@
                   <span v-show="item.submenu.length>0" class="icon-down" />
                 </nuxt-link>
 
-
-                <dl v-show="item.submenu.length>0" class="flex nav-dl" @mouseleave="hideDown(index)">
+                <!-- showPhoneMenu -->
+                <dl v-show="item.submenu.length>0" class="flex nav-dl">
                   <dd>
                     <span class="colorb fon48">{{ item.txtOne }}</span>
                     <span class="color3 fon20">{{ item.txtTwo }}</span>
@@ -46,7 +47,6 @@
                       </p>
                     </nuxt-link>
                   </dd>
-                </dl>
                 </dl>
               </li>
             </ul>
@@ -180,13 +180,13 @@ export default {
     hideDown(index) {
       debounce(() => {
         this.navlistIndex = this.navlistIndex === index ? -1 : index
-      }, 200)
+      }, 1000)
     },
 
     showPhoneMenu(index) {
       debounce(() => {
         this.navlistIndex = this.navlistIndex === index ? -1 : index
-      }, 400)
+      }, 800)
     },
   },
 }

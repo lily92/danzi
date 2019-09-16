@@ -2,8 +2,8 @@
   <ul class="list clearfix row">
     <li v-for="(item,i) in list" :key="'introduct'+i" class="col-sm-6">
       <nuxt-link class="positionr" :to="item.link">
-        <img src="~/assets/images/about/about-img-bg.jpg" alt srcset class="w100">
-        <div class="positionb">
+        <img src="~/assets/images/about/about-img-bg.jpg" alt srcset class="w100 hidden-xs">
+        <div class="positionb positions-phone">
           <img :src="item.img" alt srcset class="w100">
         </div>
         <div class="txt flex-item trans">
@@ -86,6 +86,7 @@ a {
   .title::before {
     display: none;
   }
+  .positions-phone{ position: static}
 }
 </style>
 

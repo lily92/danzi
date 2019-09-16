@@ -42,7 +42,7 @@
 .qrcode-list {
   justify-content: space-between;
   .qrcode-p {
-    padding: 5px 0;
+    padding: 5px 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
   }
   li {
     width: 19.5%;

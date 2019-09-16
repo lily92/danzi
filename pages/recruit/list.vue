@@ -142,8 +142,8 @@ export default {
   },
   methods: {
     showDetail(item) {
-      if (item.islink) {
-        this.$router.push({ path: item.islink })
+      if (item.title === '人才招聘') {
+        this.$router.push({ path: '/recruit/listdetail' })
       } else {
         this.current.title = item.title
         this.current.detail = item.detail

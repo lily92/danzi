@@ -1,6 +1,11 @@
 {
   "code":"1001",
-  "msg": "请求成功",
+  "msg": "请求成功", 
+  "about":{
+    "banner":"@img(1200,568)",
+    "company":"广东丹姿集团",
+    "time":"丹姿集团成立于1998年"
+  },
   "list":[
     {
       "link":"/about/history",
