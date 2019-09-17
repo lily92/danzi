@@ -5,8 +5,8 @@
       <div class="w50 positionr">
         <img src="~/assets/images/pinpai-banner-bg.jpg" alt srcset class="w100">
         <div
-          class="positionb flex-item"
-          :style="{'background': `url(${brand.img}) no-repeat center`,'background-size':'cover'}"
+          class="positionb flex-item bgcover"
+          :style="{'background': `url(${brand.img}) no-repeat center `,'background-size':'cover'}"
         />
       </div>
       <div class="w50 bg0 flex flex-align-center" :style="{'background': brand.bgcolor}">
@@ -59,6 +59,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.bgcover{ background-size: cover !important;}
 .bg0 {
   background: #00a2e9;
   color: #fff;
