@@ -211,7 +211,7 @@ select,
 .w50{ width: 50%;}
 /**/
 
-.ani{animation: scaleto 1.5s ; animation-iteration-count: infinite;animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53)}
+.ani{animation: scaleto 2.5s ; animation-iteration-count: infinite;animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53)}
 @keyframes scaleto {
   10% {
     transform: scale(1)
