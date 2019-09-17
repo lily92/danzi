@@ -80,7 +80,7 @@ select,
 .nowarp {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: hidden; display: block;
 }
 .line2 {
   text-overflow: -o-ellipsis-lastline;

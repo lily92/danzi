@@ -145,7 +145,11 @@ export default {
       })
     },
     activeFun(index) {
-      this.activeIndex = this.activeIndex === index ? -1 : index
+      // this.activeIndex = this.activeIndex === index ? -1 : index
+      if (this.activeIndex === index) {
+      } else {
+        this.activeIndex = index
+      }
     },
     goBrandDeatil(id) {
       this.$router.push({ path: 'brand/detail?brandId=' + id })
