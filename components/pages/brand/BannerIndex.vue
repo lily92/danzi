@@ -2,7 +2,7 @@
   <div>
     <!-- pc -->
     <div class="positionr pc hidden-xs">
-      <img src="~/assets/images/about/pinpai-1.jpg" alt srcset class="visible-hidden">
+      <img src="~/assets/images/index-d-bg.jpg" alt srcset class="visible-hidden">
       <ul class="flex pinpai-list positionb">
         <li
           v-for="(item,i) in brandList"
@@ -14,7 +14,7 @@
         >
           <div
             class="list-bg"
-            :style="{'background': `url(${item.img}) no-repeat center`,'background-size':'cover'}"
+            :style="{'background': `url(${item.indexImg}) no-repeat center`,'background-size':'cover'}"
           />
           <div class="list-txt flex">
             <img :src="item.logo" alt srcset>
@@ -28,7 +28,7 @@
       <Swiper :options="options">
         <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
           <div v-for="(item,i) in brandList" :key="'brand1'+i" class="swiper-slide trans box-shadow" @click="goBrandDeatil(item.id)">
-            <img :src="item.img" alt srcset>
+            <img :src="item.indexImg" alt srcset>
             <p class="text-center bglogo">
               <img :src="item.logo" alt srcset>
             </p>

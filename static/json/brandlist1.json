@@ -5,37 +5,43 @@
     { 
       "id": 1,
       "isShow": true,
-      "img":"@img(878,621)",
-      "logo":"@img(144,52)"
+      "img":"@img(1450,560)",
+      "logo":"@img(144,52)",
+      "indexImg":"@img(1200,555)"
     },
     { 
       "id": 1,
       "isShow": false,
-      "img":"@img(878,621)",
-      "logo":"@img(144,52)"
+      "img":"@img(1450,560)",
+      "logo":"@img(144,52)",
+      "indexImg":"@img(1200,555)"
     },
     { 
       "id": 1,
       "isShow": false,
-      "img":"@img(878,621)",
-      "logo":"@img(144,52)"
+      "img":"@img(1450,560)",
+      "logo":"@img(144,52)",
+      "indexImg":"@img(1200,555)"
     },
     { 
       "id": 1,
       "isShow": false,
-      "img":"@img(878,621)",
-      "logo":"@img(144,52)"
+      "img":"@img(1450,560)",
+      "logo":"@img(144,52)",
+      "indexImg":"@img(1200,555)"
     },
     { 
       "id": 1,
       "isShow": false,
-      "img":"@img(878,621)",
-      "logo":"@img(144,52)"
+      "img":"@img(1450,560)",
+      "logo":"@img(144,52)",
+      "indexImg":"@img(1200,555)"
     },{ 
       "id": 1,
       "isShow": false,
-      "img":"@img(878,621)",
-      "logo":"@img(144,52)"
+      "img":"@img(1450,560)",
+      "logo":"@img(144,52)",
+      "indexImg":"@img(1200,555)"
     }
     
   ]

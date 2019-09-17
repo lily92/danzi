@@ -81,7 +81,7 @@
 <script>
 import Banner from '~/components/pages/index/Banner.vue'
 import About from '~/components/pages/index/About.vue'
-import BrandBanner from '~/components/pages/brand/Banner.vue'
+import BrandBanner from '~/components/pages/brand/BannerIndex.vue'
 import Dram from '~/components/pages/index/drame.vue'
 import Shehui from '~/components/pages/index/shehui.vue'
 import News from '~/components/pages/index/news.vue'
