@@ -4,7 +4,7 @@
       <div style="display:none">
         {{ fristMenu }}
       </div>
-      <div class="container">
+      <div class="container ">
         <div class="header-right flex-item pull-right">
           <nav>
             <ul class="flex-item">
@@ -12,20 +12,25 @@
                 v-for="(item,index) in navlist"
                 :key="'b'+item.id+index"
                 :class="{'active':item.isShow}"
-                @mouseenter="showPhoneMenu(index)"
-                @mouseout="hideDown(index)"
               >
-                <nuxt-link
-                  class="links"
-                  :to="item.link"
+                <div
+                  class="linksa"
                   :class="{'current':item.id === fristMenu.id}"
                 >
-                  <span>{{ item.menu }}</span>
-                  <span v-show="item.submenu.length>0" class="icon-down" />
-                </nuxt-link>
+                  <span @click="linkto(item.link)">{{ item.menu }}</span>
+                  <span
+                    v-show="item.submenu.length>0"
+                    class="icon-down"
+                    @click="showPhoneMenu(index)"
+                  />
+                </div>
 
                 <!-- showPhoneMenu -->
-                <dl v-show="item.submenu.length>0" class="flex nav-dl">
+                <dl
+                  v-show="item.submenu.length>0"
+                  class="flex nav-dl"
+                  @mouseleave="hideDown(index)"
+                >
                   <dd>
                     <span class="colorb fon48">{{ item.txtOne }}</span>
                     <span class="color3 fon20">{{ item.txtTwo }}</span>
@@ -178,15 +183,23 @@ export default {
       this.showMenuFix = !this.showMenuFix
     },
     hideDown(index) {
+      const _this = this
       debounce(() => {
-        this.navlistIndex = this.navlistIndex === index ? -1 : index
-      }, 1000)
+        _this.navlistIndex = -1
+      }, 100)
     },
 
     showPhoneMenu(index) {
+      const _this = this
       debounce(() => {
-        this.navlistIndex = this.navlistIndex === index ? -1 : index
-      }, 800)
+        if (_this.navlistIndex === index) {
+        } else {
+          _this.navlistIndex = index
+        }
+      }, 100)
+    },
+    linkto(url) {
+      this.$router.push({ path: url })
     },
   },
 }
@@ -194,7 +207,10 @@ export default {
 
 <style lang="scss" scoped>
 $colorb: #00a2e9;
-.delay15{ animation-delay: 1.5s}
+.flex-nav{ justify-content: space-between; align-items: center;}
+.delay15 {
+  animation-delay: 1.5s;
+}
 .logo-fix {
   position: fixed;
   left: 40px;
@@ -280,8 +296,10 @@ $colorb: #00a2e9;
 .nav-btn-fix span::before {
   background: #fff;
 }
-
+.linksa{ cursor: pointer;}
+.linksa.current{ color: $colorb}
 @media (min-width: 768px) {
+  .header-right{height: 90px;}
   .fon48 {
     font-size: 28px;
   }
@@ -321,11 +339,13 @@ $colorb: #00a2e9;
     // justify-content: space-between;
     justify-content: center;
     align-items: center;
-    a {
+    a ,.linksa{
       color: #333 !important;
-      display: block;
+      display: block; cursor: pointer;
     }
-    a:hover { color: $colorb !important}
+    a:hover ,.linksa:hover{
+      color: $colorb !important;
+    }
     dd {
       // flex: 1;
       width: 16.66%;
