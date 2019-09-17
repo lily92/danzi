@@ -10,9 +10,7 @@
             </div>
           </div>
           <div class="text-center margin-top">
-            <p class="line2 max180 nohover">
-              {{ item.desc }}
-            </p>
+            <div class="line2 max180 nohover" v-html="item.desc" />
             <p class="hover">
               <a target="_blank" :href="item.link" class="max180">查看详情</a>
             </p>

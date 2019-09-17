@@ -16,9 +16,7 @@
                 <p class="title">
                   {{ item.title }}
                 </p>
-                <p class="line5 desc trans">
-                  {{ item.desc }}
-                </p>
+                <div class="line5 desc trans" v-html="item.desc" />
               </div>
             </div>
           </div>
@@ -142,6 +140,7 @@ export default {
   },
   methods: {
     showDetail(item) {
+      console.log(item)
       if (item.title === '人才招聘') {
         this.$router.push({ path: '/recruit/listdetail' })
       } else {

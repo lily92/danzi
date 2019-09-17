@@ -133,6 +133,7 @@ export default {
             )
           },
         },
+        autoHeight: true,
       },
     }
   },

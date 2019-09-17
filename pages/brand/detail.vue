@@ -18,7 +18,7 @@
             {{ brand.title }}
           </p>
           <div v-html="brand.desc" />
-          <div class="brand-link">
+          <div v-if="brand.linkArray !=[]" class="brand-link">
             <a
               v-for="(item,i) in brand.linkArray"
               :id="'brand'+i"

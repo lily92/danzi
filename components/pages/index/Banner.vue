@@ -14,12 +14,12 @@
             <div class="positionb flex flex-align-center">
               <div class="banner-txt flex flex-start">
                 <div class="max450" data-swiper-parallax="-1000">
-                  <p class="b-p1">让人类多一分美丽</p>
+                  <!-- <p class="b-p1">让人类多一分美丽</p>
                   <p class="b-p1-eng">Bring More Beauty to Humanity</p>
                   <p class="b-p2">
                     化妆品行业是一个“美丽的行业”
                     让人类多一分美丽是我们毕生努力的使命
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>

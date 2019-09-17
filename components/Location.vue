@@ -24,7 +24,7 @@ a{ text-decoration: none;}
    width: 20%;
    min-width: 130px;
    border-left: 1px solid #e6e6e6;  padding-left: 20px; display: flex; align-items: center; box-sizing: border-box;
-  .item-icon{ display: inline-block;}
+  .item-icon{ display: inline-block;  width: 20px; height: 20px;}
   .item-hover{ display: none;}
   .a1{ padding-left: 5px;}
 }
