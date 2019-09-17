@@ -9,7 +9,7 @@
               <div class="positionr ">
                 <img src="~/assets/images/new-img.jpg" alt srcset class="w100">
                 <div class="positionb flex-item">
-                  <img src="~/assets/images/new-img.jpg" alt srcset class="w100">
+                  <img :src="item.newImg" alt srcset class="w100">
                 </div>
               </div>
             </div>

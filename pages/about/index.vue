@@ -5,15 +5,15 @@
       <div class="introduct-banner positionr margin25">
         <img src="~/assets/images/about/introduce-banner-bg.jpg" alt="" srcset="">
         <div class="positionb">
-          <img src="~/assets/images/about/introduce-banner-bg.jpg" alt="" srcset="">
+          <img :src="about.banner" alt="" srcset="">
         </div>
         <div class="positionb flex flex-align-center flex-start banner-txt">
           <div>
             <p class="fon24">
-              广东丹姿集团
+              {{ about.company }}
             </p>
             <p class="fon16">
-              丹姿集团成立于1998年
+              {{ about.time }}
             </p>
             <p class="fon16">
               <nuxt-link to="/about/introduce" class="more  trans">
@@ -52,6 +52,7 @@ export default {
     const list = await $axios.$post('about/introduce')
     return {
       list: list.list,
+      about: list.about,
     }
   },
 
