@@ -141,7 +141,7 @@ export default {
     },
     createMap() {
       map = new window.BMap.Map('map')
-      map.centerAndZoom(new window.BMap.Point(113.272224, 23.203776), 17)
+      map.centerAndZoom(new window.BMap.Point(113.275218, 23.187419), 18)
     },
     setMapEvent() {
       map.enableScrollWheelZoom()
@@ -157,10 +157,10 @@ export default {
     addMapOverlay() {
       const markers = [
         {
-          content: '地址：广州市白云区机场路1438号正阳大厦八楼',
+          content: '地址：广州市白云区云城西路888号绿地中心30楼',
           title: '广东丹姿集团有限公司',
           imageOffset: { width: -46, height: -21 },
-          position: { lat: 23.201285, lng: 113.271631 },
+          position: { lat: 23.186389, lng: 113.2745 },
         },
       ]
       for (let index = 0; index < markers.length; index++) {
