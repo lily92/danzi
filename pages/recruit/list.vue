@@ -40,9 +40,7 @@
             <p class="fon24 color0 margin-b10">
               {{ current.title }}
             </p>
-            <div>
-              {{ current.detail }}
-            </div>
+
             <div v-html="current.detail" />
           </div>
         </div>
