@@ -1,5 +1,5 @@
 <template>
-  <div class="bgf7 padding25">
+  <div class="bgf7 padding-t100">
     <TopBanner :list="bannerlisttop" />
     <div class="container">
       <!-- 直营渠道 -->
