@@ -5,7 +5,7 @@
       <div class="swiper-wrapper">
         <div v-for="(item,i) in list" :key="'history'+i" class="swiper-slide flex-item">
           <div class="positionr max280">
-            <img src="~/assets/images/about/history-img-bg.jpg" alt srcset class="w100">
+            <img src="~/assets/images/about/history-img-bg.jpg" alt srcset class="w100 visible-hidden">
             <div class="positionb ">
               <img :src="item.img" alt srcset class="w100">
             </div>
