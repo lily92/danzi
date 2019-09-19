@@ -19,7 +19,7 @@
             <p class="fon20">
               {{ item.title }}
             </p>
-            <p class="fon16 color6">
+            <p class="fon16 color6 line2 height48">
               {{ item.desc }}
             </p>
           </div>
@@ -54,6 +54,7 @@
     background: #00a2e9;
   }
 }
+.height48{ height: 48px;}
 @media screen and  (max-width: 767px){
   .cluture-list li{ width: 47%; margin-bottom: 15px;}
   .fon20{ margin-top: 15px;}
