@@ -17,7 +17,7 @@
                   class="linksa"
                   :class="{'current':item.id === fristMenu.id}"
                 >
-                  <span @click="linkto(item.link)">{{ item.menu }}</span>
+                  <span @click="linkto(item.link)" @mouseover="showPhoneMenu(index)">{{ item.menu }}</span>
                   <span
                     v-show="item.submenu.length>0"
                     class="icon-down"
