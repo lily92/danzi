@@ -193,6 +193,7 @@ export default {
       const _this = this
       debounce(() => {
         if (_this.navlistIndex === index) {
+          _this.navlistIndex = -1
         } else {
           _this.navlistIndex = index
         }
