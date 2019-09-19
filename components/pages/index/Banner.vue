@@ -8,6 +8,7 @@
           :key="'banner'+item.id+index"
           class="swiper-slide"
           :href="item.linkUrl"
+          target="_blank"
         >
           <div class="pc-banner positionr hidden-xs">
             <img :src="item.src" alt srcset class="w100">

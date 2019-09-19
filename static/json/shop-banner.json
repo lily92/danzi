@@ -1,0 +1,35 @@
+{
+  "code":"1001",
+  "msg": "请求成功",
+  "swiperSlides": [
+    {
+      "src": " @img(1920,500)" ,
+      "srcPhone":"@img(750,500)" ,
+      "linkUrl": "http://baidu.com",
+      "title":"让人类多一分美丽",
+      "titleEng":"Bring More Beauty to Humanity",
+      "titleDesc":"化妆品行业是一个“美丽的行业”让人类多一分美丽是我们毕生努力的使命"
+    },{
+      "src": " @img(1920,500)" ,
+      "srcPhone":"@img(750,500)" ,
+      "linkUrl": "http://baidu.com",
+      "title":"让人类多一分美丽",
+      "titleEng":"Bring More Beauty to Humanity",
+      "titleDesc":"化妆品行业是一个“美丽的行业”让人类多一分美丽是我们毕生努力的使命"
+    },{
+      "src": " @img(1920,500)" ,
+      "srcPhone":"@img(750,500)" ,
+      "linkUrl": "http://baidu.com",
+      "title":"让人类多一分美丽",
+      "titleEng":"Bring More Beauty to Humanity",
+      "titleDesc":"化妆品行业是一个“美丽的行业”让人类多一分美丽是我们毕生努力的使命"
+    },{
+      "src": " @img(1920,500)" ,
+      "srcPhone":"@img(750,500)" ,
+      "linkUrl": "http://baidu.com",
+      "title":"让人类多一分美丽",
+      "titleEng":"Bring More Beauty to Humanity",
+      "titleDesc":"化妆品行业是一个“美丽的行业”让人类多一分美丽是我们毕生努力的使命"
+    }
+  ]
+}

@@ -11,13 +11,16 @@
       </div>
       <div class="w50 bg0 flex flex-align-center" :style="{'background': brand.bgcolor}">
         <div>
-          <p>
+          <!-- <p>
             <img :src="brand.logo" alt srcset>
-          </p>
-          <p class="title fon24">
+          </p> -->
+          <!-- <p class="title fon24">
             {{ brand.title }}
-          </p>
-          <div v-html="brand.desc" />
+          </p> -->
+          <div class="desca" v-html="brand.desc" />
+          <div>
+            <a :href="brand.newLink" target="_blank">{{ brand.newtitle }}</a>
+          </div>
           <div v-if="brand.linkArray !=[]" class="brand-link">
             <a
               v-for="(item,i) in brand.linkArray"
@@ -37,7 +40,13 @@
     <!-- end banner -->
 
     <!--star  video -->
-    <div class="video ">
+    <p v-if="video.id ===null">
+      &nbsp;<br>
+    </p>
+    <p v-if="video.id ===null">
+      &nbsp;<br>
+    </p>
+    <div v-if="video.id !=null" class="video ">
       <div class="padding25">
         <div class="positionr">
           <img src="~/assets/images/pinpai-video.jpg" alt srcset class="w100">
@@ -58,13 +67,16 @@
     <Videomster v-if="showVideo" :video="videod" @close="closevideo" />
   </div>
 </template>
+<style>
+.desca a{  color: #fff !important;}
+</style>
 <style lang="scss" scoped>
 .bgcover{ background-size: cover !important;}
 .bg0 {
   background: #00a2e9;
   color: #fff;
   padding: 10px 60px;
-  a {
+  a.linka {
     display: inline-block;
     border: 2px solid #fff;
     color: #fff;

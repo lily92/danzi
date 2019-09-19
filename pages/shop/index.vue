@@ -1,5 +1,6 @@
 <template>
   <div class="bgf7 padding25">
+    <TopBanner :list="bannerlisttop" />
     <div class="container">
       <!-- 直营渠道 -->
       <div class="channel bgf">
@@ -60,17 +61,21 @@
 </style>
 <script>
 import Banner from '~/components/pages/shop/Banner.vue'
+import TopBanner from '~/components/pages/index/Banner.vue'
 export default {
-  layout: 'ny',
+  layout: 'index',
   components: {
     Banner,
+    TopBanner,
   },
   async asyncData({ $axios }) {
     const res = await $axios.$post('shop/zhishou')
     const banner = await $axios.$post('shop/listbanner')
+    const bannertop = await $axios.$post('shop/banner')
     return {
       list: res.list,
       bannerlist: banner.list,
+      bannerlisttop: bannertop.swiperSlides,
     }
   },
   mounted() {},
