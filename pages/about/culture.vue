@@ -164,7 +164,7 @@ export default {
               this.current = {
               // title: "",
                 detail: res.detail,
-                img: res.bgimg,
+                img: res.bimg,
               }
               this.showbox = true
             }
