@@ -65,6 +65,48 @@
       "txtOne":"旗",
       "txtTwo":"下品牌",
       "submenu": [
+        {
+          "id":164,
+          "name": "水密码",
+          "link":"/brand/detail?brandId=164",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id":192,
+          "name": "他能量",
+          "link":"/brand/detail?brandId=192",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }, {
+          "id":165,
+          "name": "丹姿",
+          "link":"/brand/detail?brandId=165",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }, {
+          "id":191,
+          "name": "卡迪那",
+          "link":"/brand/detail?brandId=191",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }, {
+          "id":166,
+          "name": "彩色地带",
+          "link":"/brand/detail?brandId=166",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }
       ]
     },  {
       "menu": "社会责任",
