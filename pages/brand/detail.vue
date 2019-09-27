@@ -73,7 +73,7 @@
 <style lang="scss" scoped>
 .bgcover{ background-size: cover !important;}
 .bg0 {
-  background: #00a2e9;
+  background: #fff;
   color: #fff;
   padding: 10px 60px;
   a.linka {

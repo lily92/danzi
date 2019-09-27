@@ -23,6 +23,8 @@
         </div>
       </div>
       <!-- Add Arrows -->
+      <div class="swiper-button-next swiper-button-white" />
+      <div class="swiper-button-prev swiper-button-white" />
     </div>
     <div class="swiper-container gallery-thumbs bgfix-year">
       <div class="swiper-wrapper">
@@ -46,7 +48,7 @@ $color6: #666;
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
 }
 .history {
@@ -64,6 +66,8 @@ $color6: #666;
     margin: 30px auto 0;
     height: 80px;
     position: relative;
+    font-size: 17px;
+     font-weight: bold;
     .swiper-slide {
       position: relative;
       text-align: center;
@@ -165,6 +169,7 @@ $color6: #666;
   opacity: 1;
   cursor: pointer;
 }
+.gallery-top .swiper-slide:last-child::after{ display: none;}
 
 </style>
 

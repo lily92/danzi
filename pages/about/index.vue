@@ -31,16 +31,7 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-.margin25{ margin: 25px 0 0 0;}
 
-.banner-txt{
-  p{line-height: 1.8;}
-   color: #fff; padding: 0 60px;
-   .more{ color: #fff; display: inline-block; padding: 5px 20px; border: 2px solid #fff;}
-   .more:hover{ background: #fff; color: #00a2e9}
-}
-</style>
 <script>
 import List from '~/components/pages/about/introduce/List.vue'
 export default {
@@ -51,10 +42,21 @@ export default {
   async asyncData({ $axios }) {
     const list = await $axios.$post('about/introduce')
     return {
-      list: list.list,
       about: list.about,
+      list: list.list,
+
     }
   },
 
 }
 </script>
+<style lang="scss" scoped>
+.margin25{ margin: 25px 0 0 0;}
+
+.banner-txt{
+  p{line-height: 1.8;}
+   color: #fff; padding: 0 60px;
+   .more{ color: #fff; background: #00a2e9; display: inline-block; padding: 5px 20px; }
+   .more:hover{ background: #0498d9; }
+}
+</style>

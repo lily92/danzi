@@ -3,7 +3,7 @@
     <div class="container flex flex-between phone-container">
       <div class="w40">
         <div class="index-h3">
-          <span class="colorb">树</span>
+          <span class="colorb"><b>树</b></span>
           <span class="color0">百年伟业</span>
         </div>
         <div class="about-desc color6" v-html="aboutdesc" />

@@ -10,7 +10,7 @@
       <img :src="bgimg" alt srcset class="w100">
     </div>
     <div class="positionb">
-      <div class="container h100 padding25 colorf phone-container overfy">
+      <div class="container h100 padding25 colorf phone-container overfy flex flex-center">
         <div class="context" v-html="detail" />
       </div>
     </div>
@@ -18,6 +18,8 @@
 </template>
 <style lang="scss" scoped>
 .overfy{ overflow-y: auto; overflow-x: hidden;}
+.flex-center{ align-items: center;  justify-content: center;}
+.context{ width: 100%;}
 .colorf {
   color: #fff;
 }

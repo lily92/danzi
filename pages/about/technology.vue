@@ -2,7 +2,7 @@
   <div class="container flex technology padding25 margin25 phone-container">
     <div class="w45 flex-align-between flex">
       <h3 class="fon24 w100">
-        科研创新
+        <b class="colorb">{{ selectOn.title }}</b>
       </h3>
       <div class="flex flex-revers767">
         <div class="positionr w100">
@@ -48,6 +48,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.colorb{ color: #00a2e9}
 .padding5 {
   padding: 5px 0;
 }

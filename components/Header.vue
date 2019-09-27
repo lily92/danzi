@@ -186,7 +186,7 @@ export default {
       const _this = this
       debounce(() => {
         _this.navlistIndex = -1
-      }, 100)
+      }, 500)
     },
 
     showPhoneMenu(index) {
@@ -197,7 +197,7 @@ export default {
         } else {
           _this.navlistIndex = index
         }
-      }, 100)
+      }, 500)
     },
     linkto(url) {
       this.$router.push({ path: url })

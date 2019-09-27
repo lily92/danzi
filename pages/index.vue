@@ -8,7 +8,7 @@
     <div class="padding25">
       <div class="container max767">
         <div class="index-h3 phone-container">
-          <span class="colorb">创</span>
+          <span class="colorb"><b>创</b></span>
           <span class="color0">一流品牌</span>
         </div>
         <!-- banner -->
@@ -21,7 +21,7 @@
     <div class="bgf7 padding25">
       <div class="container phone-container">
         <div class="index-h3">
-          <span class="colorb">造</span>
+          <span class="colorb"><b>造</b></span>
           <span class="color0">成长梦想</span>
         </div>
         <Dram :dream="dream" />
@@ -33,7 +33,7 @@
     <div class="padding25">
       <div class="container phone-container">
         <div class="index-h3">
-          <span class="colorb">誓</span>
+          <span class="colorb"><b>誓</b></span>
           <span class="color0">造福社会</span>
         </div>
         <Shehui :sociology="sociology" />
@@ -45,7 +45,7 @@
     <div class="padding25 bgf7">
       <div class="container phone-container">
         <div class="index-h3">
-          <span class="colorb">聚</span>
+          <span class="colorb"><b>聚</b></span>
           <span class="color0">百家之言</span>
         </div>
         <News :newlleft="newlLeft" :newright="newRight" />

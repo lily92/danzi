@@ -19,13 +19,13 @@
       <div class="positionb">
         <div class="container flex flex-end-center">
           <div class="text-center">
-            <p>
+            <p class="animated delay5 fadeInUp">
               <img src="~/assets/images/jiji-1.png" alt srcset>
             </p>
-            <div>
+            <div class="animated delay15 fadeInUp">
               <img src="~/assets/images/line3.png" alt srcset>
             </div>
-            <p class="guangwang">
+            <p class="guangwang animated delay2 fadeInUp">
               <a :href="banner.link" class="enter-link">进入官网</a>
             </p>
           </div>
@@ -58,6 +58,15 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.delay5 {
+  animation-delay: 0.5s;
+}
+.delay15 {
+  animation-delay: 1.5s;
+}
+.delay2 {
+  animation-delay: 2s;
+}
 .flex-end-center {
   align-items: center;
   justify-content: flex-end;
