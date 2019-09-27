@@ -40,7 +40,7 @@
           <div class="w50 flex-item bgf">
             <div>
               <p class="fon18">
-                {{ item.title }}
+                <b> {{ item.title }}</b>
               </p>
               <!-- <div class="fon16 desc" v-html="item.desc" /> -->
               <div v-html="item.detail" />
