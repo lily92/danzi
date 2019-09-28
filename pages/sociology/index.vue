@@ -37,7 +37,7 @@
       <ul class="container shehi-list">
         <li v-for="(item,i) in list" :key="'shehui'+i" class="flex">
           <p :id="'s'+i" style="visible:hidden" class="w100" :name="'s'+i" />
-          <div class="w50 flex-item bgf">
+          <div class="w50 flex-item bgbule">
             <div>
               <p class="fon18">
                 <b> {{ item.title }}</b>
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="w50 positionr">
-            <img src="~/assets/images/shehui-1.jpg" alt srcset class="w100">
+            <img src="~/assets/images/shehui-1.jpg" alt srcset class="w100 visible-hidden">
             <div class="positionb flex-item">
               <img :src="item.img" alt srcset class="w100">
             </div>
@@ -58,6 +58,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.bgbule{ background: #004a9c; color:  #fff !important; padding-left: 20px; padding-right: 20px;}
 .delay5 {
   animation-delay: 0.5s;
 }
@@ -76,7 +77,13 @@
   background: #fff;
   padding: 10px 30px 10px 50px;
 }
+
+
 .shehi-list {
+  li:first-child {
+    .bgbule{ border-radius:40px 0 0 0;}
+  }
+  li:last-child .positionb.flex-item, li:last-child .positionb.flex-item img{ border-radius: 0 0 40px 0}
   li:nth-child(2n) {
     flex-direction: row-reverse;
   }

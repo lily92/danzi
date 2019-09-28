@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="logo">
-          <a href="/?loading=1">
+          <a href="/">
             <img src="../assets/images/logo.png" alt srcset>
           </a>
         </div>

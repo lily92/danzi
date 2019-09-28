@@ -23,13 +23,18 @@
         </div>
         <div class="swiper-pagination news-page" />
       </swiper>
+      <div class="bgf padding-new-more">
+        <nuxt-link :to="'/news/list?id='+newlleft[0].typeId" class="new-more">
+          了解更多
+        </nuxt-link>
+      </div>
     </div>
     <ul class="news-right flex w60">
       <li v-for="(item,i) in newright" :key="'newright'+i" class="curso trans" @click="goDetail(item.newId,item.typeId)">
         <div class="flex flex-nowarp">
           <div class="new-left color6 flex-item">
             <div>
-              <p class="new-type fon20">
+              <p class="new-type fon24">
                 {{ item.typeName }}
               </p>
               <p class="date">
@@ -65,7 +70,7 @@
   align-items:initial;
 }
 .news-page {
-  bottom: 80px !important;
+  bottom: 88px !important; text-align: right; padding-right: 10px;
 }
 .taglist {
   a {
@@ -74,9 +79,12 @@
     color: #fff;
     margin-right: 3px;
     margin-bottom: 3px;
-     line-height: 32px;
+    line-height: 32px;
   }
 }
+.padding-new-more{ padding: 5px 0 15px}
+.new-more{ transition: .3s linear all; display: block; width: 130px; height: 35px; line-height: 35px; text-align: center; background: #00a2e9; color:#fff; margin:0 auto ;}
+.new-more:hover{ background: #0498d9;}
 .w35 {
   width: 35%;
 }
@@ -84,9 +92,9 @@
   width: 60.8%;
 }
 .new-li-bg {
-  background: #00a2e9;
+  background: #fff;
   padding: 10px;
-  color: #fff;
+  color: #333;
 }
 .maxh42 {
   max-height: 42px;
@@ -94,10 +102,13 @@
   overflow: hidden;
 }
 .new-left {
-  width: 120px;
+  transition: .3s linear all;
+  width: 140px;
   flex-shrink: 0;
-  padding-right: 20px;
-  border-right: 1px solid #bfbfbf;
+   position: relative;
+  // padding-right: 20px;
+  padding: 20px ;
+  // border-right: 1px solid #bfbfbf;
   .new-type::after {
     border-bottom: 1px solid #bfbfbf;
     width: 50px;
@@ -106,31 +117,35 @@
     padding: 10px 0 0 0;
     margin-bottom: 10px;
   }
-
 }
+.new-left::after{ display: block; content: ''; width: 1px; height: 82px; background:#bfbfbf; position: absolute; right: 0; top: 20px; transition: .3s linear all; }
+
 .news-right {
   align-content: space-between;
+
   li {
     background: #fff;
     margin-bottom: 1px;
-    padding: 20px;
+    // padding: 20px;
     width: 100%;
   }
-  li:hover{ box-shadow: 0 0 5px rgba(0, 0, 0, .1)}
+  li:hover{ box-shadow: 0 0 5px rgba(0, 0, 0, .1);}
+  li:hover .new-left{ background: #00a2e9; color: #fff;}
+  li:hover .new-left .new-type::after{  border-bottom: 1px solid #fff;}
 }
 .new-right {
   width: 100%;
   overflow: hidden;
   flex-shrink: 1;
-  padding-left: 20px;
-
+  // padding-left: 20px;
+   padding:20px;
   .line2 {
     margin: 10px 0;
   }
 }
 @media screen  and (max-width: 767px){
   .w60{ width: 100%}
-  .new-left{ width: 88px;}
+  .new-left{ width: 88px; padding: 2px;}
   .news-right li{ padding: 10px; border-bottom: 0; margin-bottom: 15px;}
   .new-left .date{ font-size: 12px;}
 }
