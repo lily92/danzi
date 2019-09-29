@@ -11,7 +11,7 @@
               </div>
             </div>
             <div class="new-li-bg">
-              <p class="fon12">
+              <p class="fon14">
                 <span>{{ item.typeName }}</span>
                 <span>{{ item.newDate }}</span>
               </p>
@@ -62,6 +62,7 @@
 </template>
 <style lang="scss" scoped>
 .curso{ cursor: pointer;}
+.fon14{ font-size: 14px;}
 .flex-nowarp {
   flex-wrap: nowrap;
 }
@@ -148,6 +149,7 @@
   .new-left{ width: 88px; padding: 2px;}
   .news-right li{ padding: 10px; border-bottom: 0; margin-bottom: 15px;}
   .new-left .date{ font-size: 12px;}
+  .fon14{ font-size: 13px;}
 }
 </style>
 
