@@ -116,6 +116,15 @@
       "txtOne":"社",
       "txtTwo":"会责任",
       "submenu": [
+        {
+          "id": "xx",
+          "name": "丹姿慈善基金会",
+          "link":"/sociology",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }
       ]
     },
     {
@@ -154,6 +163,32 @@
       "txtOne":"招",
       "txtTwo":"贤纳士",
       "submenu": [
+        {
+          "id": 9,
+          "name": "员工理念",
+          "link":"/recruit/list?cid=9",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },
+        {
+          "id": 10,
+          "name": "成长机制",
+          "link":"/recruit/list?cid=10",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        },{
+          "id": "xx",
+          "name": "招聘岗位",
+          "link":"/recruit/listdetail",
+          "img":"@img(200,130)",
+          "parentId":1,
+          "icon":"@img(25,25)",
+          "iconHover":"@img(25,25)"
+        }
       ]
     },
     {

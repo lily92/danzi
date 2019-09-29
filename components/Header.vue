@@ -37,6 +37,7 @@
                   </dd>
                   <dd v-for="(subitem, i) in item.submenu" :key="'a'+subitem.id+i">
                     <nuxt-link
+
                       :to="subitem.link"
                       :data-menuid="subitem.id"
                       @click.native="hideDown(i)"

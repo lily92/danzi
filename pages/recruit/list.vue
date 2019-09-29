@@ -26,7 +26,7 @@
 
     <div v-show="showbox" class="r-master flex-item animated flipInX">
       <div class="re-con bgf positionr clearfix">
-        <img src="~/assets/images/close-0.png" alt="" srcset="" class="btn-close" @click="close">
+        <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close">
         <div class="row">
           <div class="col-sm-3 hidden-xs">
             <div class="positionr w100">
@@ -49,7 +49,11 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.warp{word-wrap:break-word; overflow-x: hidden; overflow-y: auto}
+.warp {
+  word-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .padding70 {
   padding: 70px 0;
 }
@@ -61,7 +65,9 @@
     cursor: pointer;
   }
   .desc {
-    height: 0; transition: .3s linear all; opacity: 0;
+    height: 0;
+    transition: 0.3s linear all;
+    opacity: 0;
   }
   .scale {
     overflow: hidden;
@@ -70,7 +76,8 @@
     cursor: pointer;
   }
   li:hover .desc {
-    height: 105px; opacity: 1;
+    height: 105px;
+    opacity: 1;
   }
   li:hover .scale img {
     transform: scale(1.1);
@@ -105,8 +112,16 @@
   max-width: 1440px;
   padding: 15px;
 }
-.margin-b10{ margin-bottom: 10px;}
-.btn-close{ position: absolute;right: 10px; top: 10px; cursor: pointer; z-index: 3;}
+.margin-b10 {
+  margin-bottom: 10px;
+}
+.btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
 @media screen and (max-width: 767px) {
   li {
     margin-bottom: 15px;
@@ -114,7 +129,9 @@
   .padding70 {
     padding: 35px 0 20px;
   }
-  .padding15{ padding: 15px;}
+  .padding15 {
+    padding: 15px;
+  }
 }
 </style>
 <script>
@@ -123,12 +140,23 @@ export default {
   data() {
     return {
       current: {
-        'title': '',
-        'detail': '',
-        'img': '',
+        title: '',
+        detail: '',
+        img: '',
       },
       showbox: false,
+      // cid: 0,
     }
+  },
+  computed: {
+    cid() {
+      return this.$route.query.cid
+    },
+  },
+  watch: {
+    cid() {
+      this.showBox()
+    },
   },
   async asyncData({ $axios }) {
     const res = await $axios.$post('recruit/founlist')
@@ -136,7 +164,25 @@ export default {
       list: res.list,
     }
   },
+  mounted() {
+    this.showBox()
+  },
   methods: {
+    showBox() {
+      const _this = this
+      if (this.$route.query.cid) {
+        this.showbox = true
+        for (let i = 0; i < _this.list.length; i++) {
+          if (_this.list[i].cid === Number(this.$route.query.cid)) {
+            this.current = {
+              title: _this.list[i].title,
+              detail: _this.list[i].desc,
+              img: _this.list[i].img,
+            }
+          }
+        }
+      }
+    },
     showDetail(item) {
       console.log(item)
       if (item.title === '人才招聘') {
@@ -151,9 +197,9 @@ export default {
     close() {
       this.showbox = false
       this.current = {
-        'title': '',
-        'detail': '',
-        'img': '',
+        title: '',
+        detail: '',
+        img: '',
       }
     },
   },

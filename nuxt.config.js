@@ -70,9 +70,11 @@ export default {
   //   proxy: true,
   //   prefix: '/mock/5d0c7f6c2cf1ae23f0b9d760/api/',
   // },
+  // http://47.75.185.34:39004/mock/5d65de1a8f19846bade54a63
+  // http://admindz.hk.tanghan.cn
   proxy: {
     '/api': {
-      target: 'http://admindz.hk.tanghan.cn',
+      target: 'http://47.75.185.34:39004/mock/5d65de1a8f19846bade54a63',
     },
   },
 

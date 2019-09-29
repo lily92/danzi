@@ -3,6 +3,7 @@
   "msg": "请求成功",
   "list":[
     {
+      "cid":9,
       "islink":false,
       "icon":"@img(40,40)",
       "title":"员工理念",
@@ -11,6 +12,7 @@
       "detail":"<p>人才理念：专业化、职业化、共同成长；</p><p>Talent : Professionalization & Growing Together；</p><p></p><p>学习理念：向专家学习专业精神，向军人学习执行力，向圣贤学习文化素养；</p><p>Learning: Learn professional spirit from Expert, learn execution from PLA and learn cultural literacy from Sage；</p><p>一流人才，合作共赢，愉悦顾客</p><p>First-class Talent, Win-win Cooperation,  Delight Consumer<p>"
     },
     {
+      "cid":10,
       "islink":false,
       "icon":"@img(40,40)",
       "title":"成长机制",
@@ -19,6 +21,7 @@
       "detail":"<p>人才理念：专业化、职业化、共同成长；</p><p>Talent : Professionalization & Growing Together；</p><p></p><p>学习理念：向专家学习专业精神，向军人学习执行力，向圣贤学习文化素养；</p><p>Learning: Learn professional spirit from Expert, learn execution from PLA and learn cultural literacy from Sage；</p><p>一流人才，合作共赢，愉悦顾客</p><p>First-class Talent, Win-win Cooperation,  Delight Consumer<p>"
     },
     {
+      "cid":11,
       "islink":"/recruit/listdetail",
       "icon":"@img(40,40)",
       "title":"人才招聘",
