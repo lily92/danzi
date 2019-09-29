@@ -62,6 +62,7 @@
   .color0 {
     font-size: 36px;
   }
+  b{ margin-right: 8px;}
 }
 @media screen and (max-width: 767px) {
   .index-h3 {

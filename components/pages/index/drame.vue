@@ -32,12 +32,16 @@
 .dram-btn{
   width: 332px; flex-shrink: 0;
   a{ display: inline-block; width: 105px; height: 60px; line-height: 60px; padding-left: 38px;}
-  .a1{ background:url('~@/assets/images/index/icon-dram-1.png') no-repeat 10px center #ffffff; }
-  .a1:hover{background:url('~@/assets/images/index/icon-dram-11.png') no-repeat 10px center #0aa5ea; color: #fff; }
-  .a2{ background:url('~@/assets/images/index/icon-dram-2.png') no-repeat 10px center #ffffff; }
-  .a2:hover{background:url('~@/assets/images/index/icon-dram-22.png') no-repeat 10px center #0aa5ea; color: #fff; }
-  .a3{ background:url('~@/assets/images/index/icon-dram-3.png') no-repeat 10px center #ffffff; }
-  .a3:hover{background:url('~@/assets/images/index/icon-dram-33.png') no-repeat 10px center #0aa5ea; color: #fff; }
+  // .a1{ background:url('~@/assets/images/index/icon-dram-1.png') no-repeat 10px center #ffffff; }
+  .a1{background:url('~@/assets/images/index/icon-dram-11.png') no-repeat 10px center #0aa5ea; color: #fff; }
+    .a1:hover{background:url('~@/assets/images/index/icon-dram-11.png') no-repeat 10px center #0498d9; color: #fff; }
+
+  // .a2{ background:url('~@/assets/images/index/icon-dram-2.png') no-repeat 10px center #ffffff; }
+  .a2{background:url('~@/assets/images/index/icon-dram-22.png') no-repeat 10px center #0aa5ea; color: #fff; }
+  .a2:hover{background:url('~@/assets/images/index/icon-dram-22.png') no-repeat 10px center #0498d9; color: #fff; }
+  // .a3{ background:url('~@/assets/images/index/icon-rr.png') no-repeat 10px center #ffffff; }
+  .a3{background:url('~@/assets/images/index/icon-rr1.png') no-repeat 10px center #0aa5ea; color: #fff; }
+  .a3:hover{background:url('~@/assets/images/index/icon-rr1.png') no-repeat 10px center #0498d9; color: #fff; }
 }
 .flex-npwarp{ flex-wrap: nowrap; align-items: flex-end;padding-bottom: 20px;}
 

@@ -51,31 +51,46 @@
     line-height: 60px;
     padding-left: 38px;
   }
+  // .a1 {
+  //   background: url("~@/assets/images/index/icon-s-1.png") no-repeat 10px center
+  //     #f7f7f7;
+  // }
   .a1 {
-    background: url("~@/assets/images/index/icon-s-1.png") no-repeat 10px center
-      #f7f7f7;
-  }
-  .a1:hover {
     background: url("~@/assets/images/index/icon-s-11.png") no-repeat 10px
       center #0aa5ea;
     color: #f7f7f7;
   }
-  .a2 {
-    background: url("~@/assets/images/index/icon-s-2.png") no-repeat 10px center
-      #f7f7f7;
+  .a1:hover {
+    background: url("~@/assets/images/index/icon-s-11.png") no-repeat 10px
+      center #0498d9;
+    color: #f7f7f7;
   }
-  .a2:hover {
+  // .a2 {
+  //   background: url("~@/assets/images/index/icon-s-2.png") no-repeat 10px center
+  //     #f7f7f7;
+  // }
+  .a2 {
     background: url("~@/assets/images/index/icon-s-22.png") no-repeat 10px
       center #0aa5ea;
     color: #f7f7f7;
   }
+   .a2:hover {
+    background: url("~@/assets/images/index/icon-s-22.png") no-repeat 10px
+      center #0aa5ea;
+    color: #0498d9;
+  }
+  // .a3 {
+  //   background: url("~@/assets/images/index/icon-dram-3.png") no-repeat 10px
+  //     center #f7f7f7;
+  // }
   .a3 {
-    background: url("~@/assets/images/index/icon-dram-3.png") no-repeat 10px
-      center #f7f7f7;
+    background: url("~@/assets/images/index/icon-dram-33.png") no-repeat 10px
+      center #0aa5ea;
+    color: #f7f7f7;
   }
   .a3:hover {
     background: url("~@/assets/images/index/icon-dram-33.png") no-repeat 10px
-      center #0aa5ea;
+      center #0498d9;
     color: #f7f7f7;
   }
 }
