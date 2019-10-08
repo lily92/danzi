@@ -68,7 +68,6 @@ export const getters = {
   currentMenus(state) {
     const { route: { fullPath = '', query: { cid } }, head: { nav = [] } = {} } = state
     const currentMenuIf = (ii) => fullPath.includes(ii.link) || (+cid && +cid === ii.id)
-
     const currentMenu = { ...nav.find((i) => fullPath.includes(i.link) || i.submenu.find(currentMenuIf)) }
 
     let currentSubMenu
@@ -76,7 +75,7 @@ export const getters = {
       currentSubMenu = { ...currentMenu.submenu.find(currentMenuIf) }
       delete currentMenu.submenu
     }
-    // console.log(currentMenu)
+    console.log(currentMenu)
     return [currentMenu || null, currentSubMenu || null]
   },
 }
