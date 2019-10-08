@@ -12,7 +12,7 @@
             </div>
             <div class="new-li-bg">
               <p class="fon14">
-                <span class="fon16">{{ item.typeName }}</span>
+                <span class="fon16"><b>{{ item.typeName }}</b></span>
                 <span>{{ item.newDate }}</span>
               </p>
               <p class="line2 maxh42">
