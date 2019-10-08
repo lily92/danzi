@@ -27,7 +27,7 @@
     <div v-show="showbox" class="r-master flex-item animated flipInX">
       <div class="re-con bgf positionr clearfix">
         <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close">
-        <div class="row">
+        <div class="row flex al-cetner">
           <div class="col-sm-3 hidden-xs">
             <div class="positionr w100">
               <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
@@ -36,12 +36,14 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-9 padding15 warp">
-            <p class="fon24 color0 margin-b10">
-              {{ current.title }}
-            </p>
+          <div class="col-sm-9 padding15 warp h100">
+            <div>
+              <p class="fon24 color0 margin-b10">
+                {{ current.title }}
+              </p>
 
-            <div v-html="current.detail" />
+              <div v-html="current.detail" />
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +51,8 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.h100{ display: flex; align-items: center;}
+.al-cetner{ align-items: center;}
 .warp {
   word-wrap: break-word;
   overflow-x: hidden;

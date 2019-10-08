@@ -75,7 +75,7 @@ export const getters = {
       currentSubMenu = { ...currentMenu.submenu.find(currentMenuIf) }
       delete currentMenu.submenu
     }
-    console.log(currentMenu)
+    // console.log(currentMenu)
     return [currentMenu || null, currentSubMenu || null]
   },
 }
