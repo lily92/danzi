@@ -57,6 +57,6 @@ export default {
   p{line-height: 1.8;}
    color: #fff; padding: 0 60px;
    .more{ color: #fff; background: #00a2e9; display: inline-block; padding: 5px 20px; }
-   .more:hover{ background: #0498d9; }
+   .more:hover{ background: #fff;  color: #00a2e9}
 }
 </style>
