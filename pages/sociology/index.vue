@@ -3,10 +3,11 @@
     <!-- banner -->
     <div class="socal-banner positionr">
       <img
-        src="~/assets/images/ny-banner.jpg"
+        src="~/assets/images/about/ny-banner.jpg"
         alt
         class="hidden-xs margin-auto visible-hidden w100"
       >
+      <!-- /_nuxt/assets/images/about/ny-banner.jpg -->
       <img
         src="~/assets/images/ny-banner-phone.jpg"
         alt
