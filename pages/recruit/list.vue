@@ -177,7 +177,7 @@ export default {
       if (this.$route.query.cid) {
         this.showbox = true
         for (let i = 0; i < _this.list.length; i++) {
-          if (_this.list[i].cid === Number(this.$route.query.cid)) {
+          if (_this.list[i].id === Number(this.$route.query.cid)) {
             this.current = {
               title: _this.list[i].title,
               detail: _this.list[i].desc,
