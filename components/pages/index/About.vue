@@ -16,7 +16,7 @@
       <div class="w55 positionr">
         <swiper :options="options" class="about-swiper">
           <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
-            <div v-for="(item,i) in aboutlist" :key="'about'+i" class="swiper-slide">
+            <a v-for="(item,i) in aboutlist" :key="'about'+i" :href="item.islink" class="swiper-slide">
               <div class="positionr">
                 <img src="~/assets/images/index/index-about-imgbg.jpg" alt srcset class="w100">
                 <div class="positionb scale">
@@ -35,7 +35,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </swiper>
         <div class="w32 hidden-xs" />
