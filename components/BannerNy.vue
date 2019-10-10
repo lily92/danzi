@@ -6,7 +6,7 @@
       <img :src="bannerPC" class="hidden-xs positionb">
       <img :src="bannerphone" class="visible-xs positionb">
       <div class="container flex-item banner-txt">
-        <div>
+        <div class="margin-b10">
           <h3>
             {{ lastMenu && (lastMenu.menu || lastMenu.name ) }}
           </h3>
@@ -21,6 +21,7 @@
 <style lang="scss" scoped>
 $colorb:#018bb9;
 .banners{ position: relative;}
+.margin-b10{ margin-bottom: 15%;}
 .banners img{ display: block; margin: 0 auto; background: #ccc;}
 .banner-txt{ position: absolute; left: 50%; transform: translateX(-50%); height: 100%; top: 0;  padding-bottom: 20px;justify-content: start; }
 h3{ font-size: 26px; color: #fff; font-weight: normal; position: relative;}
