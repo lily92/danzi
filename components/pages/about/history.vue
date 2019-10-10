@@ -237,7 +237,7 @@ export default {
         spaceBetween: 130,
         slidesPerView: 1,
         width: 280,
-        loop: false,
+        loop: true,
         mousewheel: true,
         navigation: {
           nextEl: '.swiper-button-next',

@@ -48,7 +48,7 @@
                           <img :src="subitem.img" alt srcset class="w100">
                         </div>
                       </div>
-                      <p class="animated delay15 fadeInUp">
+                      <p class="animated delay15 fadeInUp margint5">
                         {{ subitem.name }}
                       </p>
                     </nuxt-link>
@@ -210,6 +210,7 @@ export default {
 <style lang="scss" scoped>
 $colorb: #00a2e9;
 .flex-nav{ justify-content: space-between; align-items: center;}
+.margint5{margin-top: 5px;}
 .delay15 {
   animation-delay: 1.5s;
 }
