@@ -38,19 +38,24 @@
       <ul class="container shehi-list">
         <li v-for="(item,i) in list" :key="'shehui'+i" class="flex">
           <p :id="'s'+i" style="visible:hidden" class="w100" :name="'s'+i" />
-          <div class="w50 flex-item bgbule">
-            <div>
-              <p class="fon18">
-                <b> {{ item.title }}</b>
-              </p>
-              <!-- <div class="fon16 desc" v-html="item.desc" /> -->
-              <div v-html="item.detail" />
-            </div>
-          </div>
+          <h3 class="w100 h3">
+            <p class="fon34 main-title color3">
+              {{ item.title }}
+            </p>
+            <p class="fon16 color6 text-center">
+              {{ item.engtitle }}
+            </p>
+          </h3>
           <div class="w50 positionr">
             <img src="~/assets/images/shehui-1.jpg" alt srcset class="w100 visible-hidden">
             <div class="positionb flex-item">
               <img :src="item.img" alt srcset class="w100">
+            </div>
+          </div>
+          <div class="w50 flex-item bgbule">
+            <div>
+              <!-- <div class="fon16 desc" v-html="item.desc" /> -->
+              <div v-html="item.detail" />
             </div>
           </div>
         </li>
@@ -60,6 +65,10 @@
 </template>
 <style lang="scss" scoped>
 .bgbule{ background: #004a9c; color:  #fff !important; padding-left: 20px; padding-right: 20px;}
+.fon34{ font-size: 34px}
+.h3{ padding: 35px 0;}
+.main-title{ position: relative; text-align: center; padding-bottom: 15px; margin-bottom: 10px;}
+.main-title::after{ display: block; content: ''; width: 58px;position: absolute; height: 1px; background: #00a2e9; left: 50%; transform: translateX(-50%); bottom: 0}
 .delay5 {
   animation-delay: 0.5s;
 }
@@ -81,13 +90,16 @@
 
 
 .shehi-list {
-  li:first-child {
-    .bgbule{ border-radius:40px 0 0 0;}
+  li:first-child ,li:last-child{
+    .bgbule{ border-radius:0 0 100px 0;}
   }
-  li:last-child .positionb.flex-item, li:last-child .positionb.flex-item img{ border-radius: 0 0 40px 0}
   li:nth-child(2n) {
     flex-direction: row-reverse;
+    .positionb.flex-item{ border-radius:0 0 100px 0;}
   }
+   li img{ transition: .3s linear all}
+  li:hover img{ transform: scale(1.1)}
+
   .desc {
     padding: 5px 0;
   }
@@ -109,6 +121,8 @@
   padding: 10px 0;
 }
 @media screen and (max-width: 767px) {
+  .fon34{ font-size: 20px}
+  .h3{ padding: 20px 0;}
   .flex-end-center {
     justify-content: center;
   }
