@@ -62,7 +62,7 @@
   }
   .a1:hover {
     background: url("~@/assets/images/index/icon-s-11.png") no-repeat 10px
-      center #0498d9;
+      center #00489a;
     color: #f7f7f7;
   }
   // .a2 {
@@ -76,7 +76,7 @@
   }
    .a2:hover {
     background: url("~@/assets/images/index/icon-s-22.png") no-repeat 10px
-      center #0498d9;
+      center #00489a;
     color: #fff;
   }
   // .a3 {
@@ -90,7 +90,7 @@
   }
   .a3:hover {
     background: url("~@/assets/images/index/icon-dram-33.png") no-repeat 10px
-      center #0498d9;
+      center #00489a;
     color: #f7f7f7;
   }
 }

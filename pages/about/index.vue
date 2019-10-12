@@ -56,7 +56,7 @@ export default {
 .banner-txt{
   p{line-height: 1.8;}
    color: #fff; padding: 0 60px;
-   .more{ color: #fff; background: #3191db; display: inline-block; padding: 5px 20px; }
-   .more:hover{ background: #fff;  color: #3191db}
+   .more{ color: #fff; background: #00a3e8; display: inline-block; padding: 5px 20px; }
+   .more:hover{ background: #fff;  color: #00489a}
 }
 </style>

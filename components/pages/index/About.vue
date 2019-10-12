@@ -132,9 +132,9 @@
   line-height: 48px;
   text-align: center;
   color: #fff;
-  background: #00a2e9;
+  background: #00a3e8;
 }
-.more:hover{ background: #0498d9}
+.more:hover{ background: #00489a}
 .master {
   background: rgba($color: #000000, $alpha: 0.4);
 }
