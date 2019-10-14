@@ -210,7 +210,7 @@ export default {
 <style lang="scss" scoped>
 $colorb: #00a2e9;
 .flex-nav{ justify-content: space-between; align-items: center;}
-.margint5{margin-top: 10px;}
+.margint5{margin-top: 15px;}
 .delay15 {
   animation-delay: 1.5s;
 }
