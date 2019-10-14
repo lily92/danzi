@@ -23,7 +23,7 @@
             <p class="animated delay5 fadeInUp">
               <img src="~/assets/images/jiji-1.png" alt srcset>
             </p>
-            <div class="animated delay15 fadeInUp">
+            <div class="animated delay15 fadeInUp padding15">
               <img src="~/assets/images/line3.png" alt srcset>
             </div>
             <p class="guangwang animated delay2 fadeInUp">
@@ -67,6 +67,7 @@
 .bgbule{ background: #004a9c; color:  #fff !important; padding-left: 20px; padding-right: 20px;}
 .fon34{ font-size: 34px}
 .h3{ padding: 35px 0;}
+.padding15{ padding: 15px 0;}
 .main-title{ position: relative; text-align: center; padding-bottom: 15px; margin-bottom: 10px;}
 .main-title::after{ display: block; content: ''; width: 58px;position: absolute; height: 1px; background: #00a2e9; left: 50%; transform: translateX(-50%); bottom: 0}
 .delay5 {
@@ -117,6 +118,7 @@
   border-radius: 3px;
   padding: 5px 20px;
 }
+.enter-link:hover{  background: #00489a}
 .guangwang {
   padding: 10px 0;
 }
