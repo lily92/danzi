@@ -74,7 +74,7 @@ $color6: #666;
       color: $colorf;
       cursor: pointer;
     }
-    .swiper-slide.month{ width:30px !important}
+    .swiper-slide.month{ width:38px !important}
     .swiper-slide::after {
       display: block;
       content: "";
@@ -215,7 +215,7 @@ export default {
       const Swiper = window.Swiper
       this.instanceThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 0,
-        slidesPerView: 20,
+        slidesPerView: 11,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
