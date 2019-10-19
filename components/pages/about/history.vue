@@ -12,7 +12,7 @@
             <div class="positionb flex-item master">
               <div>
                 <p class="fon24">
-                  {{ item.year }}
+                  {{ item.title }}
                 </p>
                 <div class="lin3" v-html="item.desc">
                   <!-- {{  }} -->
