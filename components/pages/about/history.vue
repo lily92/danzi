@@ -12,7 +12,7 @@
             <div class="positionb flex-item master">
               <div>
                 <p class="fon24">
-                  {{ item.year }}
+                  {{ item.title }}
                 </p>
                 <div class="lin3" v-html="item.desc">
                   <!-- {{  }} -->
@@ -28,7 +28,7 @@
     </div>
     <div class="swiper-container gallery-thumbs bgfix-year">
       <div class="swiper-wrapper">
-        <div v-for="(item,i) in list" :key="'historyyear'+i" class="swiper-slide">
+        <div v-for="(item,i) in list" :key="'historyyear'+i" class="swiper-slide" :class="item.ismonth ?'month':''">
           {{ item.year }}
         </div>
       </div>
@@ -74,6 +74,7 @@ $color6: #666;
       color: $colorf;
       cursor: pointer;
     }
+    .swiper-slide.month{ width:38px !important}
     .swiper-slide::after {
       display: block;
       content: "";
@@ -86,6 +87,16 @@ $color6: #666;
       top: 50px;
       transition: 0.3s linear all;
     }
+    .swiper-slide.month::after {  display: block;
+      content: "";
+      width: 2px;
+      height: 10px;
+      background: $colorf;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50px;
+      transition: 0.3s linear all;}
     .swiper-slide::before {
       display: block;
       content: "";
@@ -237,7 +248,7 @@ export default {
         spaceBetween: 130,
         slidesPerView: 1,
         width: 280,
-        loop: true,
+        loop: false,
         mousewheel: true,
         navigation: {
           nextEl: '.swiper-button-next',
