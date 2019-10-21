@@ -63,6 +63,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    overflow: hidden;
   }
   li::after {
     position: absolute;
@@ -76,7 +77,9 @@
   }
   li.active {
     width: 100%;
+
   }
+   li.active .list-bg{  background-size: 100% 100% !important}
   li.active::after {
     display: none;
   }
