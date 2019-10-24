@@ -61,7 +61,8 @@
   .line22 {
     margin: 5px 0;
     height: 48px;
-    overflow: hidden; display: none;
+    overflow: hidden;
+    display: none;
   }
   .tag a {
     background: #00a2e9;
@@ -81,7 +82,7 @@
       max-height: 80%;
       display: block;
     }
-    .line2{ display: none;}
+    // .line2{ display: none;}
     .color6 {
       color: #333;
     }
@@ -130,6 +131,7 @@ export default {
           .$post('news/zixunlist', { size: 6, page: page, type: this.$route.query.id })
           .then((res) => {
             if (res.code === '1001') {
+              console.log(res.list)
               this.newList = res.list
               this.pageCount = Number(res.totalPage)
             }

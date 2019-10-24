@@ -33,7 +33,7 @@
     <div v-show="showbox" class="r-master flex-item animated flipInX">
       <div class="re-con bgf positionr clearfix">
         <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close">
-        <div class="row">
+        <div class="row flex  flex-culture">
           <div class="col-sm-3 hidden-xs">
             <div class="positionr w100">
               <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
@@ -55,6 +55,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.flex-culture{ display: flex; flex-wrap: wrap; align-items: center}
 .culture {
   background: url("~@/assets/images/about/wenhua-bg.jpg") no-repeat center;
   background-size: cover;

@@ -6,6 +6,7 @@
       "shopName":"丹姿京东商城",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
+      "desc":"手机淘宝APP扫一扫进入店铺",
       "qrcode": [
         {
           "text": "丹姿京东商城",
@@ -33,6 +34,7 @@
       "shopName":"天猫",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
+      "desc":"手机淘宝APP扫一扫进入店铺",
       "qrcode": [
         {
           "text": "丹姿京东商城",
@@ -60,6 +62,7 @@
       "shopName":"淘宝",
       "banner": "@img(998,433)",
       "url": "http://baidu.com",
+      "desc":"手机淘宝APP扫一扫进入店铺",
       "qrcode": [
         {
           "text": "丹姿京东商城",

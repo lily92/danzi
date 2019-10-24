@@ -1,6 +1,6 @@
 <template>
   <div class="bgf7 padding70">
-    <div class="container">
+    <div v-show="!cid" class="container">
       <ul class="row recurt-list">
         <li v-for="(item,i) in list" :key="'recurt'+i" class="col-sm-4" @click="showDetail(item)">
           <div class="positionr">
@@ -24,9 +24,9 @@
       </ul>
     </div>
 
-    <div v-show="showbox" class="r-master flex-item animated flipInX">
+    <div v-show="cid" class="container">
       <div class="re-con bgf positionr clearfix">
-        <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close">
+        <!-- <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close"> -->
         <div class="row flex al-cetner">
           <div class="col-sm-3 hidden-xs">
             <div class="positionr w100">
@@ -112,7 +112,7 @@
   top: 0;
 }
 .re-con {
-  width: 90%;
+  width: 100%;
   max-width: 1440px;
   padding: 15px;
 }
@@ -192,10 +192,11 @@ export default {
       if (item.title === '人才招聘') {
         this.$router.push({ path: '/recruit/listdetail' })
       } else {
-        this.current.title = item.title
-        this.current.detail = item.detail
-        this.current.img = item.img
-        this.showbox = true
+        this.$router.push({ path: '/recruit/list?cid=' + item.id })
+        // this.current.title = item.title
+        // this.current.detail = item.detail
+        // this.current.img = item.img
+        // this.showbox = true
       }
     },
     close() {

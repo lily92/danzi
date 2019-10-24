@@ -312,7 +312,7 @@ select,
 
 /**/
 .ani {
-  animation: scaleto 2.5s;
+  animation: scaleto 3.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
@@ -322,7 +322,7 @@ select,
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);

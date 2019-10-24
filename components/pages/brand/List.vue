@@ -1,5 +1,13 @@
 <template>
   <div class="">
+    <div class="text-center marginb20">
+      <p class="title1">
+        当季主打产品
+      </p>
+      <p class="title2">
+        <span>Main product of the season</span>
+      </p>
+    </div>
     <ul class="list clearfix row hidden-xs">
       <li v-for="(item,i) in list" :key="'brand'+i" class="col-sm-3 col-xs-6">
         <div class="bg-bule">
@@ -44,6 +52,11 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.title1{ color: #00a2e9; font-size: 24px}
+.title2{ font-size: 14px; color: #999; text-transform: uppercase; position: relative;}
+.title2::before{ display: block; content: ''; width: 100%; height: 1px;  background:#999; position: absolute; left: 0; top: 50%; transform: translateY(-50%)}
+.title2 span{ padding:  0 15px; background: #fff; position: relative; z-index: 2;}
+.marginb20{ margin-bottom: 50px}
 .list {
   li {
     margin-bottom: 30px; cursor: pointer;

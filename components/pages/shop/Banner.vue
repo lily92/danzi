@@ -13,18 +13,21 @@
             </div>
           </div>
           <div v-show="item.qrcode.length>0" class="bgf7 padding25">
+            <p class="text-center paddingb20">
+              {{ item.desc }}
+            </p>
             <ul class="clearfix qrcode-list text-center flex">
               <li v-for="(subitem,index) in item.qrcode" :key="'qrcodeList'+index">
                 <div>
-                  <p class="qrcode-p">
-                    {{ subitem.text }}
-                  </p>
                   <div class="positionr">
                     <img src="~/assets/images/shop-qrcode.jpg" alt srcset class="w100">
                     <div class="positionb flex-item">
                       <img :src="subitem.img" alt srcset class="w100">
                     </div>
                   </div>
+                  <p class="qrcode-p">
+                    {{ subitem.text }}
+                  </p>
                 </div>
               </li>
             </ul>
@@ -36,6 +39,7 @@
 </template>
 <style lang="scss" scoped >
 .displayb{ display: block;}
+.paddingb20{ padding-bottom: 20px; font-size: 16px}
 #banner-swiper {
   margin-left: 100px;
 }
@@ -46,7 +50,7 @@
   }
   li {
     width: 19.5%;
-    padding: 0 10px;
+    padding: 0 10px; margin-bottom: 5px
   }
 }
 @media screen and (max-width: 767px) {
