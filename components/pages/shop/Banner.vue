@@ -13,9 +13,15 @@
             </div>
           </div>
           <div v-show="item.qrcode.length>0" class="bgf7 padding25">
-            <p class="text-center paddingb20">
-              {{ item.desc }}
-            </p>
+            <div class="text-center marginb20">
+              <p class="title1">
+                {{ item.desc }}
+              </p>
+              <p class="title2">
+                <span>{{ item.endesc }}</span>
+              </p>
+            </div>
+
             <ul class="clearfix qrcode-list text-center flex">
               <li v-for="(subitem,index) in item.qrcode" :key="'qrcodeList'+index">
                 <div>
@@ -38,35 +44,75 @@
   </div>
 </template>
 <style lang="scss" scoped >
-.displayb{ display: block;}
-.paddingb20{ padding-bottom: 20px; font-size: 16px}
+.displayb {
+  display: block;
+}
+.paddingb20 {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+.title1 {
+  color: #00a2e9;
+  font-size: 24px;
+}
+.title2 {
+  font-size: 14px;
+  color: #999;
+  text-transform: uppercase;
+  position: relative;
+}
+.title2::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #999;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title2 span {
+  padding: 0 15px;
+  background: #f7f7f7;
+  position: relative;
+  z-index: 2;
+}
+.marginb20 {
+  padding:0 0 20px 0;
+}
 #banner-swiper {
   margin-left: 100px;
 }
 .qrcode-list {
   justify-content: space-between;
   .qrcode-p {
-    padding: 5px 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   li {
     width: 19.5%;
-    padding: 0 10px; margin-bottom: 5px
+    padding: 0 10px;
+    margin-bottom: 5px;
   }
 }
 @media screen and (max-width: 767px) {
-#banner-swiper{ margin-left: 0;}
-.qrcode-list {
-  justify-content: flex-start;
-  .qrcode-p {
-    padding: 5px 0;
+  #banner-swiper {
+    margin-left: 0;
   }
-  li {
-    width: 33.33%;
-    padding: 0 5px;
+  .qrcode-list {
+    justify-content: flex-start;
+    .qrcode-p {
+      padding: 5px 0;
+    }
+    li {
+      width: 33.33%;
+      padding: 0 5px;
+    }
   }
 }
-}
-
 </style>
 <style lang="scss">
 .swiper-pagination-shop {
@@ -89,7 +135,8 @@
   .swiper-pagination-bullet {
     position: relative;
     margin: 5px 0;
-    background: #333; cursor: pointer;
+    background: #333;
+    cursor: pointer;
   }
   .swiper-pagination-bullet-active {
     width: 8px;
@@ -110,10 +157,15 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .swiper-pagination-shop { position: static;}
-.swiper-pagination-shop label{ right: auto; text-align: left; left: 20px;}
+  .swiper-pagination-shop {
+    position: static;
+  }
+  .swiper-pagination-shop label {
+    right: auto;
+    text-align: left;
+    left: 20px;
+  }
 }
-
 </style>
 <script>
 import Swiper from '~/components/base/swiper.vue'

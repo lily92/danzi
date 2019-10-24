@@ -22,9 +22,7 @@
                     <img :src="item.img" alt srcset class="w100 trans">
                   </div>
                 </div>
-                <p class="text">
-                  {{ item.text }}
-                </p>
+                <p class="text">{{ item.text }}</p>
               </a>
             </li>
           </ul>
@@ -36,6 +34,7 @@
   </div>
 </template>
 <style lang="scss"  scoped >
+
 .channel {
   padding: 30px;
 }
@@ -44,19 +43,33 @@
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-.shop-list{
-  a{ color: #333; display: block;}
-  li{ margin-bottom: 15px;}
-  li:hover .scale img{ transform: scale(1.1);}
-  li:hover a{ color: #2ea3de}
-  .text{ padding: 5px 0;}
+.shop-list {
+  a {
+    color: #333;
+    display: block;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+  li:hover .scale img {
+    transform: scale(1.1);
+  }
+  li:hover a {
+    color: #2ea3de;
+  }
+  .text {
+    padding: 5px 0;
+  }
 }
-.shopbanner{
+.shopbanner {
   padding: 30px;
 }
 
 @media screen and (max-width: 767px) {
-  .channel,.shopbanner{ padding: 15px}
+  .channel,
+  .shopbanner {
+    padding: 15px;
+  }
 }
 </style>
 <script>
