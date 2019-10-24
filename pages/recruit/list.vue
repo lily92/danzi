@@ -180,7 +180,7 @@ export default {
           if (_this.list[i].id === Number(this.$route.query.cid)) {
             this.current = {
               title: _this.list[i].title,
-              detail: _this.list[i].desc,
+              detail: _this.list[i].detail,
               img: _this.list[i].img,
             }
           }
