@@ -1,9 +1,10 @@
 <template>
-  <div class="swiper-container">
-    <slot
-      @mouseover="stop"
-      @mouseout="star"
-    />
+  <div
+    class="swiper-container"
+    @mouseover="stop"
+    @mouseout="star"
+  >
+    <slot />
   </div>
 </template>
 <script>
@@ -59,12 +60,13 @@ export default {
       this.instance = new Swiper(this.$el, {
         ...this.options,
       })
+      this.instance.autoplay.start()
     },
     stop() {
-      console.log('a1a')
+      this.instance.autoplay.stop()
     },
     star() {
-      console.log('bb')
+      this.instance.autoplay.start()
     },
   },
 }
