@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper :options="options" class="banner-swiper">
+    <swiper ref="mySwiper" :options="options" class="banner-swiper">
       <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
         <!-- 1920-847 -->
         <a
@@ -20,7 +20,7 @@
                   <p class="b-p2">
                     化妆品行业是一个“美丽的行业”
                     让人类多一分美丽是我们毕生努力的使命
-                  </p> -->
+                  </p>-->
                 </div>
               </div>
             </div>
@@ -33,9 +33,7 @@
                 <div class="max450" data-swiper-parallax="-1000">
                   <p class="b-p1">{{ item.title }}</p>
                   <p class="b-p1-eng">{{ item.titleEng }}</p>
-                  <p class="b-p2">
-                    {{ item.titleDesc }}
-                  </p>
+                  <p class="b-p2">{{ item.titleDesc }}</p>
                 </div>
               </div>
             </div>
@@ -61,7 +59,9 @@ a {
   margin: 0 auto;
   padding: 0 15px;
   color: #fff;
-  .max450{ max-width: 450px;}
+  .max450 {
+    max-width: 450px;
+  }
   .b-p1 {
     font-size: 47px;
   }
@@ -70,21 +70,22 @@ a {
     font-family: Arial, Helvetica, sans-serif;
   }
   .b-p2 {
-    font-size: 24px; line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.2;
   }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .banner-txt {
-  .b-p1 {
-    font-size: 22px;
+    .b-p1 {
+      font-size: 22px;
+    }
+    .b-p1-eng {
+      font-size: 16px;
+    }
+    .b-p2 {
+      font-size: 14px;
+    }
   }
-  .b-p1-eng {
-    font-size: 16px;
-  }
-  .b-p2 {
-    font-size: 14px;
-  }
-}
 }
 </style>
 <script>
@@ -127,6 +128,8 @@ export default {
       },
     }
   },
+  computed: {
+  },
   mounted() {
     // this.fetchBannerList()
   },
@@ -137,6 +140,12 @@ export default {
           this.list = res.swiperSlides
         }
       })
+    },
+    stop() {
+      console.log('aa')
+    },
+    star() {
+      console.log('bb')
     },
   },
 }

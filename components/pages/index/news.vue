@@ -84,8 +84,8 @@
   }
 }
 .padding-new-more{ padding: 5px 0 15px}
-.new-more{ transition: .3s linear all; display: block; width: 130px; height: 35px; line-height: 35px; text-align: center; background: #00a2e9; color:#fff; margin:0 auto ;}
-.new-more:hover{ background: #00489a;}
+.new-more{border: 1px solid #00a2e9; transition: .3s linear all; display: block; width: 130px; height: 35px; line-height: 35px; text-align: center; background: #00a2e9; color:#fff; margin:0 auto ;}
+.new-more:hover{ border: 1px solid #00a2e9; color: #00a2e9; background: #fff}
 .w35 {
   width: 35%;
 }

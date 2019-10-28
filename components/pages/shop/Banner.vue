@@ -43,14 +43,7 @@
     </swiper>
   </div>
 </template>
-<style lang="scss" scoped >
-.displayb {
-  display: block;
-}
-.paddingb20 {
-  padding-bottom: 20px;
-  font-size: 16px;
-}
+<style>
 .title1 {
   color: #00a2e9;
   font-size: 24px;
@@ -81,6 +74,17 @@
 .marginb20 {
   padding:0 0 20px 0;
 }
+</style>
+<style lang="scss" scoped >
+.displayb {
+  display: block;
+}
+.paddingb20 {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+
 #banner-swiper {
   margin-left: 100px;
 }

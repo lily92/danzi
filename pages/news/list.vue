@@ -48,7 +48,7 @@
   }
   .new-desc {
     height: 35%;
-    background: rgba($color: #fff, $alpha: 0.8);
+    background: rgba($color: #fff, $alpha: 0.95);
     bottom: 0;
     width: 100%;
     padding: 15px;
@@ -82,7 +82,7 @@
       max-height: 80%;
       display: block;
     }
-    // .line2{ display: none;}
+    .line2{ color: #00a2e9 }
     .color6 {
       color: #333;
     }

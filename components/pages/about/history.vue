@@ -74,7 +74,7 @@ $color6: #666;
       color: $colorf;
       cursor: pointer;
     }
-    .swiper-slide.month{ width:38px !important}
+    .swiper-slide.month{ width:38px !important; margin-top: 20px}
     .swiper-slide::after {
       display: block;
       content: "";
@@ -95,7 +95,7 @@ $color6: #666;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 50px;
+      top: 30px;
       transition: 0.3s linear all;}
     .swiper-slide::before {
       display: block;
@@ -116,6 +116,9 @@ $color6: #666;
     }
     .swiper-slide-thumb-active::before {
       opacity: 1;
+    }
+     .swiper-slide-thumb-active.month::before {
+      top: 15px
     }
     .swiper-slide-thumb-active::after {
       background: $colorb;

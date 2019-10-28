@@ -4,12 +4,20 @@
     <div class="container">
       <!-- 直营渠道 -->
       <div class="channel bgf">
-        <div class="fon24 title">
+        <!-- <div class="fon24 title">
           <p class="color0">
             直营渠道
           </p>
           <p class="color6">
             Direct channel
+          </p>
+        </div> -->
+        <div class="text-center marginb20">
+          <p class="title1">
+            直营渠道
+          </p>
+          <p class="title2">
+            <span style="background:#fff"> Direct channel</span>
           </p>
         </div>
         <div>
@@ -28,7 +36,6 @@
           </ul>
         </div>
       </div>
-
       <Banner class="margin25 shopbanner bgf" :bannerlist="bannerlist" />
     </div>
   </div>

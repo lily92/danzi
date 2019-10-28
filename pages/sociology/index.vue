@@ -18,7 +18,7 @@
         <img :src="banner.bannerPhone" alt class="visible-xs margin-auto w100">
       </div>
       <div class="positionb">
-        <div class="container flex flex-end-center">
+        <div class="container flex flex-center">
           <div class="text-center">
             <p class="animated delay5 fadeInUp">
               <img src="~/assets/images/jiji-1.png" alt srcset>
@@ -34,7 +34,7 @@
       </div>
     </div>
     <!-- end banner -->
-    <div class="bgf7 padding25">
+    <div class="bgf7 padding25" style="padding-top:0">
       <ul class="container shehi-list">
         <li v-for="(item,i) in list" :key="'shehui'+i" class="flex">
           <p :id="'s'+i" style="visible:hidden" class="w100" :name="'s'+i" />
@@ -64,9 +64,10 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.flex-center{ align-content: center; justify-content: center; align-items: center}
 .bgbule{ background: #004a9c; color:  #fff !important; padding-left: 20px; padding-right: 20px;}
 .fon34{ font-size: 34px}
-.h3{ padding: 35px 0;}
+.h3{ padding: 35px 0; margin-top: 0}
 .padding15{ padding: 15px 0;}
 .main-title{ position: relative; text-align: center; padding-bottom: 15px; margin-bottom: 10px;}
 .main-title::after{ display: block; content: ''; width: 58px;position: absolute; height: 1px; background: #00a2e9; left: 50%; transform: translateX(-50%); bottom: 0}
@@ -98,7 +99,7 @@
     flex-direction: row-reverse;
     .positionb.flex-item{ border-radius:0 0 100px 0;}
   }
-   li img{ transition: .3s linear all}
+   li img{ transition: 1s linear all}
   li:hover img{ transform: scale(1.1)}
 
   .desc {
