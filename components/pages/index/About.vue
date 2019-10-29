@@ -211,7 +211,7 @@ export default {
           },
         },
         on: {
-          slideChangeTransitionEnd: function() {
+          slideChangeTransitionEnd() {
             // console.log('改变了，activeIndex为' + this.activeIndex)
           },
         },
@@ -257,7 +257,7 @@ export default {
           },
         },
         on: {
-          slideChangeTransitionEnd: function() {
+          slideChangeTransitionEnd() {
             _this.number = this.activeIndex
             // _this.options = options
           },

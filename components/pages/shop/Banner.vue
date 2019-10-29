@@ -187,7 +187,7 @@ export default {
           el: '.swiper-pagination-shop',
           clickable: true,
 
-          renderBullet: function(index, className) {
+          renderBullet(index, className) {
             return (
               '<span class="' + className + '"><label>' + 1 + '</label></span>'
             )
@@ -210,7 +210,7 @@ export default {
         pagination: {
           el: '.swiper-pagination-shop',
           clickable: true,
-          renderBullet: function(index, className) {
+          renderBullet(index, className) {
             return (
               '<span class="' +
               className +

@@ -7,7 +7,7 @@ export default function({ $axios, redirect }) {
     const str = generateMixed(8)
     // const str = 'ABCDEFGH'
     const encrypt = {
-      'str': str,
+      str,
       'code': Encrypt(str),
     }
     Object.assign(newObj, encrypt, data)
@@ -35,7 +35,7 @@ function Encrypt(a) {
   const keyHash = CryptoJS.MD5(lkey)
   const key = CryptoJS.enc.Utf8.parse(keyHash)
   const iv = CryptoJS.enc.Utf8.parse(livbase)
-  const res = CryptoJS.AES.encrypt(a, key, { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.ZeroPadding })
+  const res = CryptoJS.AES.encrypt(a, key, { iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.ZeroPadding })
   return res.toString()
 }
 

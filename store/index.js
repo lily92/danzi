@@ -71,7 +71,7 @@ export const getters = {
     const currentMenu = { ...nav.find((i) => fullPath.includes(i.link) || i.submenu.find(currentMenuIf)) }
 
     let currentSubMenu
-    if (currentMenu && currentMenu.submenu instanceof Array) {
+    if (currentMenu && Array.isArray(currentMenu.submenu)) {
       currentSubMenu = { ...currentMenu.submenu.find(currentMenuIf) }
       delete currentMenu.submenu
     }

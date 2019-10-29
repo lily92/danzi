@@ -64,6 +64,9 @@
   }
   b{ margin-right: 8px;}
 }
+
+.new-li-bg{background: #00a2e9 !important;color:#fff !important;}
+
 @media screen and (max-width: 767px) {
   .index-h3 {
     .colorb {

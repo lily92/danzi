@@ -18,7 +18,7 @@
         <img :src="banner.bannerPhone" alt class="visible-xs margin-auto w100">
       </div>
       <div class="positionb">
-        <div class="container flex flex-center">
+        <div class="container flex flex-center pc-pad">
           <div class="text-center">
             <p class="animated delay5 fadeInUp">
               <img src="~/assets/images/jiji-1.png" alt srcset>
@@ -65,6 +65,7 @@
 </template>
 <style lang="scss" scoped>
 .flex-center{ align-content: center; justify-content: center; align-items: center}
+.pc-pad{margin-top:10%;}
 .bgbule{ background: #004a9c; color:  #fff !important; padding-left: 20px; padding-right: 20px;}
 .fon34{ font-size: 34px}
 .h3{ padding: 35px 0; margin-top: 0}
