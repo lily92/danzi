@@ -27,17 +27,26 @@
     <div v-show="cid" class="container">
       <div class="re-con bgf positionr clearfix">
         <!-- <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close"> -->
-        <div class="row flex al-cetner">
-          <!--<div class="col-sm-3 hidden-xs">
+        <div class="row flex al-cetner cccdf">
+          <div v-if="cid!=70" class="col-sm-3 hidden-xs">
             <div class="positionr w100">
               <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
               <div class="positionb">
                 <img :src="current.img" alt srcset class="w100">
               </div>
             </div>
-          </div>-->
-          <div class="col-sm-9 padding15 warp h100">
-            <p class="fon24 color0 margin-b10">
+          </div>
+          <div v-if="cid==69" class="col-sm-9 padding15 warp h100">
+            <p v-if="cid!=70" class="fon24 color0 margin-b10">
+              {{ current.title }}
+            </p>
+
+            <div v-html="current.detail" />
+          </div>
+
+
+          <div v-if="cid==70" class="col-sm-9 padding15 warp h100 w100">
+            <p v-if="cid!=70" class="fon24 color0 margin-b10">
               {{ current.title }}
             </p>
 
@@ -49,7 +58,8 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.h100{ display: flex; align-items: center;width:100% !important;}
+.cccdf .w100{width:100% !important;}
+.h100{ display: flex; align-items: center;}
 .al-cetner{ align-items: center;}
 .warp {
   word-wrap: break-word;

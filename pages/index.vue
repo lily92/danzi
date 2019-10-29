@@ -66,6 +66,20 @@
 }
 
 .new-li-bg{background: #00a2e9 !important;color:#fff !important;}
+.bgf{
+background:#00a2e9;
+}
+.new-more{
+border: 1px solid #fff !important;
+color:#fff !important;
+background:#00a2e9 !important;
+}
+
+.new-more:hover{
+border: 1px solid #fff !important;
+color:#00a2e9 !important;
+background:#fff !important;
+}
 
 @media screen and (max-width: 767px) {
   .index-h3 {
