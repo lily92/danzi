@@ -28,22 +28,20 @@
       <div class="re-con bgf positionr clearfix">
         <!-- <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close"> -->
         <div class="row flex al-cetner">
-          <div class="col-sm-3 hidden-xs">
+          <!--<div class="col-sm-3 hidden-xs">
             <div class="positionr w100">
               <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
               <div class="positionb">
                 <img :src="current.img" alt srcset class="w100">
               </div>
             </div>
-          </div>
+          </div>-->
           <div class="col-sm-9 padding15 warp h100">
-            <div>
-              <p class="fon24 color0 margin-b10">
-                {{ current.title }}
-              </p>
+            <p class="fon24 color0 margin-b10">
+              {{ current.title }}
+            </p>
 
-              <div v-html="current.detail" />
-            </div>
+            <div v-html="current.detail" />
           </div>
         </div>
       </div>
@@ -51,7 +49,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.h100{ display: flex; align-items: center;}
+.h100{ display: flex; align-items: center;width:100% !important;}
 .al-cetner{ align-items: center;}
 .warp {
   word-wrap: break-word;
