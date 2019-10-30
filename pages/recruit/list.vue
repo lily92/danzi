@@ -45,12 +45,12 @@
           </div>
 
 
-          <div v-if="cid==70" class="col-sm-9 padding15 warp h100 w100">
+          <div v-if="cid==70" class="col-sm-9 padding15 warp h100 w100 warp2">
             <p v-if="cid!=70" class="fon24 color0 margin-b10">
               {{ current.title }}
             </p>
 
-            <div v-html="current.detail" style="width:100%;"/>
+            <div class="warp_div" v-html="current.detail" />
           </div>
         </div>
       </div>
@@ -65,7 +65,12 @@
   word-wrap: break-word;
   overflow-x: hidden;
   overflow-y: auto;
+
 }
+.warp_div{
+        width:100%;
+}
+
 .padding70 {
   padding: 70px 0;
 }
