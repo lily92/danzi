@@ -50,7 +50,7 @@
               {{ current.title }}
             </p>
 
-            <div v-html="current.detail" />
+            <div v-html="current.detail" style="width:100%;"/>
           </div>
         </div>
       </div>
