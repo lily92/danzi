@@ -66,7 +66,7 @@
 }
 
 .new-li-bg{background: #00a2e9 !important;color:#fff !important;}
-.bgf{
+.padding-new-more{
 background:#00a2e9;
 }
 .new-more{
