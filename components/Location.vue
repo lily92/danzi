@@ -1,5 +1,5 @@
 <template>
-  <div class="loctat bgf7" :class="bgf?'bgf':''">
+  <div class="loctat bgf7" :class="bgf?'bgf':'bgf7'">
     <div class="container location" :data-link="link">
       <div class=" flex  loctat-nowarp ">
         <span
@@ -93,7 +93,9 @@ export default {
   asyncData() {
     return {}
   },
-  mounted() {},
+  mounted() {
+
+  },
   methods: {
     getLocaton() {
       const navList = this.$store.state.head.nav

@@ -1,56 +1,58 @@
 <template>
-  <div class="bgf7 padding70">
-    <div v-show="!cid" class="container">
-      <ul class="row recurt-list">
-        <li v-for="(item,i) in list" :key="'recurt'+i" class="col-sm-4" @click="showDetail(item)">
-          <div class="positionr">
-            <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
-            <div class="positionb flex-item scale">
-              <img :src="item.img" alt srcset class="w100 trans">
-            </div>
-            <div class="positionb master flex-item text-center">
-              <div>
-                <p>
-                  <img :src="item.icon" alt srcset>
-                </p>
-                <p class="title">
-                  {{ item.title }}
-                </p>
-                <div class="line5 desc trans" v-html="item.desc" />
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div v-show="cid" class="container">
-      <div class="re-con bgf positionr clearfix">
-        <!-- <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close"> -->
-        <div class="row flex al-cetner cccdf">
-          <div v-if="cid!=70" class="col-sm-3 hidden-xs">
-            <div class="positionr w100">
+  <div>
+    <Location v-show="cid" :navlist="navList" :navid="navIndex" :current="menuId" :bgf="bgf" />
+    <div class="bgf7 padding70">
+      <div v-show="!cid" class="container">
+        <ul class="row recurt-list">
+          <li v-for="(item,i) in list" :key="'recurt'+i" class="col-sm-4" @click="showDetail(item)">
+            <div class="positionr">
               <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
-              <div class="positionb">
-                <img :src="current.img" alt srcset class="w100">
+              <div class="positionb flex-item scale">
+                <img :src="item.img" alt srcset class="w100 trans">
+              </div>
+              <div class="positionb master flex-item text-center">
+                <div>
+                  <p>
+                    <img :src="item.icon" alt srcset>
+                  </p>
+                  <p class="title">
+                    {{ item.title }}
+                  </p>
+                  <div class="line5 desc trans" v-html="item.desc" />
+                </div>
               </div>
             </div>
-          </div>
-          <div v-if="cid==69" class="col-sm-9 padding15 warp h100">
-            <p v-if="cid!=70" class="fon24 color0 margin-b10">
-              {{ current.title }}
-            </p>
+          </li>
+        </ul>
+      </div>
 
-            <div v-html="current.detail" />
-          </div>
+      <div v-show="cid" class="container">
+        <div class="re-con bgf positionr clearfix">
+          <!-- <img src="~/assets/images/close-0.png" alt srcset class="btn-close" @click="close"> -->
+          <div class="row flex al-cetner cccdf">
+            <div v-if="cid!=70" class="col-sm-3 hidden-xs">
+              <div class="positionr w100">
+                <img src="~/assets/images/r-img-bg.jpg" alt srcset class="w100">
+                <div class="positionb">
+                  <img :src="current.img" alt srcset class="w100">
+                </div>
+              </div>
+            </div>
+            <div v-if="cid==69" class="col-sm-9 padding15 warp h100">
+              <p v-if="cid!=70" class="fon24 color0 margin-b10">
+                {{ current.title }}
+              </p>
 
+              <div v-html="current.detail" />
+            </div>
 
-          <div v-if="cid==70" class="col-sm-9 padding15 warp h100 w100 warp2">
-            <p v-if="cid!=70" class="fon24 color0 margin-b10">
-              {{ current.title }}
-            </p>
+            <div v-if="cid==70" class="col-sm-9 padding15 warp h100 w100 warp2">
+              <p v-if="cid!=70" class="fon24 color0 margin-b10">
+                {{ current.title }}
+              </p>
 
-            <div class="warp_div" v-html="current.detail" />
+              <div class="warp_div" v-html="current.detail" />
+            </div>
           </div>
         </div>
       </div>
@@ -58,17 +60,23 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.cccdf .w100{width:100% !important;}
-.h100{ display: flex; align-items: center;}
-.al-cetner{ align-items: center;}
+.cccdf .w100 {
+  width: 100% !important;
+}
+.h100 {
+  display: flex;
+  align-items: center;
+}
+.al-cetner {
+  align-items: center;
+}
 .warp {
   word-wrap: break-word;
   overflow-x: hidden;
   overflow-y: auto;
-
 }
-.warp_div{
-        width:100%;
+.warp_div {
+  width: 100%;
 }
 
 .padding70 {
@@ -152,8 +160,12 @@
 }
 </style>
 <script>
+import Location from '~/components/Location.vue'
 export default {
-  layout: 'news',
+  layout: 'ny',
+  components: {
+    Location,
+  },
   data() {
     return {
       current: {
@@ -161,11 +173,21 @@ export default {
         detail: '',
         img: '',
       },
+      bgf: 'bgf',
       showbox: false,
       // cid: 0,
     }
   },
   computed: {
+    menuId() {
+      return this.$store.state.menuId
+    },
+    navList() {
+      return this.$store.state.head.nav
+    },
+    navIndex() {
+      return this.$store.state.head.index
+    },
     cid() {
       return this.$route.query.cid
     },
