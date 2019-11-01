@@ -153,7 +153,7 @@
 </style>
 <script>
 export default {
-  layout: 'ny',
+  layout: 'news',
   data() {
     return {
       current: {

@@ -1,6 +1,7 @@
 <template>
   <div class="culture positionr">
     <!-- <img src="~/assets/images/about/wenhua-bg.jpg" alt srcset class="w100"> -->
+    <a class="return" href="/about">返回</a>
     <div class="flex-item">
       <ul class="cluture-list flex">
         <li
@@ -60,6 +61,19 @@
   background: url("~@/assets/images/about/wenhua-bg.jpg") no-repeat center;
   background-size: cover;
   padding: 50px 0;
+  position: relative;
+}
+.return {
+  position: absolute;
+  top: 20px;
+  line-height: 18px;
+  height: 18px;
+  right: 50px;
+  color: #fff;
+  z-index: 100;
+  padding-left: 25px;
+  background: url('~@/assets/images/return.png') no-repeat;
+
 }
 .cluture-list {
   align-items: center;
