@@ -1,100 +1,108 @@
 <template>
-  <div class="bgf7">
-    <div class="container phone-container">
-      <form action class="flex form padding25">
-        <div class="item">
-          <select v-model="departmentId" name placeholder="招聘部门" class="select">
-            <option value>
-              招聘部门
-            </option>
-            <option
-              v-for="(item,i) in departmentList"
-              :key="'departmentList'+i"
-              :value="item.id"
-            >
-              {{ item.text }}
-            </option>
-          </select>
-        </div>
-        <div class="item margin20">
-          <select v-model="cityId" name placeholder="工作地点" class="select">
-            <option value>
-              工作地点
-            </option>
-            <option
-              v-for="(item,i) in cityList"
-              :key="'cityList'+i"
-              :value="item.id"
-            >
-              {{ item.text }}
-            </option>
-          </select>
-        </div>
-        <div class="flex item flex-nowarp">
-          <input v-model="keyword" type="text" placeholder="请输入关键字" class="search-key w100">
-          <button class="btn-search" type="button" @click="searchJob()">
-            搜索
-          </button>
-        </div>
-      </form>
-
-      <!--star list -->
-      <ul class="re-list">
-        <li v-for="(item,i) in listJob" :key="'job'+i" class="bgf" :class="{'active':item.isShow}">
-          <div class="flex title fon16">
-            <div class="item2">
-              {{ item.jobName }}
-            </div>
-            <div class="item1">
-              {{ item.apartment }}
-            </div>
-            <div class="item1">
-              {{ item.city }}
-            </div>
-            <div class="item2 hidden-xs">
-              {{ item.date }}
-            </div>
-            <div class>
-              <span v-show="item.isShow" class="fon24 lin24" @click="showDetail(i)">×</span>
-              <span v-show="!item.isShow" class="fon24 lin24" @click="showDetail(i)">+</span>
-            </div>
+  <div>
+    <Location :navlist="navList" :navid="navIndex" :current="menuId" :bgf="bgf" />
+    <div class="bgf7">
+      <div class="container phone-container">
+        <form action class="flex form padding25">
+          <div class="item">
+            <select v-model="departmentId" name placeholder="招聘部门" class="select">
+              <option value>
+                招聘部门
+              </option>
+              <option
+                v-for="(item,i) in departmentList"
+                :key="'departmentList'+i"
+                :value="item.id"
+              >
+                {{ item.text }}
+              </option>
+            </select>
           </div>
-          <div class="re-con trans">
-            <div class="flex flex-1">
-              <div>工作地点 ： {{ item.city }}</div>
-              <div>年龄 ：{{ item.year }}</div>
-              <div>薪资待遇 : {{ item.money }}</div>
-              <div>发布日期 :{{ item.date }}</div>
-            </div>
-            <div class="flex flex-1">
-              <div>工工作经验 ：{{ item.jinyan }}</div>
-              <div>学历 ： {{ item.xueli }}</div>
-              <div>招聘人数 : {{ item.renshu }}人</div>
-              <div>职位有效期 : {{ item.enddate }}</div>
-            </div>
-            <div>
-              <br>
-              <p>
-                <b>岗位职责</b>
-              </p>
-              <div v-html="item.zhize" />
-              <br>
-              <p>
-                <b>任职资格</b>
-              </p>
-
-              <div v-html="item.zige" />
-            </div>
-            <div>
-              <a class="send-btn margin25 text-center" :href="'mailto:'+item.mail">
-                如果您适合这个岗位要求，请将您的简历发送到
-                {{ item.mail }}
-              </a>
-            </div>
+          <div class="item margin20">
+            <select v-model="cityId" name placeholder="工作地点" class="select">
+              <option value>
+                工作地点
+              </option>
+              <option
+                v-for="(item,i) in cityList"
+                :key="'cityList'+i"
+                :value="item.id"
+              >
+                {{ item.text }}
+              </option>
+            </select>
           </div>
-        </li>
-      </ul>
-      <!--end  list -->
+          <div class="flex item flex-nowarp">
+            <input v-model="keyword" type="text" placeholder="请输入关键字" class="search-key w100">
+            <button class="btn-search" type="button" @click="searchJob()">
+              搜索
+            </button>
+          </div>
+        </form>
+
+        <!--star list -->
+        <ul class="re-list">
+          <li
+            v-for="(item,i) in listJob"
+            :key="'job'+i"
+            class="bgf"
+            :class="{'active':item.isShow}"
+          >
+            <div class="flex title fon16">
+              <div class="item2">
+                {{ item.jobName }}
+              </div>
+              <div class="item1">
+                {{ item.apartment }}
+              </div>
+              <div class="item1">
+                {{ item.city }}
+              </div>
+              <div class="item2 hidden-xs">
+                {{ item.date }}
+              </div>
+              <div class>
+                <span v-show="item.isShow" class="fon24 lin24" @click="showDetail(i)">×</span>
+                <span v-show="!item.isShow" class="fon24 lin24" @click="showDetail(i)">+</span>
+              </div>
+            </div>
+            <div class="re-con trans">
+              <div class="flex flex-1">
+                <div>工作地点 ： {{ item.city }}</div>
+                <div>年龄 ：{{ item.year }}</div>
+                <div>薪资待遇 : {{ item.money }}</div>
+                <div>发布日期 :{{ item.date }}</div>
+              </div>
+              <div class="flex flex-1">
+                <div>工工作经验 ：{{ item.jinyan }}</div>
+                <div>学历 ： {{ item.xueli }}</div>
+                <div>招聘人数 : {{ item.renshu }}人</div>
+                <div>职位有效期 : {{ item.enddate }}</div>
+              </div>
+              <div>
+                <br>
+                <p>
+                  <b>岗位职责</b>
+                </p>
+                <div v-html="item.zhize" />
+                <br>
+                <p>
+                  <b>任职资格</b>
+                </p>
+
+                <div v-html="item.zige" />
+              </div>
+              <div>
+                <a class="send-btn margin25 text-center" :href="'mailto:'+item.mail">
+                  如果您适合这个岗位要求，请将您的简历发送到
+                  {{ item.mail }}
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!--end  list -->
+      </div>
     </div>
   </div>
 </template>
@@ -182,26 +190,42 @@
   .flex-1 {
     div {
       flex: inherit;
-      width: 100%;margin-bottom: 2px;
+      width: 100%;
+      margin-bottom: 2px;
     }
   }
-  .form .item{ flex:inherit; width: 100%; margin-bottom: 5px;}
-  .form .item.margin20{ margin: 0 0 5px 0; }
+  .form .item {
+    flex: inherit;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .form .item.margin20 {
+    margin: 0 0 5px 0;
+  }
   .re-list {
-    .title{ padding: 10px 5px;}
-    li{ margin-bottom: 10px;}
+    .title {
+      padding: 10px 5px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
 <script>
+import Location from '~/components/Location.vue'
 export default {
   layout: 'ny',
+  components: {
+    Location,
+  },
   data() {
     return {
       activeIndex: -1,
       departmentId: '',
       cityId: '',
       keyword: '',
+      bgf: 'bgf',
     }
   },
   computed: {

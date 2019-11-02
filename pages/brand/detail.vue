@@ -9,7 +9,8 @@
           :style="{'background': `url(${brand.img}) no-repeat center `,'background-size':'cover'}"
         />
       </div>
-      <div class="w50 bg0 flex flex-align-center" :style="{'background': brand.bgcolor}">
+      <div class="w50 bg0 flex flex-align-center desca_box" :style="{'background': brand.bgcolor}">
+        <a class="back_home" @click="backBrandHome">返回</a>
         <div>
           <!-- <p>
             <img :src="brand.logo" alt srcset>
@@ -68,6 +69,21 @@
   </div>
 </template>
 <style>
+.desca_box {
+  position: relative;
+}
+.desca_box .back_home {
+  position: absolute;
+  right: 60px;
+  top: 5%;
+  color: #fff;
+  padding-left: 20px;
+  background: url("~@/assets/images/brand/back.png") no-repeat left center;
+  cursor: pointer;
+}
+.desca_box .back_home:hover {
+  background: url("~@/assets/images/brand/back.png") no-repeat left center !important;
+}
 .desca a{  color: #fff !important;}
 </style>
 <style lang="scss" scoped>
@@ -190,6 +206,9 @@ export default {
     },
     closevideo() {
       this.showVideo = false
+    },
+    backBrandHome() {
+      this.$router.push({ path: '/brand' })
     },
   },
 }
