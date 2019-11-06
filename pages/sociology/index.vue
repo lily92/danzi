@@ -21,10 +21,10 @@
         <div class="container flex flex-center pc-pad">
           <div class="text-center">
             <p class="animated delay5 fadeInUp">
-              <img src="~/assets/images/jiji-1.png" alt srcset>
+              <img src="~/assets/images/jiji-1.png" alt srcset class="max150">
             </p>
             <div class="animated delay15 fadeInUp padding15">
-              <img src="~/assets/images/line3.png" alt srcset>
+              <img src="~/assets/images/line3.png" alt srcset class="max200">
             </div>
             <p class="guangwang animated delay2 fadeInUp">
               <a :href="banner.link" class="enter-link">进入官网</a>
@@ -125,8 +125,11 @@
   padding: 10px 0;
 }
 @media screen and (max-width: 767px) {
+  .max150{ max-width: 120px}
+  .max200{ max-width: 200px}
   .fon34{ font-size: 20px}
   .h3{ padding: 20px 0;}
+  .bgbule{ border-radius: 0 !important; padding: 15px}
   .flex-end-center {
     justify-content: center;
   }
@@ -138,10 +141,11 @@
       flex-direction: row;
     }
     li {
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
       margin-bottom: 15px;
     }
   }
+  .shehi-list li:nth-child(2n) .positionb.flex-item{ border-radius: 0 !important}
 }
 </style>
 <script>
