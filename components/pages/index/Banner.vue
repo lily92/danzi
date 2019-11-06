@@ -31,9 +31,9 @@
             <div class="positionb flex flex-align-center">
               <div class="banner-txt flex flex-start">
                 <div class="max450" data-swiper-parallax="-1000">
-                  <p class="b-p1">{{ item.title }}</p>
+                  <!-- <p class="b-p1">{{ item.title }}</p>
                   <p class="b-p1-eng">{{ item.titleEng }}</p>
-                  <p class="b-p2">{{ item.titleDesc }}</p>
+                  <p class="b-p2">{{ item.titleDesc }}</p> -->
                 </div>
               </div>
             </div>
