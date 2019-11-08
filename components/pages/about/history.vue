@@ -265,6 +265,11 @@ export default {
             slidesPerView: 1,
             spaceBetween: 10,
           },
+          414: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            width: 414,
+          },
           375: {
             slidesPerView: 1,
             spaceBetween: 0,
