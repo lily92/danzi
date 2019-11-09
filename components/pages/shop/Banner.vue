@@ -5,8 +5,8 @@
       <div class="swiper-wrapper" style="transform: translate3d(0,0,0)">
         <div v-for="(item,i) in bannerlist" :key="'shopbanner'+i" class="swiper-slide">
           <div class="positionr">
-            <img src="~/assets/images/shop-img1.jpg" alt srcset class="w100 visible-hidden">
-            <div class="positionb flex-item displayb">
+            <!-- <img src="~/assets/images/shop-img1.jpg" alt srcset class="w100 visible-hidden"> -->
+            <div class="positionb0 flex-item displayb">
               <a :href="item.url" target="_blank" class="w100">
                 <img :src="item.banner" alt srcset class="w100">
               </a>

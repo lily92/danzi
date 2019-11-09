@@ -26,7 +26,7 @@
             <p class="fon20">
               {{ item.title }}
             </p>
-            <textarea v-model="item.desc" class="fon16 color6 line2 height48" />
+            <textarea v-model="item.desc" class="fon16 color6 line3 height48" />
           </div>
         </li>
       </ul>
@@ -105,7 +105,7 @@
   }
 }
 .height48 {
-  height: 48px;
+  height:57px;
   width: 100%;
   border: 0;
   resize: none;

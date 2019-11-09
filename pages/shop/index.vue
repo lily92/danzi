@@ -92,6 +92,7 @@ export default {
     const res = await $axios.$post('shop/zhishou')
     const banner = await $axios.$post('shop/listbanner')
     const bannertop = await $axios.$post('shop/banner')
+    console.log(bannertop.swiperSlides)
     return {
       list: res.list,
       bannerlist: banner.list,

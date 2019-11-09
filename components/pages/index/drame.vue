@@ -9,17 +9,19 @@
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
-          <div class="line3 drame-con" v-html="dream.desc" />
-          <div class="dram-btn">
-            <nuxt-link to="/recruit/list" class="a1 trans">
-              员工理念
-            </nuxt-link>
-            <nuxt-link to="/recruit/list" class="a2 trans">
-              成长机制
-            </nuxt-link>
-            <nuxt-link to="/recruit/listdetail" class="a3 trans">
-              招聘岗位
-            </nuxt-link>
+          <div>
+            <div class="line3 drame-con" v-html="dream.desc" />
+            <div class="dram-btn">
+              <nuxt-link to="/recruit/list" class="a1 trans">
+                员工理念
+              </nuxt-link>
+              <nuxt-link to="/recruit/list" class="a2 trans">
+                成长机制
+              </nuxt-link>
+              <nuxt-link to="/recruit/listdetail" class="a3 trans">
+                招聘岗位
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -27,7 +29,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.drame-con{ width: 100%; flex-shrink: 1; color: #fff; padding: 0 15px; height: 63px; overflow: hidden;}
+.drame-con{ width: 100%; flex-shrink: 1; color: #fff; padding: 0 15px; height: 63px; overflow: hidden; margin-bottom: 10px}
 .bg-0{ background: url('~@/assets/images/index-bg-line1.png') no-repeat center bottom; width: 100%; height: 100%; align-content: flex-end}
 .dram-btn{
   width: 332px; flex-shrink: 0;
@@ -50,7 +52,7 @@
   .dram-btn{ display: flex; justify-content: space-between; width: 100%;
    a{ width: 33%}
   }
-  .drame-con{ height: 56px;;}
+  // .drame-con{ height: 56px;;}
 
 }
 </style>

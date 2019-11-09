@@ -74,7 +74,7 @@ export default {
   // http://admindz.hk.tanghan.cn
   proxy: {
     '/api': {
-      target: 'http://admindz.hk.tanghan.cn',
+      target: 'http://admin.danzi.cn',
     },
   },
 

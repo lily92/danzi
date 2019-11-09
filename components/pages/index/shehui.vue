@@ -9,17 +9,19 @@
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
-          <div class="line3 drame-con" v-html="sociology.desc" />
-          <div class="dram-btn">
-            <nuxt-link to="/sociology#s0" class="a1 trans">
-              甘霖计划
-            </nuxt-link>
-            <nuxt-link to="/sociology#s1" class="a2 trans">
-              百善计划
-            </nuxt-link>
-            <nuxt-link to="/sociology#s2" class="a3 trans">
-              救灾行动
-            </nuxt-link>
+          <div>
+            <div class="line3 drame-con" v-html="sociology.desc" />
+            <div class="dram-btn">
+              <nuxt-link to="/sociology#s0" class="a1 trans">
+                甘霖计划
+              </nuxt-link>
+              <nuxt-link to="/sociology#s1" class="a2 trans">
+                百善计划
+              </nuxt-link>
+              <nuxt-link to="/sociology#s2" class="a3 trans">
+                救灾行动
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -33,7 +35,7 @@
   color: #fff;
   padding: 0 15px;
   height: 63px;
-  overflow: hidden;
+  overflow: hidden; margin-bottom: 10px
 }
 .bg-0 {
   background: url("~@/assets/images/index-bg-line1.png") no-repeat center bottom;
@@ -113,7 +115,7 @@
     }
   }
   .drame-con {
-    height: 56px;
+    // height: 56px;
   }
 }
 </style>
