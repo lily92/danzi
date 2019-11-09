@@ -35,7 +35,7 @@
   color: #fff;
   padding: 0 15px;
   height: 63px;
-  overflow: hidden; margin-bottom: 10px
+  overflow: hidden;
 }
 .bg-0 {
   background: url("~@/assets/images/index-bg-line1.png") no-repeat center bottom;
@@ -114,9 +114,7 @@
       width: 33%;
     }
   }
-  .drame-con {
-    // height: 56px;
-  }
+ .drame-con{ margin-bottom: 10px}
 }
 </style>
 
