@@ -48,7 +48,7 @@
   }
   .new-desc {
     height: 35%;
-    background: rgba($color: #fff, $alpha: 0.95);
+    background: rgba($color: #fff, $alpha: 0.85);
     bottom: 0;
     width: 100%;
     padding: 15px;
