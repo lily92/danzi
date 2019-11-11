@@ -9,7 +9,7 @@
       </div>
       <div class="bg-0 positionb flex">
         <div class="flex flex-npwarp">
-          <div>
+          <div class="visible-xs">
             <div class="line3 drame-con" v-html="sociology.desc" />
             <div class="dram-btn">
               <nuxt-link to="/sociology#s0" class="a1 trans">
@@ -22,6 +22,18 @@
                 救灾行动
               </nuxt-link>
             </div>
+          </div>
+          <div class="line3 drame-con hidden-xs" v-html="sociology.desc" />
+          <div class="dram-btn hidden-xs">
+            <nuxt-link to="/sociology#s0" class="a1 trans">
+              甘霖计划
+            </nuxt-link>
+            <nuxt-link to="/sociology#s1" class="a2 trans">
+              百善计划
+            </nuxt-link>
+            <nuxt-link to="/sociology#s2" class="a3 trans">
+              救灾行动
+            </nuxt-link>
           </div>
         </div>
       </div>

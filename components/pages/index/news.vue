@@ -44,7 +44,7 @@
           </div>
           <div class="new-right">
             <div class="w100">
-              <p class="nowarp color3">
+              <p class="nowarp color3  fon16">
                 <b> {{ item.newTitle }}</b>
               </p>
               <p class="color6 line2">
