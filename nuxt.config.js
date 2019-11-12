@@ -12,8 +12,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
       { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=Edge,chrome=1' },
-      { name: 'keywords', content: '丹姿' },
-      { hid: 'description', name: 'description', content: '丹姿' },
+      { name: 'keywords', content: '丹姿集团,丹姿集团怎么样,丹姿集团招聘,丹姿集团文化,丹姿集团公益,丹姿,水密码,他能量' },
+      { hid: 'description', name: 'description', content: '丹姿集团成立于1998年，是一家集科研、品牌营销、服务与供应链管理为一体的化妆品“高新科技”企业。丹姿集团秉持“成为世界一流品牌”的企业愿景，以“让人类多一分美丽”为使命，坚持“守正 利他，以顾客为中心”的价值观，先后创立了“丹姿”、“水密码”，“他能量”等一流品牌，其中“水密码”、“丹姿”被评为“中国驰名商标”，体现了丹姿集团在品牌建设方面领先行业，成绩卓然，集团更被权威机构评为“中华美业十强科技创新企业”。' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
