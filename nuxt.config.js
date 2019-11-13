@@ -7,7 +7,7 @@ export default {
   */
   head: {
     // title: process.env.npm_package_name || '安然',
-    title: '丹姿',
+    title: '丹姿集团官网-让人类多一分美丽',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },

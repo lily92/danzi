@@ -116,7 +116,7 @@
   padding: 10px 0;
 }
 .w40 {
-  width: 40%;
+  width: 38.5%;
 }
 .w55 {
   width: 60%;
